@@ -1,0 +1,10 @@
+# Build
+dist/
+
+# Swift Package Manager
+.build/
+Packages/
+
+# Xcode
+project.xcworkspace/
+xcuserdata/
