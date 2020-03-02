@@ -2,7 +2,7 @@ import Cocoa
 
 // Source: https://stackoverflow.com/questions/40008141/nsapplicationdelegate-not-working-without-storyboard
 class GlanceApp: NSApplication {
-	// swiftlint:disable weak_delegate
+	// swiftlint:disable:next weak_delegate
 	let strongDelegate = AppDelegate()
 
 	override init() {
