@@ -2,13 +2,8 @@ import Cocoa
 import Quartz
 
 class PreviewViewController: NSViewController, QLPreviewingController {
-	override var nibName: NSNib.Name? {
-		NSNib.Name("PreviewViewController")
-	}
-
 	override func loadView() {
-		super.loadView()
-		// Do any additional setup after loading the view.
+		view = NSView()
 	}
 
 	/*
