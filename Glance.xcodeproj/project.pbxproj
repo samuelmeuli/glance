@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7E59DDD7240CC3B2009A4E05 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7E59DDD6240CC3B2009A4E05 /* .gitignore */; };
+		7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6EF1FC240CC802009E4199 /* Quartz.framework */; };
+		7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */; };
+		7E6EF203240CC802009E4199 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6EF201240CC802009E4199 /* PreviewViewController.xib */; };
+		7E6EF208240CC802009E4199 /* QLPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7E8DEE96240CC47C007A1477 /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE94240CC47B007A1477 /* .swiftformat */; };
 		7E8DEE97240CC47C007A1477 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE95240CC47B007A1477 /* .swiftlint.yml */; };
 		7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */; };
@@ -16,8 +20,38 @@
 		7ECC8CF6240CB4CC000D6970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7E6EF206240CC802009E4199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ECC8CE6240CB4CC000D6970 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E6EF1F9240CC802009E4199;
+			remoteInfo = QLPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E6EF209240CC802009E4199 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7E6EF208240CC802009E4199 /* QLPlugin.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7E59DDD6240CC3B2009A4E05 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		7E6EF1FA240CC802009E4199 /* QLPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QLPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6EF1FC240CC802009E4199 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		7E6EF202240CC802009E4199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreviewViewController.xib; sourceTree = "<group>"; };
+		7E6EF204240CC802009E4199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E6EF205240CC802009E4199 /* QLPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLPlugin.entitlements; sourceTree = "<group>"; };
 		7E8DEE94240CC47B007A1477 /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		7E8DEE95240CC47B007A1477 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceApp.swift; sourceTree = "<group>"; };
@@ -30,6 +64,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E6EF1F7240CC802009E4199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ECC8CEB240CB4CC000D6970 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +82,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E6EF1FB240CC802009E4199 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E6EF1FC240CC802009E4199 /* Quartz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E6EF1FE240CC802009E4199 /* QLPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */,
+				7E6EF201240CC802009E4199 /* PreviewViewController.xib */,
+				7E6EF204240CC802009E4199 /* Info.plist */,
+				7E6EF205240CC802009E4199 /* QLPlugin.entitlements */,
+			);
+			path = QLPlugin;
+			sourceTree = "<group>";
+		};
 		7ECC8CE5240CB4CC000D6970 = {
 			isa = PBXGroup;
 			children = (
 				7ECC8CF0240CB4CC000D6970 /* Glance */,
+				7E6EF1FE240CC802009E4199 /* QLPlugin */,
+				7E6EF1FB240CC802009E4199 /* Frameworks */,
 				7ECC8CEF240CB4CC000D6970 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				7ECC8CEE240CB4CC000D6970 /* Glance.app */,
+				7E6EF1FA240CC802009E4199 /* QLPlugin.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +139,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7E6EF1F9240CC802009E4199 /* QLPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E6EF20C240CC802009E4199 /* Build configuration list for PBXNativeTarget "QLPlugin" */;
+			buildPhases = (
+				7E6EF1F6240CC802009E4199 /* Sources */,
+				7E6EF1F7240CC802009E4199 /* Frameworks */,
+				7E6EF1F8240CC802009E4199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLPlugin;
+			productName = QLPlugin;
+			productReference = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		7ECC8CED240CB4CC000D6970 /* Glance */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7ECC8CFE240CB4CC000D6970 /* Build configuration list for PBXNativeTarget "Glance" */;
@@ -82,10 +163,12 @@
 				7ECC8CEA240CB4CC000D6970 /* Sources */,
 				7ECC8CEB240CB4CC000D6970 /* Frameworks */,
 				7ECC8CEC240CB4CC000D6970 /* Resources */,
+				7E6EF209240CC802009E4199 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7E6EF207240CC802009E4199 /* PBXTargetDependency */,
 			);
 			name = Glance;
 			productName = Glance;
@@ -102,6 +185,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Samuel Meuli";
 				TargetAttributes = {
+					7E6EF1F9240CC802009E4199 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					7ECC8CED240CB4CC000D6970 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -121,11 +207,20 @@
 			projectRoot = "";
 			targets = (
 				7ECC8CED240CB4CC000D6970 /* Glance */,
+				7E6EF1F9240CC802009E4199 /* QLPlugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7E6EF1F8240CC802009E4199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6EF203240CC802009E4199 /* PreviewViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ECC8CEC240CB4CC000D6970 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +235,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E6EF1F6240CC802009E4199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ECC8CEA240CB4CC000D6970 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,7 +255,66 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7E6EF207240CC802009E4199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E6EF1F9240CC802009E4199 /* QLPlugin */;
+			targetProxy = 7E6EF206240CC802009E4199 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E6EF201240CC802009E4199 /* PreviewViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E6EF202240CC802009E4199 /* Base */,
+			);
+			name = PreviewViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		7E6EF20A240CC802009E4199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QLPlugin/QLPlugin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AKCUQXMXK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = QLPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.samuelmeuli.Glance.QLPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7E6EF20B240CC802009E4199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QLPlugin/QLPlugin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AKCUQXMXK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = QLPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.samuelmeuli.Glance.QLPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		7ECC8CFC240CB4CC000D6970 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -269,6 +431,7 @@
 		7ECC8CFF240CB4CC000D6970 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Glance/Glance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +452,7 @@
 		7ECC8D00240CB4CC000D6970 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Glance/Glance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +473,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E6EF20C240CC802009E4199 /* Build configuration list for PBXNativeTarget "QLPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E6EF20A240CC802009E4199 /* Debug */,
+				7E6EF20B240CC802009E4199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7ECC8CE9240CB4CC000D6970 /* Build configuration list for PBXProject "Glance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
