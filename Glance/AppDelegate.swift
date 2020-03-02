@@ -1,12 +1,33 @@
 import Cocoa
 
+let APP_NAME = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-	func applicationDidFinishLaunching(_: Notification) {
-		// Insert code here to initialize your application
+	var window: NSWindow!
+
+	override init() {
+		super.init()
 	}
 
-	func applicationWillTerminate(_: Notification) {
-		// Insert code here to tear down your application
+	func applicationDidFinishLaunching(_: Notification) {
+		createWindow()
+	}
+
+	func applicationWillTerminate(_: Notification) {}
+
+	func createWindow() {
+		window = NSWindow(
+			contentRect: .init(
+				origin: .zero,
+				size: .init(width: NSScreen.main!.frame.midX, height: NSScreen.main!.frame.midY)
+			),
+			styleMask: [.closable, .miniaturizable, .titled],
+			backing: .buffered,
+			defer: false
+		)
+		window.center()
+		window.title = APP_NAME
+		window.makeKeyAndOrderFront(nil)
 	}
 }
