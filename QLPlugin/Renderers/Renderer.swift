@@ -8,7 +8,7 @@ class Renderer {
 	var fileContent: String
 	var fileExtension: String
 
-	init(fileContent: String, fileExtension: String) {
+	required init(fileContent: String, fileExtension: String) {
 		self.fileContent = fileContent
 		self.fileExtension = fileExtension
 	}

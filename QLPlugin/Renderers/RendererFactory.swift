@@ -2,11 +2,13 @@ import Foundation
 
 class RendererFactory {
 	static func getRenderer(fileContent: String, fileExtension: String) -> Renderer {
+		var renderer: Renderer.Type
 		switch fileExtension {
 		case "md", "markdown", "mdown", "mkdn", "mkd":
-			return MarkdownRenderer(fileContent: fileContent, fileExtension: fileExtension)
+			renderer = MarkdownRenderer.self
 		default:
-			return CodeRenderer(fileContent: fileContent, fileExtension: fileExtension)
+			renderer = CodeRenderer.self
 		}
+		return renderer.init(fileContent: fileContent, fileExtension: fileExtension)
 	}
 }
