@@ -33,21 +33,21 @@ class CodeRenderer: Renderer {
 		context.evaluateScript(try String(contentsOf: url))
 
 		// Apply syntax highlighting with PrismJS
-		guard let prismObj = context.objectForKeyedSubscript("Prism") else {
+		guard let prismObject = context.objectForKeyedSubscript("Prism") else {
 			os_log("Could not find `Prism` object in JSContext", type: .error)
 			return fileContent
 		}
-		guard let languagesObj = prismObj.objectForKeyedSubscript("languages") else {
+		guard let languagesObject = prismObject.objectForKeyedSubscript("languages") else {
 			os_log("Could not find `Prism.languages` object", type: .error)
 			return fileContent
 		}
-		guard let grammarObj = languagesObj.objectForKeyedSubscript(fileExtension) else {
+		guard let grammarObject = languagesObject.objectForKeyedSubscript(fileExtension) else {
 			os_log("Could not find `Prism.languages.%s` object", type: .error, fileExtension)
 			return fileContent
 		}
-		guard let highlightedHtml = prismObj.invokeMethod(
+		guard let highlightedHtml = prismObject.invokeMethod(
 			"highlight",
-			withArguments: [fileContent, grammarObj, fileExtension]
+			withArguments: [fileContent, grammarObject, fileExtension]
 		) else {
 			os_log("Missing return value from `Prism.highlight` function call", type: .error)
 			return fileContent
@@ -60,7 +60,7 @@ class CodeRenderer: Renderer {
 			return fileContent
 		}
 
-		// Return generated HTML (with syntax highlighting)
+		// Return generated HTML
 		return "<pre><code>\(highlightedHtmlString)</code></pre>"
 	}
 }

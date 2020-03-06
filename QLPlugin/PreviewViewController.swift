@@ -25,8 +25,7 @@ class PreviewViewController: NSViewController, QLPreviewingController {
 		view.addSubview(webView)
 	}
 
-	/// Handles file previews. Called e.g. for previews in the Finder, when pressing space on a file
-	/// or in Spotlight
+	/// Handles file previews. Called e.g. for Quick Look and previews in Finder/Spotlight
 	func preparePreviewOfFile(
 		at fileUrl: URL,
 		completionHandler handler: @escaping (Error?) -> Void
