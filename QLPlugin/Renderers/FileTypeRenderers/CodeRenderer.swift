@@ -6,14 +6,14 @@ class CodeRenderer: Renderer {
 	private let binaryUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
 	private let cssUrl = Bundle.main.url(forResource: "code", withExtension: "css")
 
-	override func getCssFiles() -> [URL] {
-		var cssFiles = super.getCssFiles()
-		if let cssUrlResolved = cssUrl {
-			cssFiles.append(cssUrlResolved)
+	override func getStylesheets() -> [Stylesheet] {
+		var stylesheets = super.getStylesheets()
+		if let cssUrl = cssUrl {
+			stylesheets.append(Stylesheet(url: cssUrl))
 		} else {
 			os_log("Could not find code stylesheet", type: .error)
 		}
-		return cssFiles
+		return stylesheets
 	}
 
 	override func getHtml() -> String {

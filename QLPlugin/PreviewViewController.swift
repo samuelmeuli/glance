@@ -59,8 +59,8 @@ class PreviewViewController: NSViewController, QLPreviewingController {
 			// Render file preview in web view
 			webView.renderPage(
 				htmlBody: htmlBody,
-				cssFiles: renderer.getCssFiles(),
-				jsFiles: renderer.getJsFiles()
+				stylesheets: renderer.getStylesheets(),
+				scripts: renderer.getScripts()
 			)
 		} catch {
 			os_log("Error loading file preview: %s", type: .error, error.localizedDescription)

@@ -26,6 +26,9 @@
 		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E9F0D6124164D35007F1008 /* code.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* code.css */; };
 		7E9F0D7424168685007F1008 /* github-markdown-css.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7324168685007F1008 /* github-markdown-css.min.css */; };
+		7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7A24168870007F1008 /* Stylesheet.swift */; };
+		7E9F0D7E24168870007F1008 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7B24168870007F1008 /* Script.swift */; };
+		7E9F0D7F24168870007F1008 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7C24168870007F1008 /* Asset.swift */; };
 		7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01E9240D2063009505D0 /* PreviewWebView.swift */; };
 		7EAC01EC240D220B009505D0 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01EB240D220B009505D0 /* FileInfo.swift */; };
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
@@ -88,6 +91,9 @@
 		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
 		7E9F0D6024164D35007F1008 /* code.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = code.css; sourceTree = "<group>"; };
 		7E9F0D7324168685007F1008 /* github-markdown-css.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-markdown-css.min.css"; sourceTree = "<group>"; };
+		7E9F0D7A24168870007F1008 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
+		7E9F0D7B24168870007F1008 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
+		7E9F0D7C24168870007F1008 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		7EAC01E9240D2063009505D0 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
 		7EAC01EB240D220B009505D0 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		7ECC8CEE240CB4CC000D6970 /* Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +128,7 @@
 		7E1DC51C240E674300D0A061 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7E9F0D7924168870007F1008 /* Asset */,
 				7EAC01EB240D220B009505D0 /* FileInfo.swift */,
 				7E9F0D56241625A9007F1008 /* Shell.swift */,
 			);
@@ -202,6 +209,16 @@
 				7E9F0D7324168685007F1008 /* github-markdown-css.min.css */,
 			);
 			path = markdown;
+			sourceTree = "<group>";
+		};
+		7E9F0D7924168870007F1008 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				7E9F0D7A24168870007F1008 /* Stylesheet.swift */,
+				7E9F0D7B24168870007F1008 /* Script.swift */,
+				7E9F0D7C24168870007F1008 /* Asset.swift */,
+			);
+			path = Asset;
 			sourceTree = "<group>";
 		};
 		7EAC01E1240D1E94009505D0 /* Renderers */ = {
@@ -365,11 +382,14 @@
 				7EAC01EC240D220B009505D0 /* FileInfo.swift in Sources */,
 				7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */,
 				7E1DC51F240E6CE300D0A061 /* Renderer.swift in Sources */,
+				7E9F0D7F24168870007F1008 /* Asset.swift in Sources */,
 				7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */,
 				7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */,
 				7E1DC521240E6D8000D0A061 /* MarkdownRenderer.swift in Sources */,
 				7E9F0D57241625A9007F1008 /* Shell.swift in Sources */,
 				7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */,
+				7E9F0D7E24168870007F1008 /* Script.swift in Sources */,
+				7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

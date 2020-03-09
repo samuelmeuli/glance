@@ -20,29 +20,29 @@ class Renderer {
 		self.fileUrl = fileUrl
 	}
 
-	func getCssFiles() -> [URL] {
-		var cssFiles: [URL] = []
+	func getStylesheets() -> [Stylesheet] {
+		var stylesheets: [Stylesheet] = []
 
-		if let normalizeCssUrlResolved = normalizeCssUrl {
-			cssFiles.append(normalizeCssUrlResolved)
+		if let normalizeCssUrl = normalizeCssUrl {
+			stylesheets.append(Stylesheet(url: normalizeCssUrl))
 		} else {
 			os_log("Could not find normalize stylesheet", type: .error)
 		}
 
-		if let sharedCssUrlResolved = sharedCssUrl {
-			cssFiles.append(sharedCssUrlResolved)
+		if let sharedCssUrl = sharedCssUrl {
+			stylesheets.append(Stylesheet(url: sharedCssUrl))
 		} else {
 			os_log("Could not find shared stylesheet", type: .error)
 		}
 
-		return cssFiles
+		return stylesheets
 	}
 
 	func getHtml() -> String {
 		""
 	}
 
-	func getJsFiles() -> [URL] {
+	func getScripts() -> [Script] {
 		[]
 	}
 }
