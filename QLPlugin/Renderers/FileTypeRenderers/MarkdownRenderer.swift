@@ -3,7 +3,10 @@ import Foundation
 import os.log
 
 class MarkdownRenderer: Renderer {
-	private let cssUrl = Bundle.main.url(forResource: "markdown", withExtension: "css")
+	private let cssUrl = Bundle.main.url(
+		forResource: "github-markdown-css.min",
+		withExtension: "css"
+	)
 
 	override func getCssFiles() -> [URL] {
 		var cssFiles = super.getCssFiles()

@@ -3,7 +3,7 @@ import JavaScriptCore
 import os.log
 
 class CodeRenderer: Renderer {
-	private let binaryUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-0.7.0")
+	private let binaryUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
 	private let cssUrl = Bundle.main.url(forResource: "code", withExtension: "css")
 
 	override func getCssFiles() -> [URL] {

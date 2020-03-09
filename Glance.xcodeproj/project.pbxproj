@@ -22,10 +22,10 @@
 		7E8DEE97240CC47C007A1477 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE95240CC47B007A1477 /* .swiftlint.yml */; };
 		7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */; };
 		7E9F0D57241625A9007F1008 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D56241625A9007F1008 /* Shell.swift */; };
-		7E9F0D5D24164260007F1008 /* chroma-0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-0.7.0 */; };
-		7E9F0D5F24164290007F1008 /* chroma-0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
+		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E9F0D6124164D35007F1008 /* code.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* code.css */; };
-		7E9F0D6424165882007F1008 /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6324165882007F1008 /* markdown.css */; };
+		7E9F0D7424168685007F1008 /* github-markdown-css.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7324168685007F1008 /* github-markdown-css.min.css */; };
 		7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01E9240D2063009505D0 /* PreviewWebView.swift */; };
 		7EAC01EC240D220B009505D0 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01EB240D220B009505D0 /* FileInfo.swift */; };
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
@@ -61,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				7E9F0D5F24164290007F1008 /* chroma-0.7.0 in CopyFiles */,
+				7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +85,9 @@
 		7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceApp.swift; sourceTree = "<group>"; };
 		7E9F0D56241625A9007F1008 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
-		7E9F0D592416286A007F1008 /* chroma-0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-0.7.0"; sourceTree = "<group>"; };
+		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
 		7E9F0D6024164D35007F1008 /* code.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = code.css; sourceTree = "<group>"; };
-		7E9F0D6324165882007F1008 /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
+		7E9F0D7324168685007F1008 /* github-markdown-css.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-markdown-css.min.css"; sourceTree = "<group>"; };
 		7EAC01E9240D2063009505D0 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
 		7EAC01EB240D220B009505D0 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		7ECC8CEE240CB4CC000D6970 /* Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E9F0D5D24164260007F1008 /* chroma-0.7.0 in Frameworks */,
+				7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */,
 				7E1DC524240E6DCD00D0A061 /* Down in Frameworks */,
 				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
 			);
@@ -191,7 +191,7 @@
 		7E9F0D5B24162920007F1008 /* Binaries */ = {
 			isa = PBXGroup;
 			children = (
-				7E9F0D592416286A007F1008 /* chroma-0.7.0 */,
+				7E9F0D592416286A007F1008 /* chroma-v0.7.0 */,
 			);
 			path = Binaries;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 		7E9F0D622416563E007F1008 /* markdown */ = {
 			isa = PBXGroup;
 			children = (
-				7E9F0D6324165882007F1008 /* markdown.css */,
+				7E9F0D7324168685007F1008 /* github-markdown-css.min.css */,
 			);
 			path = markdown;
 			sourceTree = "<group>";
@@ -339,7 +339,7 @@
 			files = (
 				7E1DC515240E5A4B00D0A061 /* shared.css in Resources */,
 				7E35BFC42410FDD800AB0A3C /* minireset.min.css in Resources */,
-				7E9F0D6424165882007F1008 /* markdown.css in Resources */,
+				7E9F0D7424168685007F1008 /* github-markdown-css.min.css in Resources */,
 				7E9F0D6124164D35007F1008 /* code.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
