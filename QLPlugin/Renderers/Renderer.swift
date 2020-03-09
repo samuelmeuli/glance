@@ -1,50 +1,48 @@
 import Foundation
 import os.log
 
-let normalizeCssUrl = Bundle.main.url(forResource: "minireset.min", withExtension: "css")
-let sharedCssUrl = Bundle.main.url(forResource: "shared", withExtension: "css")
-
 class Renderer {
+	private let normalizeCssUrl = Bundle.main.url(
+		forResource: "minireset.min",
+		withExtension: "css"
+	)
+	private let sharedCssUrl = Bundle.main.url(forResource: "shared", withExtension: "css")
+
+	let errorHtml = "<p>Something went wrong</p>"
+
 	var fileContent: String
 	var fileExtension: String
+	var fileUrl: URL
 
-	required init(fileContent: String, fileExtension: String) {
+	required init(fileContent: String, fileExtension: String, fileUrl: URL) {
 		self.fileContent = fileContent
 		self.fileExtension = fileExtension
+		self.fileUrl = fileUrl
 	}
 
-	func getCss() -> String {
-		var normalizeCss = ""
-		var sharedCss = ""
+	func getCssFiles() -> [URL] {
+		var cssFiles: [URL] = []
 
-		do {
-			if let normalizeCssPath = normalizeCssUrl?.path {
-				normalizeCss = try String(contentsOfFile: normalizeCssPath)
-			} else {
-				os_log("Cannot find normalize stylesheet", type: .error)
-			}
-		} catch {
-			os_log("Cannot read normalize stylesheet: %s", type: .error, error.localizedDescription)
+		if let normalizeCssUrlResolved = normalizeCssUrl {
+			cssFiles.append(normalizeCssUrlResolved)
+		} else {
+			os_log("Could not find normalize stylesheet", type: .error)
 		}
 
-		do {
-			if let sharedCssPath = sharedCssUrl?.path {
-				sharedCss = try String(contentsOfFile: sharedCssPath)
-			} else {
-				os_log("Cannot find shared stylesheet", type: .error)
-			}
-		} catch {
-			os_log("Cannot read shared stylesheet: %s", type: .error, error.localizedDescription)
+		if let sharedCssUrlResolved = sharedCssUrl {
+			cssFiles.append(sharedCssUrlResolved)
+		} else {
+			os_log("Could not find shared stylesheet", type: .error)
 		}
 
-		return "\(normalizeCss)\n\n\(sharedCss)"
+		return cssFiles
 	}
 
-	func getHtml() throws -> String {
+	func getHtml() -> String {
 		""
 	}
 
-	func getJs() -> String {
-		""
+	func getJsFiles() -> [URL] {
+		[]
 	}
 }

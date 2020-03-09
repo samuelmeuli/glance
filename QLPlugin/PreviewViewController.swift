@@ -36,31 +36,31 @@ class PreviewViewController: NSViewController, QLPreviewingController {
 
 	/// Loads a HTML preview of the selected file in the `webView`
 	private func previewFile(fileUrl: URL, completionHandler handler: @escaping (Error?) -> Void) {
-		// TODO: Display errors to user
-
 		do {
 			// Retrieve information about previewed file
 			let fileInfo = try FileInfo(url: fileUrl)
 			let fileExtension = fileInfo.url.pathExtension
 
-			// Exit if file is too large to preview
-			if fileInfo.getSize() > MAX_FILE_SIZE {
-				os_log("Not loading file preview for %s: File too large", type: .info, fileUrl.path)
-				handler(nil)
-				return
-			}
-
-			// Convert file content to HTML
 			let renderer = RendererFactory.getRenderer(
 				fileContent: try fileInfo.getContent(),
-				fileExtension: fileExtension
+				fileExtension: fileExtension,
+				fileUrl: fileUrl
 			)
+
+			var htmlBody: String
+			if fileInfo.getSize() > MAX_FILE_SIZE {
+				// Exit if file is too large to preview
+				os_log("Not loading file preview for %s: File too large", type: .info, fileUrl.path)
+				htmlBody = "<p>File is too large to preview</p>"
+			} else {
+				htmlBody = renderer.getHtml()
+			}
 
 			// Render file preview in web view
 			webView.renderPage(
-				contentHtml: try renderer.getHtml(),
-				css: renderer.getCss(),
-				js: renderer.getJs()
+				htmlBody: htmlBody,
+				cssFiles: renderer.getCssFiles(),
+				jsFiles: renderer.getJsFiles()
 			)
 		} catch {
 			os_log("Error loading file preview: %s", type: .error, error.localizedDescription)

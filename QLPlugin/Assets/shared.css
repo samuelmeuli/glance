@@ -2,15 +2,23 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
 	font-size: 12px;
 	tab-size: 4;
-	padding: 10px;
+	padding: 12px;
 	line-height: 1.4;
+	overflow: auto;
+}
+
+/* Large previews (e.g. Quick Look) */
+@media screen and (min-width: 500px) {
+	body {
+		padding: 25px;
+	}
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
 	body {
-		background: #1E1E1E;
-		color: white;
+		background: #1e1e1e;
+		color: #ffffff;
 	}
 }
 

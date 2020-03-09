@@ -17,8 +17,15 @@ class PreviewWebView: WKWebView {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	func renderPage(contentHtml: String = "", css: String = "", js: String = "") {
-		let pageHtml = """
+	func renderPage(htmlBody: String = "", cssFiles: [URL] = [], jsFiles: [URL] = []) {
+		let linkTags = cssFiles
+			.map { "<link rel=\"stylesheet\" type=\"text/css\" href=\"\($0.path)\" />" }
+			.joined(separator: "\n")
+		let scriptTags = jsFiles
+			.map { "<script src=\"\($0.path)\" />" }
+			.joined(separator: "\n")
+
+		let html = """
 			<!DOCTYPE html>
 			<html>
 				<head>
@@ -27,14 +34,14 @@ class PreviewWebView: WKWebView {
 						name="viewport"
 						content="width=device-width, initial-scale=1, shrink-to-fit=no"
 					/>
-					<style>\(css)</style>
+					\(linkTags)
 				</head>
 				<body>
-					<div id="content">\(contentHtml)</div>
-					<script>\(js)</script>
+					<div id="content">\(htmlBody)</div>
+					\(scriptTags)
 				</body>
 			</html>
 		"""
-		loadHTMLString(pageHtml, baseURL: Bundle.main.resourceURL)
+		loadHTMLString(html, baseURL: Bundle.main.resourceURL)
 	}
 }

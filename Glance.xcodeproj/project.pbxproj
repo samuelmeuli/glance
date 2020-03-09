@@ -13,8 +13,6 @@
 		7E1DC524240E6DCD00D0A061 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1DC523240E6DCD00D0A061 /* Down */; };
 		7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */; };
 		7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */; };
-		7E35BFC12410F60F00AB0A3C /* prism.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BFBF2410F60F00AB0A3C /* prism.min.css */; };
-		7E35BFC22410F60F00AB0A3C /* prism.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BFC02410F60F00AB0A3C /* prism.min.js */; };
 		7E35BFC42410FDD800AB0A3C /* minireset.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BFC32410FDD800AB0A3C /* minireset.min.css */; };
 		7E59DDD7240CC3B2009A4E05 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7E59DDD6240CC3B2009A4E05 /* .gitignore */; };
 		7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6EF1FC240CC802009E4199 /* Quartz.framework */; };
@@ -23,6 +21,11 @@
 		7E8DEE96240CC47C007A1477 /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE94240CC47B007A1477 /* .swiftformat */; };
 		7E8DEE97240CC47C007A1477 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE95240CC47B007A1477 /* .swiftlint.yml */; };
 		7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */; };
+		7E9F0D57241625A9007F1008 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D56241625A9007F1008 /* Shell.swift */; };
+		7E9F0D5D24164260007F1008 /* chroma-0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-0.7.0 */; };
+		7E9F0D5F24164290007F1008 /* chroma-0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7E9F0D6124164D35007F1008 /* code.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* code.css */; };
+		7E9F0D6424165882007F1008 /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6324165882007F1008 /* markdown.css */; };
 		7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01E9240D2063009505D0 /* PreviewWebView.swift */; };
 		7EAC01EC240D220B009505D0 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01EB240D220B009505D0 /* FileInfo.swift */; };
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
@@ -52,6 +55,16 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E9F0D5E2416427B007F1008 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				7E9F0D5F24164290007F1008 /* chroma-0.7.0 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +73,6 @@
 		7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
 		7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererFactory.swift; sourceTree = "<group>"; };
 		7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRenderer.swift; sourceTree = "<group>"; };
-		7E35BFBF2410F60F00AB0A3C /* prism.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prism.min.css; sourceTree = "<group>"; };
-		7E35BFC02410F60F00AB0A3C /* prism.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prism.min.js; sourceTree = "<group>"; };
 		7E35BFC32410FDD800AB0A3C /* minireset.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = minireset.min.css; path = QLPlugin/Assets/minireset.min.css; sourceTree = SOURCE_ROOT; };
 		7E59DDD6240CC3B2009A4E05 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		7E6EF1FA240CC802009E4199 /* QLPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QLPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +83,11 @@
 		7E8DEE94240CC47B007A1477 /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		7E8DEE95240CC47B007A1477 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceApp.swift; sourceTree = "<group>"; };
+		7E9F0D56241625A9007F1008 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
+		7E9F0D592416286A007F1008 /* chroma-0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-0.7.0"; sourceTree = "<group>"; };
+		7E9F0D6024164D35007F1008 /* code.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = code.css; sourceTree = "<group>"; };
+		7E9F0D6324165882007F1008 /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
 		7EAC01E9240D2063009505D0 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
 		7EAC01EB240D220B009505D0 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		7ECC8CEE240CB4CC000D6970 /* Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9F0D5D24164260007F1008 /* chroma-0.7.0 in Frameworks */,
 				7E1DC524240E6DCD00D0A061 /* Down in Frameworks */,
 				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
 			);
@@ -106,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				7EAC01EB240D220B009505D0 /* FileInfo.swift */,
+				7E9F0D56241625A9007F1008 /* Shell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -122,26 +140,26 @@
 			isa = PBXGroup;
 			children = (
 				7E1DC52D240E9D2C00D0A061 /* code */,
+				7E9F0D622416563E007F1008 /* markdown */,
 				7E35BFC32410FDD800AB0A3C /* minireset.min.css */,
 				7E1DC50A240E5A4B00D0A061 /* shared.css */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		7E1DC52C240E9A3700D0A061 /* Subclasses */ = {
+		7E1DC52C240E9A3700D0A061 /* FileTypeRenderers */ = {
 			isa = PBXGroup;
 			children = (
 				7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */,
 				7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */,
 			);
-			path = Subclasses;
+			path = FileTypeRenderers;
 			sourceTree = "<group>";
 		};
 		7E1DC52D240E9D2C00D0A061 /* code */ = {
 			isa = PBXGroup;
 			children = (
-				7E35BFBF2410F60F00AB0A3C /* prism.min.css */,
-				7E35BFC02410F60F00AB0A3C /* prism.min.js */,
+				7E9F0D6024164D35007F1008 /* code.css */,
 			);
 			path = code;
 			sourceTree = "<group>";
@@ -149,6 +167,7 @@
 		7E6EF1FB240CC802009E4199 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E9F0D582416284A007F1008 /* chroma */,
 				7E6EF1FC240CC802009E4199 /* Quartz.framework */,
 			);
 			name = Frameworks;
@@ -158,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				7E1DC52B240E91FC00D0A061 /* Assets */,
+				7E9F0D5B24162920007F1008 /* Binaries */,
 				7E1DC51D240E68AF00D0A061 /* Views */,
 				7EAC01E1240D1E94009505D0 /* Renderers */,
 				7E1DC51C240E674300D0A061 /* Utils */,
@@ -168,12 +188,28 @@
 			path = QLPlugin;
 			sourceTree = "<group>";
 		};
+		7E9F0D5B24162920007F1008 /* Binaries */ = {
+			isa = PBXGroup;
+			children = (
+				7E9F0D592416286A007F1008 /* chroma-0.7.0 */,
+			);
+			path = Binaries;
+			sourceTree = "<group>";
+		};
+		7E9F0D622416563E007F1008 /* markdown */ = {
+			isa = PBXGroup;
+			children = (
+				7E9F0D6324165882007F1008 /* markdown.css */,
+			);
+			path = markdown;
+			sourceTree = "<group>";
+		};
 		7EAC01E1240D1E94009505D0 /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
 				7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */,
 				7E1DC51E240E6CE300D0A061 /* Renderer.swift */,
-				7E1DC52C240E9A3700D0A061 /* Subclasses */,
+				7E1DC52C240E9A3700D0A061 /* FileTypeRenderers */,
 			);
 			path = Renderers;
 			sourceTree = "<group>";
@@ -221,6 +257,7 @@
 			buildConfigurationList = 7E6EF20C240CC802009E4199 /* Build configuration list for PBXNativeTarget "QLPlugin" */;
 			buildPhases = (
 				7E6EF1F6240CC802009E4199 /* Sources */,
+				7E9F0D5E2416427B007F1008 /* CopyFiles */,
 				7E6EF1F7240CC802009E4199 /* Frameworks */,
 				7E6EF1F8240CC802009E4199 /* Resources */,
 			);
@@ -300,10 +337,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E35BFC22410F60F00AB0A3C /* prism.min.js in Resources */,
-				7E35BFC12410F60F00AB0A3C /* prism.min.css in Resources */,
 				7E1DC515240E5A4B00D0A061 /* shared.css in Resources */,
 				7E35BFC42410FDD800AB0A3C /* minireset.min.css in Resources */,
+				7E9F0D6424165882007F1008 /* markdown.css in Resources */,
+				7E9F0D6124164D35007F1008 /* code.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +368,7 @@
 				7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */,
 				7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */,
 				7E1DC521240E6D8000D0A061 /* MarkdownRenderer.swift in Sources */,
+				7E9F0D57241625A9007F1008 /* Shell.swift in Sources */,
 				7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
