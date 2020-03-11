@@ -1,0 +1,13 @@
+table {
+	border-collapse: collapse;
+}
+
+table,
+td {
+	padding: 5px 7px;
+	border: 1px solid var(--color-border);
+}
+
+tr:first-child td {
+	background: var(--color-border);
+}

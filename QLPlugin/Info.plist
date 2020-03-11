@@ -155,6 +155,11 @@
 				<string>dyn.ah62d4rv4ge81g25xsq</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
 				<string>dyn.ah62d4rv4ge80g55sq2</string>
+
+				<!-- CSV -->
+				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
+				<string>public.comma-separated-values-text</string> <!-- .csv -->
+				<string>public.tab-separated-values-text</string> <!-- .tsv -->
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<true/>

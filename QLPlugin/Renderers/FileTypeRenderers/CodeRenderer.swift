@@ -1,5 +1,4 @@
 import Foundation
-import JavaScriptCore
 import os.log
 
 class CodeRenderer: Renderer {

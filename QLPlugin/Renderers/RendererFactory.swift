@@ -8,6 +8,8 @@ class RendererFactory {
 	) -> Renderer {
 		var renderer: Renderer.Type
 		switch fileExtension {
+		case "csv", "tab", "tsv":
+			renderer = CsvRenderer.self
 		case "md", "markdown", "mdown", "mkdn", "mkd":
 			renderer = MarkdownRenderer.self
 		default:
