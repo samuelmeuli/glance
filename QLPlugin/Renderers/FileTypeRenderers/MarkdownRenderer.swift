@@ -4,7 +4,7 @@ import os.log
 
 class MarkdownRenderer: Renderer {
 	private let cssUrl = Bundle.main.url(
-		forResource: "github-markdown-css.min",
+		forResource: "markdown-github-markdown-css.min",
 		withExtension: "css"
 	)
 

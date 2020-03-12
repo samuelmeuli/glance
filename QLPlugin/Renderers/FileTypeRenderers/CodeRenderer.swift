@@ -3,7 +3,7 @@ import os.log
 
 class CodeRenderer: Renderer {
 	private let binaryUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
-	private let cssUrl = Bundle.main.url(forResource: "code", withExtension: "css")
+	private let cssUrl = Bundle.main.url(forResource: "code-chroma", withExtension: "css")
 
 	override func getStylesheets() -> [Stylesheet] {
 		var stylesheets = super.getStylesheets()
