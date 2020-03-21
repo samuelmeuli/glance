@@ -13,7 +13,6 @@
 		7E1DC524240E6DCD00D0A061 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1DC523240E6DCD00D0A061 /* Down */; };
 		7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */; };
 		7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */; };
-		7E35BFC42410FDD800AB0A3C /* minireset.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BFC32410FDD800AB0A3C /* minireset.min.css */; };
 		7E413F802418DD6200CFBB1D /* CsvRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */; };
 		7E413F822418EB4B00CFBB1D /* csv-papaparse.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */; };
 		7E413F842418EB7E00CFBB1D /* csv-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F832418EB7E00CFBB1D /* csv-main.css */; };
@@ -80,7 +79,6 @@
 		7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
 		7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererFactory.swift; sourceTree = "<group>"; };
 		7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRenderer.swift; sourceTree = "<group>"; };
-		7E35BFC32410FDD800AB0A3C /* minireset.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = minireset.min.css; path = QLPlugin/Assets/minireset.min.css; sourceTree = SOURCE_ROOT; };
 		7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvRenderer.swift; sourceTree = "<group>"; };
 		7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "csv-papaparse.min.js"; sourceTree = "<group>"; };
 		7E413F832418EB7E00CFBB1D /* csv-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "csv-main.css"; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				7E1DC52D240E9D2C00D0A061 /* code */,
 				7E413F7E2418DD3000CFBB1D /* csv */,
 				7E9F0D622416563E007F1008 /* markdown */,
-				7E35BFC32410FDD800AB0A3C /* minireset.min.css */,
 				7E1DC50A240E5A4B00D0A061 /* shared.css */,
 			);
 			path = Assets;
@@ -375,7 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1DC515240E5A4B00D0A061 /* shared.css in Resources */,
-				7E35BFC42410FDD800AB0A3C /* minireset.min.css in Resources */,
 				7E9F0D7424168685007F1008 /* markdown-github-markdown-css.min.css in Resources */,
 				7E9F0D6124164D35007F1008 /* code-chroma.css in Resources */,
 				7E413F862418EEC100CFBB1D /* csv-main.js in Resources */,
