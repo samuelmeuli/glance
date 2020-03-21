@@ -2,21 +2,20 @@ import Foundation
 import os.log
 
 class CodeRenderer: Renderer {
-	private let binaryUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
-	private let cssUrl = Bundle.main.url(forResource: "code-chroma", withExtension: "css")
+	private let chromaBinUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
 
 	override func getStylesheets() -> [Stylesheet] {
 		var stylesheets = super.getStylesheets()
-		if let cssUrl = cssUrl {
+		if let cssUrl = chromaCssUrl {
 			stylesheets.append(Stylesheet(url: cssUrl))
 		} else {
-			os_log("Could not find code stylesheet", type: .error)
+			os_log("Could not find Chroma stylesheet", type: .error)
 		}
 		return stylesheets
 	}
 
 	override func getHtml() -> String {
-		guard let binaryUrlResolved = binaryUrl else {
+		guard let binaryUrlResolved = chromaBinUrl else {
 			os_log("Could not find Chroma binary", type: .error)
 			return errorHtml
 		}

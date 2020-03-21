@@ -1,0 +1,26 @@
+/**
+ * nbtohtml
+ * v0.3.0
+ * https://github.com/samuelmeuli/nbtohtml
+ *
+ * MIT License
+ *
+ * Copyright (c) 2020 Samuel Meuli
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ * sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+ * NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+.notebook{--box-background:#f5f5f5;--box-border:#e0e0e0;--notebook-background:#ffffff;--output-error-background:#ffdddd;--prompt-color:#afafaf}@media (prefers-color-scheme:dark){.notebook{--box-background:#171717;--box-border:#575757;--notebook-background:#2b2b2b;--output-error-background:#3c0404;--prompt-color:#afafaf}}.notebook{box-sizing:border-box;background:var(--notebook-background)}.notebook h1{margin:0}.notebook ol,.notebook p,.notebook ul{margin:0 0 .8em}.notebook pre{margin:0}.notebook table{border-collapse:collapse}.notebook table,.notebook td,.notebook th{padding:4px 6px;border:0}.notebook thead tr{border-bottom:1px solid var(--box-border)}.notebook tbody tr:nth-child(even){background:var(--box-background)}.notebook .input-prompt,.notebook .output-prompt,.notebook pre{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}.notebook .input-prompt,.notebook .output-prompt,.notebook pre,.notebook table{font-size:90%}.notebook .cell+.cell{margin-top:20px}.notebook .input-wrapper,.notebook .output-wrapper{display:flex}.notebook .input-prompt,.notebook .output-prompt{width:50px}.notebook .input,.notebook .output{flex:1}.notebook .output-wrapper{margin-top:10px}.notebook .input-prompt,.notebook .output-prompt{color:var(--prompt-color)}.notebook .cell-code .input,.notebook .cell-raw .input,.notebook .output-error{padding:8px 10px;overflow-y:auto;border-radius:2px}.notebook .cell-code .input,.notebook .cell-raw .input{background:var(--box-background);border:1px solid var(--box-border)}.notebook .cell-code .input-prompt,.notebook .cell-raw .input-prompt{padding-top:8px}.notebook .output-error{background:var(--output-error-background)}.notebook .term-fg30{color:#3e424d}.notebook .term-fg31{color:#e75c58}.notebook .term-fg32{color:#00a250}.notebook .term-fg33{color:#ddb62b}.notebook .term-fg34{color:#208ffb}.notebook .term-fg35{color:#d160c4}.notebook .term-fg36{color:#60c6c8}

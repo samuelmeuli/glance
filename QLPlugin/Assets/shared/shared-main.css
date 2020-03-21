@@ -1,0 +1,39 @@
+/* Variables */
+body {
+	--color-background: #ffffff;
+	--color-border: #b5b5b5;
+	--color-text: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+	/* Dark mode */
+	body {
+		--color-background: #1e1e1e;
+		--color-border: #6f6f6f;
+		--color-text: #ffffff;
+	}
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	tab-size: 4;
+	padding: 12px;
+	line-height: 1.5;
+	overflow: auto;
+	background: var(--color-background);
+	color: var(--color-text);
+}
+
+/* Large previews (e.g. Quick Look) */
+@media screen and (min-width: 500px) {
+	body {
+		padding: 25px;
+	}
+}
+
+pre,
+code {
+	font-family: Menlo, monospace;
+	font-size: 12px;
+}

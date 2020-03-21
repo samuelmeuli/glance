@@ -28,6 +28,18 @@
 		<dict>
 			<key>QLSupportedContentTypes</key>
 			<array>
+				<!-- CSV -->
+				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
+				<string>public.comma-separated-values-text</string> <!-- .csv -->
+				<string>public.tab-separated-values-text</string> <!-- .tsv -->
+
+				<!-- Jupyter Notebook -->
+				<string>dyn.ah62d4rv4ge80w6d3r3va</string> <!-- .ipynb -->
+
+				<!-- Markdown -->
+				<string>net.daringfireball.markdown</string> <!-- .md -->
+
+				<!-- Code / plain text -->
 				<string>com.adobe.actionscript</string>
 				<string>com.adobe.coldfusion</string>
 				<string>com.adobe.jsx</string>
@@ -59,7 +71,6 @@
 				<string>com.sun.java-class</string>
 				<string>com.sun.manifest</string>
 				<string>com.unknown.lhs</string>
-				<string>net.daringfireball.markdown</string>
 				<string>org.applescript.source</string>
 				<string>org.arduino.ino-source</string>
 				<string>org.arduino.source</string>
@@ -155,11 +166,6 @@
 				<string>dyn.ah62d4rv4ge81g25xsq</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
 				<string>dyn.ah62d4rv4ge80g55sq2</string>
-
-				<!-- CSV -->
-				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
-				<string>public.comma-separated-values-text</string> <!-- .csv -->
-				<string>public.tab-separated-values-text</string> <!-- .tsv -->
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<true/>

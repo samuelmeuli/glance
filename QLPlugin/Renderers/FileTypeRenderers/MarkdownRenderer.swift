@@ -3,17 +3,17 @@ import Foundation
 import os.log
 
 class MarkdownRenderer: Renderer {
-	private let cssUrl = Bundle.main.url(
+	private let githubMarkdownCssUrl = Bundle.main.url(
 		forResource: "markdown-github-markdown-css.min",
 		withExtension: "css"
 	)
 
 	override func getStylesheets() -> [Stylesheet] {
 		var stylesheets = super.getStylesheets()
-		if let cssUrl = cssUrl {
+		if let cssUrl = githubMarkdownCssUrl {
 			stylesheets.append(Stylesheet(url: cssUrl))
 		} else {
-			os_log("Could not find Markdown stylesheet", type: .error)
+			os_log("Could not find `github-markdown-css` stylesheet", type: .error)
 		}
 		return stylesheets
 	}
