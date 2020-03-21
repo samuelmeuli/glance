@@ -28,6 +28,18 @@
 		<dict>
 			<key>QLSupportedContentTypes</key>
 			<array>
+				<!--
+					UTIs that macOS does not allow us to handle:
+
+					- .pem (public.x509-certificate)
+					- .plist (com.apple.property-list)
+					- .ts (could be TypeScript, is identified as public.mpeg-2-transport-stream)
+					- .xml (public.xml)
+				-->
+
+				<!-- Base UTI -->
+				<string>public.data</string>
+
 				<!-- CSV -->
 				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
 				<string>public.comma-separated-values-text</string> <!-- .csv -->
@@ -45,8 +57,9 @@
 				<string>com.adobe.jsx</string>
 				<string>com.apple.applescript.script</string>
 				<string>com.apple.applescript.text</string>
-				<string>com.apple.property-list</string>
+				<string>com.apple.property-list</string> <!-- .plist -->
 				<string>com.apple.rez-source</string>
+				<string>com.apple.xcode.entitlements-property-list</string> <!-- .entitlements -->
 				<string>com.barebones.bbedit.scss-source</string>
 				<string>com.barebones.bbedit.verilog-hdl-source</string>
 				<string>com.barebones.bbedit.vhdl-source</string>
@@ -70,6 +83,7 @@
 				<string>com.sun.javafx</string>
 				<string>com.sun.java-class</string>
 				<string>com.sun.manifest</string>
+				<string>com.vallettaventures.texpadm.tex</string> <!-- Texpad LaTeX (.cls, .sty, .tex) -->
 				<string>com.unknown.lhs</string>
 				<string>org.applescript.source</string>
 				<string>org.arduino.ino-source</string>
@@ -120,6 +134,7 @@
 				<string>org.ocaml.ocaml-source</string>
 				<string>org.omg.ecore</string>
 				<string>org.rdf.source</string>
+				<string>com.runningwithcrayons.alfred.appearance</string> <!-- Alfred theme (.alfredappearance) -->
 				<string>org.rust-lang.source</string>
 				<string>org.sbarex.conf</string>
 				<string>org.sbarex.dart</string>
@@ -155,6 +170,7 @@
 				<string>tk.tcl.tcl</string>
 				<string>tk.tcl.tcl-source</string>
 				<string>dyn.ah62d4rv4ge8007a</string>
+				<string>dyn.ah62d4rv4ge80255drq</string> <!-- Lockfile (.lock, e.g. for Yarn and Poetry) -->
 				<string>dyn.ah62d4rv4ge80c75p</string>
 				<string>dyn.ah62d4rv4ge80g55sq2</string>
 				<string>dyn.ah62d4rv4ge80g62</string>
@@ -162,6 +178,7 @@
 				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string>
 				<string>dyn.ah62d4rv4ge80w5pq</string>
 				<string>dyn.ah62d4rv4ge80y652</string>
+				<string>dyn.ah62d4rv4ge81e3pxr70hq3pe</string> <!-- Lockfile (.resolved, for Swift Package Manager) -->
 				<string>dyn.ah62d4rv4ge81g22</string>
 				<string>dyn.ah62d4rv4ge81g25brvuu</string>
 				<string>dyn.ah62d4rv4ge81g25xsq</string>
