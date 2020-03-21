@@ -12,7 +12,7 @@ function render(fileContent) {
 	}
 
 	// Parse CSV
-	Papa.parse(fileContent, {
+	Papa.parse(fileContent.trim(), {
 		worker: true,
 		chunk: results => appendRows(results.data),
 	});
