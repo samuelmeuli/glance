@@ -156,6 +156,7 @@
 				<string>tk.tcl.tcl-source</string>
 				<string>dyn.ah62d4rv4ge8007a</string>
 				<string>dyn.ah62d4rv4ge80c75p</string>
+				<string>dyn.ah62d4rv4ge80g55sq2</string>
 				<string>dyn.ah62d4rv4ge80g62</string>
 				<string>dyn.ah62d4rv4ge80s52</string>
 				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string>
@@ -165,7 +166,7 @@
 				<string>dyn.ah62d4rv4ge81g25brvuu</string>
 				<string>dyn.ah62d4rv4ge81g25xsq</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
-				<string>dyn.ah62d4rv4ge80g55sq2</string>
+				<string>dyn.ah62d4rv4ge81k55rru</string> <!-- .toml -->
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<true/>
