@@ -1,3 +1,118 @@
-.notebook {
-	background: none;
+/* Text */
+
+.input-prompt,
+.output-prompt {
+	font-size: 0.7em;
+	font-family: var(--font-family-monospace);
+}
+
+table {
+	font-size: 0.85em;
+}
+
+/* Cells */
+
+.cell + .cell {
+	margin-top: var(--spacing-normal);
+}
+
+.input-wrapper,
+.output-wrapper {
+	display: flex;
+}
+
+.input-prompt,
+.output-prompt {
+	width: 40px;
+}
+
+.input,
+.output {
+	flex: 1;
+}
+
+.input > :first-child,
+.output > :first-child {
+	margin-top: 0;
+}
+
+.input > :last-child,
+.output > :last-child {
+	margin-bottom: 0;
+}
+
+.output-wrapper {
+	margin-top: 10px;
+}
+
+/* Prompts (execution counts) */
+
+.input-prompt,
+.output-prompt {
+	color: var(--color-text-faded);
+}
+
+/* Boxes (e.g. for code and errors) */
+
+.cell-code .input,
+.cell-raw .input,
+.output-error {
+	padding: 8px 10px;
+	overflow-y: auto;
+	border-radius: var(--border-radius);
+}
+
+/* Grey boxes */
+.cell-code .input,
+.cell-raw .input {
+	background: var(--color-background-code-block);
+	border: 1px solid var(--color-border);
+}
+
+/* Adjust spacing of prompts next to boxes (so text is aligned) */
+.cell-code .input-prompt,
+.cell-raw .input-prompt {
+	padding-top: 8px;
+}
+
+/* Error output */
+
+/* Error box */
+.output-error {
+	background: var(--color-background-error);
+}
+
+/* Black ANSI color */
+.term-fg30 {
+	color: #3e424d;
+}
+
+/* Red ANSI color */
+.term-fg31 {
+	color: #e75c58;
+}
+
+/* Green ANSI color */
+.term-fg32 {
+	color: #00a250;
+}
+
+/* Yellow ANSI color */
+.term-fg33 {
+	color: #ddb62b;
+}
+
+/* Blue ANSI color */
+.term-fg34 {
+	color: #208ffb;
+}
+
+/* Magenta ANSI color */
+.term-fg35 {
+	color: #d160c4;
+}
+
+/* Cyan ANSI color */
+.term-fg36 {
+	color: #60c6c8;
 }

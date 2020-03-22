@@ -13,20 +13,9 @@ class JupyterRenderer: Renderer {
 	)
 	private let katexJsUrl = Bundle.main.url(forResource: "jupyter-katex.min", withExtension: "js")
 	private let nbtohtmlBinUrl = Bundle.main.url(forAuxiliaryExecutable: "nbtohtml-v0.3.0")
-	private let nbtohtmlCssUrl = Bundle.main.url(
-		forResource: "jupyter-nbtohtml.min",
-		withExtension: "css"
-	)
 
 	override func getStylesheets() -> [Stylesheet] {
 		var stylesheets = super.getStylesheets()
-
-		// nbtohtml stylesheet (general Jupyter Notebook styles, e.g. for cells and prompts)
-		if let nbtohtmlCssUrl = nbtohtmlCssUrl {
-			stylesheets.append(Stylesheet(url: nbtohtmlCssUrl))
-		} else {
-			os_log("Could not find nbtohtml stylesheet", type: .error)
-		}
 
 		// Main Jupyter stylesheet (overrides and additions for nbtohtml stylesheet)
 		if let mainCssUrl = mainCssUrl {

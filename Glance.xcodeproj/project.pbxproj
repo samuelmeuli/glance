@@ -15,7 +15,6 @@
 		7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */; };
 		7E413F802418DD6200CFBB1D /* CsvRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */; };
 		7E413F822418EB4B00CFBB1D /* csv-papaparse.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */; };
-		7E413F842418EB7E00CFBB1D /* csv-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F832418EB7E00CFBB1D /* csv-main.css */; };
 		7E413F862418EEC100CFBB1D /* csv-main.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F852418EEC100CFBB1D /* csv-main.js */; };
 		7E59DDD7240CC3B2009A4E05 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7E59DDD6240CC3B2009A4E05 /* .gitignore */; };
 		7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6EF1FC240CC802009E4199 /* Quartz.framework */; };
@@ -28,7 +27,6 @@
 		7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E9F0D6124164D35007F1008 /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* shared-chroma.css */; };
-		7E9F0D7424168685007F1008 /* markdown-github-markdown-css.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7324168685007F1008 /* markdown-github-markdown-css.min.css */; };
 		7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7A24168870007F1008 /* Stylesheet.swift */; };
 		7E9F0D7E24168870007F1008 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7B24168870007F1008 /* Script.swift */; };
 		7E9F0D7F24168870007F1008 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7C24168870007F1008 /* Asset.swift */; };
@@ -98,10 +96,10 @@
 		7EB749152422851D007265A4 /* KaTeX_Math-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D62422851C007265A4 /* KaTeX_Math-BoldItalic.ttf */; };
 		7EB7491924228549007265A4 /* JupyterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7491824228549007265A4 /* JupyterRenderer.swift */; };
 		7EB7491F242287AB007265A4 /* jupyter-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7491E242287AB007265A4 /* jupyter-main.css */; };
-		7EB7492124228AB1007265A4 /* jupyter-nbtohtml.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7492024228AB1007265A4 /* jupyter-nbtohtml.min.css */; };
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
 		7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF3240CB4CC000D6970 /* ViewController.swift */; };
 		7ECC8CF6240CB4CC000D6970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */; };
+		7ECC93C8242780C000E23D99 /* markdown-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC93C7242780BF00E23D99 /* markdown-main.css */; };
 		7EFC750E2426413E0095E5D0 /* nbtohtml-v0.3.0 in Resources */ = {isa = PBXBuildFile; fileRef = 7EFC750D2426413E0095E5D0 /* nbtohtml-v0.3.0 */; };
 		7EFC750F242641470095E5D0 /* nbtohtml-v0.3.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7EFC750D2426413E0095E5D0 /* nbtohtml-v0.3.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7EFC75102426414B0095E5D0 /* nbtohtml-v0.3.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFC750D2426413E0095E5D0 /* nbtohtml-v0.3.0 */; };
@@ -151,7 +149,6 @@
 		7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRenderer.swift; sourceTree = "<group>"; };
 		7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvRenderer.swift; sourceTree = "<group>"; };
 		7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "csv-papaparse.min.js"; sourceTree = "<group>"; };
-		7E413F832418EB7E00CFBB1D /* csv-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "csv-main.css"; sourceTree = "<group>"; };
 		7E413F852418EEC100CFBB1D /* csv-main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "csv-main.js"; sourceTree = "<group>"; };
 		7E59DDD6240CC3B2009A4E05 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		7E6EF1FA240CC802009E4199 /* QLPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QLPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +163,6 @@
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
 		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
 		7E9F0D6024164D35007F1008 /* shared-chroma.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
-		7E9F0D7324168685007F1008 /* markdown-github-markdown-css.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-github-markdown-css.min.css"; sourceTree = "<group>"; };
 		7E9F0D7A24168870007F1008 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		7E9F0D7B24168870007F1008 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		7E9F0D7C24168870007F1008 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -236,13 +232,13 @@
 		7EB748D62422851C007265A4 /* KaTeX_Math-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.ttf"; sourceTree = "<group>"; };
 		7EB7491824228549007265A4 /* JupyterRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JupyterRenderer.swift; sourceTree = "<group>"; };
 		7EB7491E242287AB007265A4 /* jupyter-main.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "jupyter-main.css"; sourceTree = "<group>"; };
-		7EB7492024228AB1007265A4 /* jupyter-nbtohtml.min.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "jupyter-nbtohtml.min.css"; sourceTree = "<group>"; };
 		7ECC8CEE240CB4CC000D6970 /* Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ECC8CF3240CB4CC000D6970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECC8CFA240CB4CC000D6970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ECC8CFB240CB4CC000D6970 /* Glance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Glance.entitlements; sourceTree = "<group>"; };
+		7ECC93C7242780BF00E23D99 /* markdown-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-main.css"; sourceTree = "<group>"; };
 		7EFC750D2426413E0095E5D0 /* nbtohtml-v0.3.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "nbtohtml-v0.3.0"; sourceTree = "<group>"; };
 		7EFC7511242648CF0095E5D0 /* jupyter-katex-auto-render.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jupyter-katex-auto-render.min.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,7 +288,7 @@
 			children = (
 				7E413F7E2418DD3000CFBB1D /* csv */,
 				7EB7489224228374007265A4 /* jupyter */,
-				7E9F0D622416563E007F1008 /* markdown */,
+				7ECC93C6242780BF00E23D99 /* markdown */,
 				7E1DC52D240E9D2C00D0A061 /* shared */,
 			);
 			path = Assets;
@@ -321,7 +317,6 @@
 		7E413F7E2418DD3000CFBB1D /* csv */ = {
 			isa = PBXGroup;
 			children = (
-				7E413F832418EB7E00CFBB1D /* csv-main.css */,
 				7E413F852418EEC100CFBB1D /* csv-main.js */,
 				7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */,
 			);
@@ -361,14 +356,6 @@
 			path = Binaries;
 			sourceTree = "<group>";
 		};
-		7E9F0D622416563E007F1008 /* markdown */ = {
-			isa = PBXGroup;
-			children = (
-				7E9F0D7324168685007F1008 /* markdown-github-markdown-css.min.css */,
-			);
-			path = markdown;
-			sourceTree = "<group>";
-		};
 		7E9F0D7924168870007F1008 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,7 +384,6 @@
 				7EB7489524228374007265A4 /* jupyter-katex.min.js */,
 				7EFC7511242648CF0095E5D0 /* jupyter-katex-auto-render.min.js */,
 				7EB7491E242287AB007265A4 /* jupyter-main.css */,
-				7EB7492024228AB1007265A4 /* jupyter-nbtohtml.min.css */,
 			);
 			name = jupyter;
 			path = QLPlugin/Assets/jupyter;
@@ -505,6 +491,14 @@
 			path = Glance;
 			sourceTree = "<group>";
 		};
+		7ECC93C6242780BF00E23D99 /* markdown */ = {
+			isa = PBXGroup;
+			children = (
+				7ECC93C7242780BF00E23D99 /* markdown-main.css */,
+			);
+			path = markdown;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,20 +602,19 @@
 				7EB749102422851D007265A4 /* KaTeX_Size4-Regular.ttf in Resources */,
 				7EB7490F2422851D007265A4 /* KaTeX_Caligraphic-Regular.ttf in Resources */,
 				7EB748DF2422851D007265A4 /* KaTeX_Size3-Regular.woff2 in Resources */,
-				7EB7492124228AB1007265A4 /* jupyter-nbtohtml.min.css in Resources */,
 				7EB748FF2422851D007265A4 /* KaTeX_Math-Italic.ttf in Resources */,
 				7EB749082422851D007265A4 /* KaTeX_Main-Italic.woff2 in Resources */,
 				7EB748E62422851D007265A4 /* KaTeX_Typewriter-Regular.ttf in Resources */,
 				7EB748E92422851D007265A4 /* KaTeX_SansSerif-Bold.woff2 in Resources */,
 				7EB7489824228374007265A4 /* jupyter-katex.min.js in Resources */,
 				7EB748DC2422851D007265A4 /* KaTeX_AMS-Regular.ttf in Resources */,
+				7ECC93C8242780C000E23D99 /* markdown-main.css in Resources */,
 				7EB749022422851D007265A4 /* KaTeX_Main-Italic.ttf in Resources */,
 				7EB748EE2422851D007265A4 /* KaTeX_SansSerif-Bold.ttf in Resources */,
 				7EB748E32422851D007265A4 /* KaTeX_Size3-Regular.ttf in Resources */,
 				7EB7489724228374007265A4 /* jupyter-katex.min.css in Resources */,
 				7EB748FA2422851D007265A4 /* KaTeX_Size4-Regular.woff in Resources */,
 				7EB749052422851D007265A4 /* KaTeX_Fraktur-Bold.ttf in Resources */,
-				7E9F0D7424168685007F1008 /* markdown-github-markdown-css.min.css in Resources */,
 				7EB7491F242287AB007265A4 /* jupyter-main.css in Resources */,
 				7EB748E52422851D007265A4 /* KaTeX_Caligraphic-Regular.woff in Resources */,
 				7EB749072422851D007265A4 /* KaTeX_SansSerif-Italic.woff in Resources */,
@@ -659,7 +652,6 @@
 				7EB749092422851D007265A4 /* KaTeX_Size1-Regular.woff2 in Resources */,
 				7EB749112422851D007265A4 /* KaTeX_Size2-Regular.woff2 in Resources */,
 				7EB7490C2422851D007265A4 /* KaTeX_SansSerif-Regular.ttf in Resources */,
-				7E413F842418EB7E00CFBB1D /* csv-main.css in Resources */,
 				7EB748F02422851D007265A4 /* KaTeX_Main-Bold.ttf in Resources */,
 				7EB748E22422851D007265A4 /* KaTeX_Caligraphic-Bold.woff2 in Resources */,
 				7EB748F52422851D007265A4 /* KaTeX_Main-Regular.ttf in Resources */,

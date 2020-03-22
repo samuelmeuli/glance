@@ -1,0 +1,48 @@
+code {
+	margin: 0;
+	padding: 0.2em 0.4em;
+	font-size: 85%;
+	background-color: var(--color-background-code-inline);
+	border-radius: var(--border-radius);
+}
+
+pre > code {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	white-space: pre;
+	word-break: normal;
+	background: transparent;
+	border: 0;
+}
+
+.chroma {
+	margin-bottom: var(--spacing-normal);
+}
+
+.chroma pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.chroma pre,
+pre {
+	padding: var(--spacing-normal);
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: var(--color-background-code-block);
+	border-radius: var(--border-radius);
+}
+
+pre code {
+	display: inline;
+	max-width: auto;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: initial;
+	border: 0;
+}

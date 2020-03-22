@@ -2,22 +2,11 @@ import Foundation
 import os.log
 
 class CsvRenderer: Renderer {
-	private let mainCssUrl = Bundle.main.url(forResource: "csv-main", withExtension: "css")
 	private let mainJsUrl = Bundle.main.url(forResource: "csv-main", withExtension: "js")
 	private let papaParseJsUrl = Bundle.main.url(
 		forResource: "csv-papaparse.min",
 		withExtension: "js"
 	)
-
-	override func getStylesheets() -> [Stylesheet] {
-		var stylesheets = super.getStylesheets()
-		if let cssUrl = mainCssUrl {
-			stylesheets.append(Stylesheet(url: cssUrl))
-		} else {
-			os_log("Could not find main CSV stylesheet", type: .error)
-		}
-		return stylesheets
-	}
 
 	override func getHtml() -> String {
 		"<div id=\"csv-preview\"></div>"

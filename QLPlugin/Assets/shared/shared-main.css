@@ -1,39 +1,219 @@
 /* Variables */
+
+/* General */
 body {
-	--color-background: #ffffff;
-	--color-border: #b5b5b5;
+	--border-radius: 3px;
+	--color-background-body: #ffffff;
+	--color-background-code-block: #f6f8fa;
+	--color-background-code-inline: #f3f3f3;
+	--color-background-error: #ffdddd;
+	--color-border: #dfe2e5;
+	--color-border-heading: #eaecef;
 	--color-text: #000000;
+	--color-text-faded: #6a737d;
+	--color-text-link: #0366d6;
+	--font-family-monospace: "Menlo", monospace;
+	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica", sans-serif;
+	--font-weight-bold: 600;
+	--padding-body: 0;
+	--spacing-normal: 16px;
+	--spacing-large: 24px;
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
-	/* Dark mode */
 	body {
-		--color-background: #1e1e1e;
+		--color-background-body: #1e1e1e;
+		--color-background-code-block: #111111;
+		--color-background-code-inline: #090909;
+		--color-background-error: #3c0404;
 		--color-border: #6f6f6f;
+		--color-border-heading: #6a6a6a;
 		--color-text: #ffffff;
+		--color-text-faded: #9b9b9b;
+		--color-text-link: #4ba0ff;
 	}
-}
-
-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
-	font-size: 13px;
-	tab-size: 4;
-	padding: 12px;
-	line-height: 1.5;
-	overflow: auto;
-	background: var(--color-background);
-	color: var(--color-text);
 }
 
 /* Large previews (e.g. Quick Look) */
-@media screen and (min-width: 500px) {
+@media (min-width: 500px) {
 	body {
-		padding: 25px;
+		--padding-body: var(--spacing-normal);
 	}
 }
 
+/* Global styles */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: var(--padding-body);
+	overflow: auto;
+	color: var(--color-text);
+	font-size: 14px;
+	font-family: var(--font-family-sans-serif);
+	line-height: 1.5;
+	tab-size: 4;
+	background: var(--color-background-body);
+}
+
+/* General element spacing */
+blockquote,
+ol,
+ul,
+p,
 pre,
-code {
-	font-family: Menlo, monospace;
-	font-size: 12px;
+table {
+	margin-top: 0;
+	margin-bottom: var(--spacing-normal);
+}
+
+body > :first-child {
+	margin-top: 0;
+}
+
+body > :last-child {
+	margin-bottom: 0;
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: var(--spacing-large);
+	margin-bottom: var(--spacing-normal);
+	font-weight: var(--font-weight-bold);
+}
+
+h1,
+h2 {
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid var(--color-border-heading);
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h5 {
+	font-size: 0.875em;
+}
+
+h6 {
+	color: var(--color-text-faded);
+	font-size: 0.85em;
+}
+
+a {
+	color: var(--color-text-link);
+	text-decoration: none;
+}
+
+/* Lists */
+
+ol,
+ul {
+	padding-left: 2em;
+}
+
+ol ol,
+ul ol {
+	list-style-type: lower-roman;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+	list-style-type: lower-alpha;
+}
+
+li + li {
+	margin-top: 0.25em;
+}
+
+li > p {
+	margin-top: var(--spacing-normal);
+}
+
+/* Horizontal rules */
+
+hr {
+	margin: 24px 0;
+	border: 0;
+	border-bottom: 4px solid var(--color-border-heading);
+}
+
+/* Quotes */
+
+blockquote {
+	margin-right: 0;
+	margin-left: 0;
+	padding: 0 1em;
+	color: var(--color-text-faded);
+	border-left: 0.25em solid var(--color-border);
+}
+
+blockquote > :first-child {
+	margin-top: 0;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
+/* Code */
+
+code,
+pre {
+	font-size: 0.85em;
+	font-family: var(--font-family-monospace);
+}
+
+/* Tables */
+
+table {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+	font-weight: var(--font-weight-bold);
+}
+
+td,
+th,
+tr {
+	border: 1px solid var(--color-border);
+}
+
+td,
+th {
+	padding: 6px 13px;
+}
+
+table tr:nth-child(even) {
+	background-color: var(--color-background-code-block);
 }
