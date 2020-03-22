@@ -5,10 +5,17 @@ function render(fileContent) {
 	previewDiv.append(tableElement);
 
 	function appendRows(rows) {
+		if (!tableElement.innerHTML) {
+			const header = rows.shift();
+			tableElement.insertAdjacentHTML(
+				"beforeend",
+				`<tr>${header.map(column => `<th>${column}</th>`).join("\n")}</tr>`,
+			);
+		}
 		const rowElements = rows
 			.map(row => `<tr>${row.map(column => `<td>${column}</td>`).join("\n")}</tr>`)
 			.join("\n");
-		tableElement.innerHTML = rowElements;
+		tableElement.insertAdjacentHTML("beforeend", rowElements);
 	}
 
 	// Parse CSV
