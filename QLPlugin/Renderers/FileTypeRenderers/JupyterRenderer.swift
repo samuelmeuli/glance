@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftExec
 
 class JupyterRenderer: Renderer {
 	private let mainCssUrl = Bundle.main.url(forResource: "jupyter-main", withExtension: "css")
@@ -47,17 +48,20 @@ class JupyterRenderer: Renderer {
 			return errorHtml
 		}
 
-		let (status, stdout, stderr) = Shell.run(
-			url: nbtohtmlBinUrl,
-			arguments: ["convert", fileUrl.path]
-		)
-
-		guard status == 0 else {
-			os_log("nbtohtml returned exit code %s: %s", type: .error, status, stderr ?? "")
+		do {
+			let result = try exec(
+				program: nbtohtmlBinUrl.path,
+				arguments: ["convert", fileUrl.path]
+			)
+			return result.stdout ?? ""
+		} catch {
+			os_log(
+				"Error trying to convert Jupyter Notebook to HTML using nbtohtml: %s",
+				type: .error,
+				error.localizedDescription
+			)
 			return errorHtml
 		}
-
-		return stdout ?? ""
 	}
 
 	override func getScripts() -> [Script] {

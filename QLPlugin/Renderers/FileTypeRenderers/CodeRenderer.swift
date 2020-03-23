@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftExec
 
 let dotfileLexers = [
 	".dockerignore": "bash",
@@ -45,21 +46,24 @@ class CodeRenderer: Renderer {
 	}
 
 	override func getHtml() -> String {
-		guard let binaryUrlResolved = chromaBinUrl else {
+		guard let chromaBinUrl = chromaBinUrl else {
 			os_log("Could not find Chroma binary", type: .error)
 			return errorHtml
 		}
 
-		let (status, stdout, stderr) = Shell.run(
-			url: binaryUrlResolved,
-			arguments: [fileUrl.path, "--html", "--html-only", "--lexer", getLexer()]
-		)
-
-		guard status == 0 else {
-			os_log("Chroma returned exit code %s: %s", type: .error, status, stderr ?? "")
+		do {
+			let result = try exec(
+				program: chromaBinUrl.path,
+				arguments: [fileUrl.path, "--html", "--html-only", "--lexer", getLexer()]
+			)
+			return result.stdout ?? ""
+		} catch {
+			os_log(
+				"Error trying to convert source code to HTML using Chroma: %s",
+				type: .error,
+				error.localizedDescription
+			)
 			return errorHtml
 		}
-
-		return stdout ?? ""
 	}
 }

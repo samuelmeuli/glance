@@ -20,10 +20,10 @@
 		7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6EF1FC240CC802009E4199 /* Quartz.framework */; };
 		7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */; };
 		7E6EF208240CC802009E4199 /* QLPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E74113E242981B90088C9B3 /* SwiftExec in Frameworks */ = {isa = PBXBuildFile; productRef = 7E74113D242981B90088C9B3 /* SwiftExec */; };
 		7E8DEE96240CC47C007A1477 /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE94240CC47B007A1477 /* .swiftformat */; };
 		7E8DEE97240CC47C007A1477 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEE95240CC47B007A1477 /* .swiftlint.yml */; };
 		7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */; };
-		7E9F0D57241625A9007F1008 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D56241625A9007F1008 /* Shell.swift */; };
 		7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E9F0D6124164D35007F1008 /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* shared-chroma.css */; };
@@ -159,7 +159,6 @@
 		7E8DEE94240CC47B007A1477 /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		7E8DEE95240CC47B007A1477 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceApp.swift; sourceTree = "<group>"; };
-		7E9F0D56241625A9007F1008 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
 		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
 		7E9F0D6024164D35007F1008 /* shared-chroma.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
@@ -249,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */,
+				7E74113E242981B90088C9B3 /* SwiftExec in Frameworks */,
 				7E1DC524240E6DCD00D0A061 /* Down in Frameworks */,
 				7EFC75102426414B0095E5D0 /* nbtohtml-v0.3.0 in Frameworks */,
 				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
@@ -270,7 +270,6 @@
 			children = (
 				7E9F0D7924168870007F1008 /* Asset */,
 				7EAC01EB240D220B009505D0 /* FileInfo.swift */,
-				7E9F0D56241625A9007F1008 /* Shell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -518,6 +517,7 @@
 			name = QLPlugin;
 			packageProductDependencies = (
 				7E1DC523240E6DCD00D0A061 /* Down */,
+				7E74113D242981B90088C9B3 /* SwiftExec */,
 			);
 			productName = QLPlugin;
 			productReference = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */;
@@ -571,6 +571,7 @@
 			mainGroup = 7ECC8CE5240CB4CC000D6970;
 			packageReferences = (
 				7E1DC522240E6DCD00D0A061 /* XCRemoteSwiftPackageReference "Down" */,
+				7E74113C242981B90088C9B3 /* XCRemoteSwiftPackageReference "swift-exec" */,
 			);
 			productRefGroup = 7ECC8CEF240CB4CC000D6970 /* Products */;
 			projectDirPath = "";
@@ -687,7 +688,6 @@
 				7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */,
 				7E1DC521240E6D8000D0A061 /* MarkdownRenderer.swift in Sources */,
 				7E413F802418DD6200CFBB1D /* CsvRenderer.swift in Sources */,
-				7E9F0D57241625A9007F1008 /* Shell.swift in Sources */,
 				7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */,
 				7E9F0D7E24168870007F1008 /* Script.swift in Sources */,
 				7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */,
@@ -951,6 +951,14 @@
 				minimumVersion = 0.9.1;
 			};
 		};
+		7E74113C242981B90088C9B3 /* XCRemoteSwiftPackageReference "swift-exec" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/samuelmeuli/swift-exec.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -958,6 +966,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E1DC522240E6DCD00D0A061 /* XCRemoteSwiftPackageReference "Down" */;
 			productName = Down;
+		};
+		7E74113D242981B90088C9B3 /* SwiftExec */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E74113C242981B90088C9B3 /* XCRemoteSwiftPackageReference "swift-exec" */;
+			productName = SwiftExec;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
