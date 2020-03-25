@@ -31,7 +31,7 @@
 		7E9F0D7E24168870007F1008 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7B24168870007F1008 /* Script.swift */; };
 		7E9F0D7F24168870007F1008 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7C24168870007F1008 /* Asset.swift */; };
 		7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01E9240D2063009505D0 /* PreviewWebView.swift */; };
-		7EAC01EC240D220B009505D0 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01EB240D220B009505D0 /* FileInfo.swift */; };
+		7EAC01EC240D220B009505D0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01EB240D220B009505D0 /* File.swift */; };
 		7EB7489724228374007265A4 /* jupyter-katex.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489424228374007265A4 /* jupyter-katex.min.css */; };
 		7EB7489824228374007265A4 /* jupyter-katex.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489524228374007265A4 /* jupyter-katex.min.js */; };
 		7EB748DA2422851D007265A4 /* KaTeX_Typewriter-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489B2422851C007265A4 /* KaTeX_Typewriter-Regular.woff2 */; };
@@ -166,7 +166,7 @@
 		7E9F0D7B24168870007F1008 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		7E9F0D7C24168870007F1008 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		7EAC01E9240D2063009505D0 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
-		7EAC01EB240D220B009505D0 /* FileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
+		7EAC01EB240D220B009505D0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7EB7489424228374007265A4 /* jupyter-katex.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jupyter-katex.min.css"; sourceTree = "<group>"; };
 		7EB7489524228374007265A4 /* jupyter-katex.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jupyter-katex.min.js"; sourceTree = "<group>"; };
 		7EB7489B2422851C007265A4 /* KaTeX_Typewriter-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.woff2"; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				7E9F0D7924168870007F1008 /* Asset */,
-				7EAC01EB240D220B009505D0 /* FileInfo.swift */,
+				7EAC01EB240D220B009505D0 /* File.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -679,7 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EAC01EC240D220B009505D0 /* FileInfo.swift in Sources */,
+				7EAC01EC240D220B009505D0 /* File.swift in Sources */,
 				7EB7491924228549007265A4 /* JupyterRenderer.swift in Sources */,
 				7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */,
 				7E1DC51F240E6CE300D0A061 /* Renderer.swift in Sources */,

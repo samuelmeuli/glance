@@ -1,24 +1,31 @@
 import Foundation
 import os.log
 
+enum RendererError {
+	case resourceNotFoundError(resourceName: String)
+}
+
+extension RendererError: LocalizedError {
+	public var errorDescription: String? {
+		switch self {
+		case let .resourceNotFoundError(resourceName):
+			return NSLocalizedString(
+				"Could not find renderer resource \"\(resourceName)\"",
+				comment: ""
+			)
+		}
+	}
+}
+
 class Renderer {
 	/// Stylesheet with CSS that applies to all file types
 	private let sharedCssUrl = Bundle.main.url(forResource: "shared-main", withExtension: "css")
-	let chromaCssUrl = Bundle.main.url(forResource: "shared-chroma", withExtension: "css")
 
-	/// HTML of error message which can be displayed instead of the file content's HTML
-	/// representation
-	let errorHtml = "<p>Something went wrong</p>"
+	/// File to be rendered
+	var file: File
 
-	/// Information about the file to be rendered
-	var fileContent: String
-	var fileExtension: String
-	var fileUrl: URL
-
-	required init(fileContent: String, fileExtension: String, fileUrl: URL) {
-		self.fileContent = fileContent
-		self.fileExtension = fileExtension
-		self.fileUrl = fileUrl
+	required init(file: File) {
+		self.file = file
 	}
 
 	func getStylesheets() -> [Stylesheet] {
@@ -33,11 +40,7 @@ class Renderer {
 		return stylesheets
 	}
 
-	func getHtml() -> String {
-		""
-	}
+	func getHtml() throws -> String { "" }
 
-	func getScripts() -> [Script] {
-		[]
-	}
+	func getScripts() throws -> [Script] { [] }
 }

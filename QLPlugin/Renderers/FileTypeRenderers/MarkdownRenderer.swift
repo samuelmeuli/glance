@@ -18,7 +18,15 @@ class MarkdownRenderer: Renderer {
 		return stylesheets
 	}
 
-	override func getHtml() -> String {
+	override func getHtml() throws -> String {
+		var fileContent: String
+		do {
+			fileContent = try file.read()
+		} catch {
+			os_log("Could not read Markdown file: %s", type: .error, error.localizedDescription)
+			throw error
+		}
+
 		let down = Down(markdownString: fileContent)
 
 		do {
@@ -30,7 +38,7 @@ class MarkdownRenderer: Renderer {
 				type: .error,
 				error.localizedDescription
 			)
-			return errorHtml
+			throw error
 		}
 	}
 }

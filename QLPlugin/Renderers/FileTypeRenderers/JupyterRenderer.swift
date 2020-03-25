@@ -4,6 +4,7 @@ import SwiftExec
 
 class JupyterRenderer: Renderer {
 	private let mainCssUrl = Bundle.main.url(forResource: "jupyter-main", withExtension: "css")
+	private let chromaCssUrl = Bundle.main.url(forResource: "shared-chroma", withExtension: "css")
 	private let katexAutoRenderJsUrl = Bundle.main.url(
 		forResource: "jupyter-katex-auto-render.min",
 		withExtension: "js"
@@ -42,16 +43,16 @@ class JupyterRenderer: Renderer {
 		return stylesheets
 	}
 
-	override func getHtml() -> String {
+	override func getHtml() throws -> String {
 		guard let nbtohtmlBinUrl = nbtohtmlBinUrl else {
 			os_log("Could not find nbtohtml binary", type: .error)
-			return errorHtml
+			throw RendererError.resourceNotFoundError(resourceName: "nbtohtml binary")
 		}
 
 		do {
 			let result = try exec(
 				program: nbtohtmlBinUrl.path,
-				arguments: ["convert", fileUrl.path]
+				arguments: ["convert", file.path]
 			)
 			return result.stdout ?? ""
 		} catch {
@@ -60,12 +61,12 @@ class JupyterRenderer: Renderer {
 				type: .error,
 				error.localizedDescription
 			)
-			return errorHtml
+			throw error
 		}
 	}
 
-	override func getScripts() -> [Script] {
-		var scripts = super.getScripts()
+	override func getScripts() throws -> [Script] {
+		var scripts = try! super.getScripts()
 
 		// KaTeX library (for rendering LaTeX math)
 		if let katexJsUrl = katexJsUrl {

@@ -5,6 +5,22 @@ import Quartz
 /// Max size of files to render: 100000 B = 100 KB
 let MAX_FILE_SIZE = 100_000
 
+enum PreviewError: Error {
+	case fileSizeError(path: String, fileSize: UInt64)
+}
+
+extension PreviewError: LocalizedError {
+	public var errorDescription: String? {
+		switch self {
+		case let .fileSizeError(path, fileSize):
+			return NSLocalizedString(
+				"File \(path) is too large to preview (\(fileSize) > \(MAX_FILE_SIZE))",
+				comment: ""
+			)
+		}
+	}
+}
+
 class PreviewViewController: NSViewController, QLPreviewingController {
 	var webView: PreviewWebView!
 
@@ -30,43 +46,45 @@ class PreviewViewController: NSViewController, QLPreviewingController {
 		at fileUrl: URL,
 		completionHandler handler: @escaping (Error?) -> Void
 	) {
+		// Render preview
 		os_log("Generating Quick Look preview for file %s", type: .debug, fileUrl.path)
 		previewFile(fileUrl: fileUrl, completionHandler: handler)
 	}
 
-	/// Loads a HTML preview of the selected file in the `webView`
+	/// Loads an HTML preview of the selected file into the `webView`
 	private func previewFile(fileUrl: URL, completionHandler handler: @escaping (Error?) -> Void) {
+		// Retrieve information about previewed file
+		var file: File
 		do {
-			// Retrieve information about previewed file
-			let fileInfo = try FileInfo(url: fileUrl)
-			let fileExtension = fileInfo.url.pathExtension
-
-			let renderer = RendererFactory.getRenderer(
-				fileContent: try fileInfo.getContent(),
-				fileExtension: fileExtension,
-				fileUrl: fileUrl
-			)
-
-			var htmlBody: String
-			if fileInfo.getSize() > MAX_FILE_SIZE {
-				// Exit if file is too large to preview
-				os_log("Not loading file preview for %s: File too large", type: .info, fileUrl.path)
-				htmlBody = "<p>File is too large to preview</p>"
-			} else {
-				htmlBody = renderer.getHtml()
-			}
-
-			// Render file preview in web view
-			webView.renderPage(
-				htmlBody: htmlBody,
-				stylesheets: renderer.getStylesheets(),
-				scripts: renderer.getScripts()
-			)
+			file = try File(url: fileUrl)
 		} catch {
-			os_log("Error loading file preview: %s", type: .error, error.localizedDescription)
+			handler(error)
+			return
 		}
 
-		// Stop displaying Quick Look loading spinner
+		// Initialize renderer object for the file type
+		let renderer = RendererFactory.getRenderer(file: file)
+
+		// Abort and display error to user if file is too large to preview
+		if !file.isDirectory, file.size > MAX_FILE_SIZE {
+			os_log("Not loading file preview for %s: File too large", type: .info, fileUrl.path)
+			handler(PreviewError.fileSizeError(path: file.path, fileSize: file.size))
+			return
+		}
+
+		// Render file preview
+		do {
+			webView.renderPage(
+				htmlBody: try renderer.getHtml(),
+				stylesheets: renderer.getStylesheets(),
+				scripts: try renderer.getScripts()
+			)
+		} catch {
+			handler(error)
+			return
+		}
+
+		// Hide Quick Look loading spinner
 		handler(nil)
 	}
 }

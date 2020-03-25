@@ -2,14 +2,10 @@ import Foundation
 
 /// Returns an instance of the `Renderer` subclass that should be used for the provided file type
 class RendererFactory {
-	static func getRenderer(
-		fileContent: String,
-		fileExtension: String,
-		fileUrl: URL
-	) -> Renderer {
+	static func getRenderer(file: File) -> Renderer {
 		var renderer: Renderer.Type
 
-		switch fileExtension {
+		switch file.url.pathExtension {
 		case "csv", "tab", "tsv":
 			renderer = CsvRenderer.self
 		case "md", "markdown", "mdown", "mkdn", "mkd":
@@ -20,10 +16,6 @@ class RendererFactory {
 			renderer = CodeRenderer.self
 		}
 
-		return renderer.init(
-			fileContent: fileContent,
-			fileExtension: fileExtension,
-			fileUrl: fileUrl
-		)
+		return renderer.init(file: file)
 	}
 }

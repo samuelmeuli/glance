@@ -22,16 +22,17 @@ let fileExtensionLexers = [
 
 class CodeRenderer: Renderer {
 	private let chromaBinUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
+	private let chromaCssUrl = Bundle.main.url(forResource: "shared-chroma", withExtension: "css")
 
 	/// Returns the name of the Chroma lexer to use for the file. This is determined based on the
 	/// file name/extension
 	private func getLexer() -> String {
-		if fileExtension.isEmpty {
+		if file.url.pathExtension.isEmpty {
 			// Dotfile
-			return dotfileLexers[fileUrl.lastPathComponent, default: "autodetect"]
+			return dotfileLexers[file.url.lastPathComponent, default: "autodetect"]
 		} else {
 			// File with extension
-			return fileExtensionLexers[fileExtension, default: "autodetect"]
+			return fileExtensionLexers[file.url.pathExtension, default: "autodetect"]
 		}
 	}
 
@@ -45,16 +46,16 @@ class CodeRenderer: Renderer {
 		return stylesheets
 	}
 
-	override func getHtml() -> String {
+	override func getHtml() throws -> String {
 		guard let chromaBinUrl = chromaBinUrl else {
-			os_log("Could not find Chroma binary", type: .error)
-			return errorHtml
+			os_log("Could not find nbtohtml binary", type: .error)
+			throw RendererError.resourceNotFoundError(resourceName: "nbtohtml binary")
 		}
 
 		do {
 			let result = try exec(
 				program: chromaBinUrl.path,
-				arguments: [fileUrl.path, "--html", "--html-only", "--lexer", getLexer()]
+				arguments: [file.path, "--html", "--html-only", "--lexer", getLexer()]
 			)
 			return result.stdout ?? ""
 		} catch {
@@ -63,7 +64,7 @@ class CodeRenderer: Renderer {
 				type: .error,
 				error.localizedDescription
 			)
-			return errorHtml
+			throw error
 		}
 	}
 }

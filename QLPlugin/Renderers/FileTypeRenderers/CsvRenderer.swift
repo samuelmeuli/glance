@@ -8,12 +8,20 @@ class CsvRenderer: Renderer {
 		withExtension: "js"
 	)
 
-	override func getHtml() -> String {
+	override func getHtml() throws -> String {
 		"<div id=\"csv-preview\"></div>"
 	}
 
-	override func getScripts() -> [Script] {
-		var scripts = super.getScripts()
+	override func getScripts() throws -> [Script] {
+		var fileContent: String
+		do {
+			fileContent = try file.read()
+		} catch {
+			os_log("Could not read CSV file: %s", type: .error, error.localizedDescription)
+			throw error
+		}
+
+		var scripts = try! super.getScripts()
 
 		// Papa Parse library (for parsing CSV files)
 		if let papaParsejsUrl = papaParseJsUrl {
