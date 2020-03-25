@@ -181,6 +181,11 @@ blockquote > :last-child {
 	margin-bottom: 0;
 }
 
+/* Images */
+img {
+	max-width: 100%;
+}
+
 /* Code */
 
 code,
