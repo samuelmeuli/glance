@@ -14,7 +14,7 @@ class JupyterRenderer: Renderer {
 		withExtension: "css"
 	)
 	private let katexJsUrl = Bundle.main.url(forResource: "jupyter-katex.min", withExtension: "js")
-	private let nbtohtmlBinUrl = Bundle.main.url(forAuxiliaryExecutable: "nbtohtml-v0.3.0")
+	private let nbtohtmlBinUrl = Bundle.main.url(forAuxiliaryExecutable: "nbtohtml-v0.4.0")
 
 	override func getStylesheets() -> [Stylesheet] {
 		var stylesheets = super.getStylesheets()
