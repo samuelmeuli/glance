@@ -1,7 +1,7 @@
 import Foundation
 import WebKit
 
-class PreviewWebView: WKWebView {
+class PreviewWebView: OfflineWebView {
 	init(frame: CGRect) {
 		// Web view configuration
 		let preferences = WKPreferences()
@@ -10,11 +10,6 @@ class PreviewWebView: WKWebView {
 		configuration.preferences = preferences
 
 		super.init(frame: frame, configuration: configuration)
-	}
-
-	@available(*, unavailable)
-	required init?(coder _: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
 	}
 
 	func renderPage(htmlBody: String = "", stylesheets: [Stylesheet] = [], scripts: [Script] = []) {
@@ -26,21 +21,21 @@ class PreviewWebView: WKWebView {
 			.joined(separator: "\n")
 
 		let html = """
-			<!DOCTYPE html>
-			<html>
-				<head>
-					<meta charset="utf-8" />
-					<meta
-						name="viewport"
-						content="width=device-width, initial-scale=1, shrink-to-fit=no"
-					/>
-					\(linkTags)
-				</head>
-				<body>
-					\(htmlBody)
-					\(scriptTags)
-				</body>
-			</html>
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<meta charset="utf-8" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1, shrink-to-fit=no"
+				/>
+				\(linkTags)
+			</head>
+			<body>
+				\(htmlBody)
+				\(scriptTags)
+			</body>
+		</html>
 		"""
 		loadHTMLString(html, baseURL: Bundle.main.resourceURL)
 	}

@@ -23,6 +23,7 @@
 		7E8DEDB0242BEF3700F2DABB /* nbtohtml-v0.4.0 in Resources */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; };
 		7E8DEDB1242BEF3900F2DABB /* nbtohtml-v0.4.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E8DEDB2242BEF4500F2DABB /* nbtohtml-v0.4.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; };
+		7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */; };
 		7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */; };
 		7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -153,6 +154,7 @@
 		7E6EF204240CC802009E4199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6EF205240CC802009E4199 /* QLPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLPlugin.entitlements; sourceTree = "<group>"; };
 		7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "nbtohtml-v0.4.0"; sourceTree = "<group>"; };
+		7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineWebView.swift; sourceTree = "<group>"; };
 		7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceApp.swift; sourceTree = "<group>"; };
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
 		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				7EAC01E9240D2063009505D0 /* PreviewWebView.swift */,
+				7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 			files = (
 				7EAC01EC240D220B009505D0 /* File.swift in Sources */,
 				7EB7491924228549007265A4 /* JupyterRenderer.swift in Sources */,
+				7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */,
 				7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */,
 				7E1DC51F240E6CE300D0A061 /* Renderer.swift in Sources */,
 				7E9F0D7F24168870007F1008 /* Asset.swift in Sources */,

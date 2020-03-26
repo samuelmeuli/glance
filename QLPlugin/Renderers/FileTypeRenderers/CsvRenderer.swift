@@ -39,8 +39,8 @@ class CsvRenderer: Renderer {
 
 		// Main script (for calling the render function with the previewed file's content)
 		scripts.append(Script(content: """
-			const fileContent = `\(fileContent.replacingOccurrences(of: "`", with: "\\`"))`;
-			render(fileContent);
+		const fileContent = `\(fileContent.replacingOccurrences(of: "`", with: "\\`"))`;
+		render(fileContent);
 		"""))
 
 		return scripts

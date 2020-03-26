@@ -83,9 +83,7 @@ class JupyterRenderer: Renderer {
 		}
 
 		// Main script (calls the KaTeX auto-renderer)
-		scripts.append(Script(content: """
-			renderMathInElement(document.body);
-		"""))
+		scripts.append(Script(content: "renderMathInElement(document.body);"))
 
 		return scripts
 	}
