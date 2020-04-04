@@ -12,6 +12,12 @@ class PreviewWebView: OfflineWebView {
 		super.init(frame: frame, configuration: configuration)
 	}
 
+	override func viewWillDraw() {
+		super.viewWillDraw()
+		layer?.borderWidth = 1
+		layer?.borderColor = NSColor.tertiaryLabelColor.cgColor
+	}
+
 	func renderPage(htmlBody: String = "", stylesheets: [Stylesheet] = [], scripts: [Script] = []) {
 		let linkTags = stylesheets
 			.map { $0.getHtml() }
