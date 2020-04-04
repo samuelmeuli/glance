@@ -22,6 +22,7 @@ extension PreviewError: LocalizedError {
 }
 
 class PreviewViewController: NSViewController, QLPreviewingController {
+	let stats = Stats()
 	var webView: PreviewWebView!
 
 	override func loadView() {
@@ -83,6 +84,9 @@ class PreviewViewController: NSViewController, QLPreviewingController {
 			handler(error)
 			return
 		}
+
+		// Update stats
+		stats.increaseStatsCounts(fileExtension: file.url.pathExtension)
 
 		// Hide Quick Look loading spinner
 		handler(nil)

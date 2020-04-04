@@ -9,6 +9,9 @@
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Glance" customModuleProvider="target"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
@@ -357,9 +360,6 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Glance" customModuleProvider="target"/>
-                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
@@ -611,10 +611,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dz1-sz-nAq" userLabel="StatsStackView">
-                                        <rect key="frame" x="390" y="0.0" width="181" height="72"/>
+                                        <rect key="frame" x="372" y="0.0" width="217" height="72"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Yh-l8-rvY">
-                                                <rect key="frame" x="57" y="56" width="66" height="16"/>
+                                                <rect key="frame" x="75" y="56" width="66" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Statistics" id="qiP-Pn-cMc">
                                                     <font key="font" metaFont="systemBold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -622,10 +622,10 @@
                                                 </textFieldCell>
                                             </textField>
                                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afk-fh-XgE">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="217" height="48"/>
                                                 <subviews>
                                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="da6-33-OGP" userLabel="TotalStatsStackView">
-                                                        <rect key="frame" x="19" y="32" width="142" height="16"/>
+                                                        <rect key="frame" x="27" y="32" width="162" height="16"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LUe-rf-Owc" userLabel="TotalStatsTitleLabel">
                                                                 <rect key="frame" x="-2" y="0.0" width="102" height="16"/>
@@ -636,8 +636,8 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yGx-F0-e5D" userLabel="TotalStatsValueLabel">
-                                                                <rect key="frame" x="101" y="0.0" width="43" height="16"/>
-                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="12345" id="JL3-3P-Yxr">
+                                                                <rect key="frame" x="101" y="0.0" width="63" height="16"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Loading…" id="JL3-3P-Yxr">
                                                                     <font key="font" usesAppearanceFont="YES"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -653,10 +653,10 @@
                                                             <real value="3.4028234663852886e+38"/>
                                                         </customSpacing>
                                                     </stackView>
-                                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-RW-Kg6" userLabel="DayStatsStackView">
-                                                        <rect key="frame" x="3" y="16" width="174" height="16"/>
+                                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wy-RW-Kg6" userLabel="DailyAverageStatsStackView">
+                                                        <rect key="frame" x="3" y="16" width="211" height="16"/>
                                                         <subviews>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="omt-dE-KUE" userLabel="DayStatsTitleLabel">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="omt-dE-KUE" userLabel="DailyAverageStatsTitleLabel">
                                                                 <rect key="frame" x="-2" y="0.0" width="151" height="16"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Files previewed per day:" id="6f5-Pl-oeT">
                                                                     <font key="font" metaFont="system"/>
@@ -664,9 +664,9 @@
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-Uk-dEk" userLabel="DayStatsValueLabel">
-                                                                <rect key="frame" x="150" y="0.0" width="26" height="16"/>
-                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="123" id="ypw-HQ-kBj">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-Uk-dEk" userLabel="DailyAverageStatsValueLabel">
+                                                                <rect key="frame" x="150" y="0.0" width="63" height="16"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Loading…" id="ypw-HQ-kBj">
                                                                     <font key="font" usesAppearanceFont="YES"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -682,10 +682,10 @@
                                                             <real value="3.4028234663852886e+38"/>
                                                         </customSpacing>
                                                     </stackView>
-                                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNx-8x-m0H" userLabel="TypeStatsStackView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="181" height="16"/>
+                                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNx-8x-m0H" userLabel="FileTypeStatsStackView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="217" height="16"/>
                                                         <subviews>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WKO-s1-5yd" userLabel="TypeStatsTitleLabel">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WKO-s1-5yd" userLabel="FileTypeStatsTitleLabel">
                                                                 <rect key="frame" x="-2" y="0.0" width="157" height="16"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Most previewed file type:" id="NlY-wl-YmZ">
                                                                     <font key="font" metaFont="system"/>
@@ -693,9 +693,9 @@
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RLD-y9-mYb" userLabel="TypeStatsValueLabel">
-                                                                <rect key="frame" x="156" y="0.0" width="27" height="16"/>
-                                                                <textFieldCell key="cell" lineBreakMode="clipping" title=".md" id="Cv2-gy-Dbn">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RLD-y9-mYb" userLabel="FileTypeStatsValueLabel">
+                                                                <rect key="frame" x="156" y="0.0" width="63" height="16"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Loading…" id="Cv2-gy-Dbn">
                                                                     <font key="font" usesAppearanceFont="YES"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -759,6 +759,11 @@
                             <constraint firstAttribute="bottom" secondItem="lK5-aM-ivS" secondAttribute="bottom" constant="40" id="xiv-ze-oty"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dailyAverageStatsValueLabel" destination="hrf-Uk-dEk" id="y8F-vb-tT0"/>
+                        <outlet property="fileTypeStatsValueLabel" destination="RLD-y9-mYb" id="Fja-aF-ZaQ"/>
+                        <outlet property="totalStatsValueLabel" destination="yGx-F0-e5D" id="qgj-sc-mdk"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
