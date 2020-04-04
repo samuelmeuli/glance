@@ -338,17 +338,17 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="aQC-g2-T8m"/>
-                                        <menuItem title="Website" id="f7A-U6-axm">
+                                        <menuItem title="Website" id="f7A-U6-axm" customClass="WebsiteMenuItem" customModule="Glance" customModuleProvider="target">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="License" id="wVn-yr-O4t">
+                                        <menuItem title="License" id="wVn-yr-O4t" customClass="LicenseMenuItem" customModule="Glance" customModuleProvider="target">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Privacy Policy" id="d7Z-4V-EBe">
+                                        <menuItem title="Privacy Policy" id="d7Z-4V-EBe" customClass="PrivacyPolicyMenuItem" customModule="Glance" customModuleProvider="target">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="Hdo-k9-f9B"/>
-                                        <menuItem title="Submit Feedback" id="z27-18-yV2">
+                                        <menuItem title="Submit Feedback" id="z27-18-yV2" customClass="FeedbackMenuItem" customModule="Glance" customModuleProvider="target">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
