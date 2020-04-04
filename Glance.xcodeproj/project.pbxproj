@@ -12,6 +12,7 @@
 		7E1DC521240E6D8000D0A061 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */; };
 		7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */; };
 		7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */; };
+		7E21C88B2438818100818EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */; };
 		7E413F802418DD6200CFBB1D /* CsvRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */; };
 		7E413F822418EB4B00CFBB1D /* csv-papaparse.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */; };
 		7E413F862418EEC100CFBB1D /* csv-main.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F852418EEC100CFBB1D /* csv-main.js */; };
@@ -24,7 +25,6 @@
 		7E8DEDB1242BEF3900F2DABB /* nbtohtml-v0.4.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E8DEDB2242BEF4500F2DABB /* nbtohtml-v0.4.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; };
 		7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */; };
-		7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */; };
 		7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E9F0D6124164D35007F1008 /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* shared-chroma.css */; };
@@ -145,6 +145,7 @@
 		7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
 		7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererFactory.swift; sourceTree = "<group>"; };
 		7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRenderer.swift; sourceTree = "<group>"; };
+		7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvRenderer.swift; sourceTree = "<group>"; };
 		7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "csv-papaparse.min.js"; sourceTree = "<group>"; };
 		7E413F852418EEC100CFBB1D /* csv-main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "csv-main.js"; sourceTree = "<group>"; };
@@ -155,7 +156,6 @@
 		7E6EF205240CC802009E4199 /* QLPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLPlugin.entitlements; sourceTree = "<group>"; };
 		7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "nbtohtml-v0.4.0"; sourceTree = "<group>"; };
 		7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineWebView.swift; sourceTree = "<group>"; };
-		7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceApp.swift; sourceTree = "<group>"; };
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
 		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
 		7E9F0D6024164D35007F1008 /* shared-chroma.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
@@ -461,6 +461,7 @@
 				7ECC8CEF240CB4CC000D6970 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		7ECC8CEF240CB4CC000D6970 /* Products */ = {
 			isa = PBXGroup;
@@ -474,12 +475,12 @@
 		7ECC8CF0240CB4CC000D6970 /* Glance */ = {
 			isa = PBXGroup;
 			children = (
-				7E8DEE98240CC4D2007A1477 /* GlanceApp.swift */,
 				7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */,
 				7ECC8CF3240CB4CC000D6970 /* ViewController.swift */,
 				7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */,
 				7ECC8CFA240CB4CC000D6970 /* Info.plist */,
 				7ECC8CFB240CB4CC000D6970 /* Glance.entitlements */,
+				7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */,
 			);
 			path = Glance;
 			sourceTree = "<group>";
@@ -660,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ECC8CF6240CB4CC000D6970 /* Assets.xcassets in Resources */,
+				7E21C88B2438818100818EB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +692,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E8DEE99240CC4D2007A1477 /* GlanceApp.swift in Sources */,
 				7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */,
 				7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */,
 			);
