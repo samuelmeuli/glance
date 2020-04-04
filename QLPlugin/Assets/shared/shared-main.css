@@ -15,7 +15,6 @@ body {
 	--font-family-monospace: "Menlo", monospace;
 	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica", sans-serif;
 	--font-weight-bold: 600;
-	--padding-body: 0;
 	--spacing-normal: 16px;
 	--spacing-large: 24px;
 }
@@ -35,13 +34,6 @@ body {
 	}
 }
 
-/* Large previews (e.g. Quick Look) */
-@media (min-width: 500px) {
-	body {
-		--padding-body: var(--spacing-normal);
-	}
-}
-
 /* Global styles */
 
 * {
@@ -49,7 +41,7 @@ body {
 }
 
 body {
-	padding: var(--padding-body);
+	padding: var(--spacing-normal);
 	overflow: auto;
 	color: var(--color-text);
 	font-size: 14px;
@@ -93,7 +85,7 @@ h6 {
 
 h1,
 h2 {
-	padding-bottom: 0.3em;
+	padding-bottom: 0.1em;
 	border-bottom: 1px solid var(--color-border-heading);
 }
 
