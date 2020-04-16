@@ -1,0 +1,25 @@
+name: Lint
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          brew install mint
+          mint install nicklockwood/SwiftFormat@0.44.7
+          mint install realm/SwiftLint@0.39.2
+
+      - name: Lint
+        run: |
+          swiftlint --quiet --strict
+          swiftformat --lint .
