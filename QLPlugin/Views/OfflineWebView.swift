@@ -2,7 +2,7 @@ import Cocoa
 import os.log
 import WebKit
 
-// Block all URLs except those starting with "file://"
+// Block all URLs except those starting with "blob:" or "file://"
 let blockRules = """
 [
 	{
@@ -11,6 +11,14 @@ let blockRules = """
 		},
 		"action": {
 			"type": "block"
+		}
+	},
+	{
+		"trigger": {
+			"url-filter": "blob:.*"
+		},
+		"action": {
+			"type": "ignore-previous-rules"
 		}
 	},
 	{
