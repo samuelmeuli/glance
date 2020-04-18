@@ -8,24 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7E04C0472448E0BD00B54ED1 /* UsageStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04C0462448E0BD00B54ED1 /* UsageStackView.swift */; };
-		7E1DC515240E5A4B00D0A061 /* shared-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DC50A240E5A4B00D0A061 /* shared-main.css */; };
-		7E1DC51F240E6CE300D0A061 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC51E240E6CE300D0A061 /* Renderer.swift */; };
-		7E1DC521240E6D8000D0A061 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */; };
-		7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */; };
-		7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */; };
+		7E1DC51F240E6CE300D0A061 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */; };
+		7E1DC521240E6D8000D0A061 /* MarkdownPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC520240E6D8000D0A061 /* MarkdownPreviewVC.swift */; };
+		7E1DC528240E6F4A00D0A061 /* PreviewVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC527240E6F4A00D0A061 /* PreviewVCFactory.swift */; };
+		7E1DC52A240E6FDE00D0A061 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC529240E6FDE00D0A061 /* CodePreviewVC.swift */; };
 		7E21C88B2438818100818EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */; };
 		7E21C88D2438CAA500818EB2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C88C2438CAA500818EB2 /* Stats.swift */; };
 		7E21C88E24390BE400818EB2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C88C2438CAA500818EB2 /* Stats.swift */; };
 		7E21C89124390E3100818EB2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C89024390E3100818EB2 /* Date.swift */; };
-		7E413F802418DD6200CFBB1D /* CsvRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */; };
-		7E413F822418EB4B00CFBB1D /* csv-papaparse.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */; };
-		7E413F862418EEC100CFBB1D /* csv-main.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E413F852418EEC100CFBB1D /* csv-main.js */; };
+		7E413F802418DD6200CFBB1D /* CSVPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* CSVPreviewVC.swift */; };
 		7E458AED2439176B0091BD0F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C89024390E3100818EB2 /* Date.swift */; };
 		7E458AF0243944810091BD0F /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E458AEF243944810091BD0F /* URL.swift */; };
 		7E458AF22439474E0091BD0F /* NSMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E458AF12439474E0091BD0F /* NSMenuItem.swift */; };
 		7E458AF52439481F0091BD0F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E458AF42439481F0091BD0F /* Menu.swift */; };
+		7E616BB0244997420043F7AB /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 7E616BAF244997420043F7AB /* SwiftCSV */; };
+		7E616BB2244998650043F7AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E616BB1244998650043F7AB /* MainVC.xib */; };
 		7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6EF1FC240CC802009E4199 /* Quartz.framework */; };
-		7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */; };
+		7E6EF200240CC802009E4199 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EF1FF240CC802009E4199 /* MainVC.swift */; };
 		7E6EF208240CC802009E4199 /* QLPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7E8DEDAB242BE1FA00F2DABB /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8DEDAA242BE1FA00F2DABB /* Down */; };
 		7E8DEDAE242BE20F00F2DABB /* SwiftExec in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8DEDAD242BE20F00F2DABB /* SwiftExec */; };
@@ -33,83 +32,88 @@
 		7E8DEDB1242BEF3900F2DABB /* nbtohtml-v0.4.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E8DEDB2242BEF4500F2DABB /* nbtohtml-v0.4.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; };
 		7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */; };
+		7E9282112449AB7100DDCFBF /* TablePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9282102449AB7100DDCFBF /* TablePreviewView.xib */; };
+		7E9282132449ACF900DDCFBF /* TablePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9282122449ACF900DDCFBF /* TablePreviewView.swift */; };
+		7E9282152449B96600DDCFBF /* LoadableNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9282142449B96600DDCFBF /* LoadableNib.swift */; };
 		7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 		7E9F0D5F24164290007F1008 /* chroma-v0.7.0 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		7E9F0D6124164D35007F1008 /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F0D6024164D35007F1008 /* shared-chroma.css */; };
 		7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7A24168870007F1008 /* Stylesheet.swift */; };
 		7E9F0D7E24168870007F1008 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7B24168870007F1008 /* Script.swift */; };
-		7E9F0D7F24168870007F1008 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7C24168870007F1008 /* Asset.swift */; };
-		7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01E9240D2063009505D0 /* PreviewWebView.swift */; };
+		7E9F0D7F24168870007F1008 /* WebAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F0D7C24168870007F1008 /* WebAsset.swift */; };
+		7EAC01EA240D2063009505D0 /* WebPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01E9240D2063009505D0 /* WebPreviewVC.swift */; };
 		7EAC01EC240D220B009505D0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC01EB240D220B009505D0 /* File.swift */; };
-		7EB7489724228374007265A4 /* jupyter-katex.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489424228374007265A4 /* jupyter-katex.min.css */; };
-		7EB7489824228374007265A4 /* jupyter-katex.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489524228374007265A4 /* jupyter-katex.min.js */; };
-		7EB748DA2422851D007265A4 /* KaTeX_Typewriter-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489B2422851C007265A4 /* KaTeX_Typewriter-Regular.woff2 */; };
-		7EB748DB2422851D007265A4 /* KaTeX_Main-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489C2422851C007265A4 /* KaTeX_Main-Regular.woff */; };
-		7EB748DC2422851D007265A4 /* KaTeX_AMS-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489D2422851C007265A4 /* KaTeX_AMS-Regular.ttf */; };
-		7EB748DD2422851D007265A4 /* KaTeX_Main-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489E2422851C007265A4 /* KaTeX_Main-BoldItalic.woff */; };
-		7EB748DE2422851D007265A4 /* KaTeX_AMS-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7489F2422851C007265A4 /* KaTeX_AMS-Regular.woff2 */; };
-		7EB748DF2422851D007265A4 /* KaTeX_Size3-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A02422851C007265A4 /* KaTeX_Size3-Regular.woff2 */; };
-		7EB748E02422851D007265A4 /* KaTeX_Main-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A12422851C007265A4 /* KaTeX_Main-Regular.woff2 */; };
-		7EB748E12422851D007265A4 /* KaTeX_Script-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A22422851C007265A4 /* KaTeX_Script-Regular.ttf */; };
-		7EB748E22422851D007265A4 /* KaTeX_Caligraphic-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A32422851C007265A4 /* KaTeX_Caligraphic-Bold.woff2 */; };
-		7EB748E32422851D007265A4 /* KaTeX_Size3-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A42422851C007265A4 /* KaTeX_Size3-Regular.ttf */; };
-		7EB748E42422851D007265A4 /* KaTeX_Typewriter-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A52422851C007265A4 /* KaTeX_Typewriter-Regular.woff */; };
-		7EB748E52422851D007265A4 /* KaTeX_Caligraphic-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A62422851C007265A4 /* KaTeX_Caligraphic-Regular.woff */; };
-		7EB748E62422851D007265A4 /* KaTeX_Typewriter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A72422851C007265A4 /* KaTeX_Typewriter-Regular.ttf */; };
-		7EB748E72422851D007265A4 /* KaTeX_Main-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A82422851C007265A4 /* KaTeX_Main-Italic.woff */; };
-		7EB748E82422851D007265A4 /* KaTeX_Caligraphic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748A92422851C007265A4 /* KaTeX_Caligraphic-Bold.ttf */; };
-		7EB748E92422851D007265A4 /* KaTeX_SansSerif-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748AA2422851C007265A4 /* KaTeX_SansSerif-Bold.woff2 */; };
-		7EB748EA2422851D007265A4 /* KaTeX_Math-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748AB2422851C007265A4 /* KaTeX_Math-Italic.woff2 */; };
-		7EB748EB2422851D007265A4 /* KaTeX_Size4-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748AC2422851C007265A4 /* KaTeX_Size4-Regular.woff2 */; };
-		7EB748EC2422851D007265A4 /* KaTeX_Fraktur-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748AD2422851C007265A4 /* KaTeX_Fraktur-Bold.woff2 */; };
-		7EB748ED2422851D007265A4 /* KaTeX_Caligraphic-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748AE2422851C007265A4 /* KaTeX_Caligraphic-Bold.woff */; };
-		7EB748EE2422851D007265A4 /* KaTeX_SansSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748AF2422851C007265A4 /* KaTeX_SansSerif-Bold.ttf */; };
-		7EB748EF2422851D007265A4 /* KaTeX_Fraktur-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B02422851C007265A4 /* KaTeX_Fraktur-Regular.woff */; };
-		7EB748F02422851D007265A4 /* KaTeX_Main-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B12422851C007265A4 /* KaTeX_Main-Bold.ttf */; };
-		7EB748F12422851D007265A4 /* KaTeX_SansSerif-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B22422851C007265A4 /* KaTeX_SansSerif-Italic.woff2 */; };
-		7EB748F22422851D007265A4 /* KaTeX_Main-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B32422851C007265A4 /* KaTeX_Main-Bold.woff2 */; };
-		7EB748F32422851D007265A4 /* KaTeX_SansSerif-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B42422851C007265A4 /* KaTeX_SansSerif-Regular.woff2 */; };
-		7EB748F42422851D007265A4 /* KaTeX_Fraktur-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B52422851C007265A4 /* KaTeX_Fraktur-Regular.ttf */; };
-		7EB748F52422851D007265A4 /* KaTeX_Main-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B62422851C007265A4 /* KaTeX_Main-Regular.ttf */; };
-		7EB748F62422851D007265A4 /* KaTeX_Size2-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B72422851C007265A4 /* KaTeX_Size2-Regular.woff */; };
-		7EB748F72422851D007265A4 /* KaTeX_Main-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B82422851C007265A4 /* KaTeX_Main-BoldItalic.woff2 */; };
-		7EB748F82422851D007265A4 /* KaTeX_Fraktur-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748B92422851C007265A4 /* KaTeX_Fraktur-Regular.woff2 */; };
-		7EB748F92422851D007265A4 /* KaTeX_Script-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748BA2422851C007265A4 /* KaTeX_Script-Regular.woff2 */; };
-		7EB748FA2422851D007265A4 /* KaTeX_Size4-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748BB2422851C007265A4 /* KaTeX_Size4-Regular.woff */; };
-		7EB748FB2422851D007265A4 /* KaTeX_Size3-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748BC2422851C007265A4 /* KaTeX_Size3-Regular.woff */; };
-		7EB748FC2422851D007265A4 /* KaTeX_AMS-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748BD2422851C007265A4 /* KaTeX_AMS-Regular.woff */; };
-		7EB748FD2422851D007265A4 /* KaTeX_Main-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748BE2422851C007265A4 /* KaTeX_Main-Bold.woff */; };
-		7EB748FE2422851D007265A4 /* KaTeX_SansSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748BF2422851C007265A4 /* KaTeX_SansSerif-Italic.ttf */; };
-		7EB748FF2422851D007265A4 /* KaTeX_Math-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C02422851C007265A4 /* KaTeX_Math-Italic.ttf */; };
-		7EB749002422851D007265A4 /* KaTeX_Size1-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C12422851C007265A4 /* KaTeX_Size1-Regular.woff */; };
-		7EB749012422851D007265A4 /* KaTeX_SansSerif-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C22422851C007265A4 /* KaTeX_SansSerif-Regular.woff */; };
-		7EB749022422851D007265A4 /* KaTeX_Main-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C32422851C007265A4 /* KaTeX_Main-Italic.ttf */; };
-		7EB749032422851D007265A4 /* KaTeX_Math-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C42422851C007265A4 /* KaTeX_Math-Italic.woff */; };
-		7EB749042422851D007265A4 /* KaTeX_Math-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C52422851C007265A4 /* KaTeX_Math-BoldItalic.woff2 */; };
-		7EB749052422851D007265A4 /* KaTeX_Fraktur-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C62422851C007265A4 /* KaTeX_Fraktur-Bold.ttf */; };
-		7EB749062422851D007265A4 /* KaTeX_Size2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C72422851C007265A4 /* KaTeX_Size2-Regular.ttf */; };
-		7EB749072422851D007265A4 /* KaTeX_SansSerif-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C82422851C007265A4 /* KaTeX_SansSerif-Italic.woff */; };
-		7EB749082422851D007265A4 /* KaTeX_Main-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748C92422851C007265A4 /* KaTeX_Main-Italic.woff2 */; };
-		7EB749092422851D007265A4 /* KaTeX_Size1-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748CA2422851C007265A4 /* KaTeX_Size1-Regular.woff2 */; };
-		7EB7490A2422851D007265A4 /* KaTeX_Fraktur-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748CB2422851C007265A4 /* KaTeX_Fraktur-Bold.woff */; };
-		7EB7490B2422851D007265A4 /* KaTeX_Script-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748CC2422851C007265A4 /* KaTeX_Script-Regular.woff */; };
-		7EB7490C2422851D007265A4 /* KaTeX_SansSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748CD2422851C007265A4 /* KaTeX_SansSerif-Regular.ttf */; };
-		7EB7490D2422851D007265A4 /* KaTeX_Math-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748CE2422851C007265A4 /* KaTeX_Math-BoldItalic.woff */; };
-		7EB7490E2422851D007265A4 /* KaTeX_Size1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748CF2422851C007265A4 /* KaTeX_Size1-Regular.ttf */; };
-		7EB7490F2422851D007265A4 /* KaTeX_Caligraphic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D02422851C007265A4 /* KaTeX_Caligraphic-Regular.ttf */; };
-		7EB749102422851D007265A4 /* KaTeX_Size4-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D12422851C007265A4 /* KaTeX_Size4-Regular.ttf */; };
-		7EB749112422851D007265A4 /* KaTeX_Size2-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D22422851C007265A4 /* KaTeX_Size2-Regular.woff2 */; };
-		7EB749122422851D007265A4 /* KaTeX_Caligraphic-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D32422851C007265A4 /* KaTeX_Caligraphic-Regular.woff2 */; };
-		7EB749132422851D007265A4 /* KaTeX_Main-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D42422851C007265A4 /* KaTeX_Main-BoldItalic.ttf */; };
-		7EB749142422851D007265A4 /* KaTeX_SansSerif-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D52422851C007265A4 /* KaTeX_SansSerif-Bold.woff */; };
-		7EB749152422851D007265A4 /* KaTeX_Math-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB748D62422851C007265A4 /* KaTeX_Math-BoldItalic.ttf */; };
-		7EB7491924228549007265A4 /* JupyterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7491824228549007265A4 /* JupyterRenderer.swift */; };
-		7EB7491F242287AB007265A4 /* jupyter-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7491E242287AB007265A4 /* jupyter-main.css */; };
+		7EB3643F244B03CC00D7F96F /* jupyter-katex.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363F7244B03CC00D7F96F /* jupyter-katex.min.js */; };
+		7EB36440244B03CC00D7F96F /* jupyter-katex-auto-render.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363F8244B03CC00D7F96F /* jupyter-katex-auto-render.min.js */; };
+		7EB36441244B03CC00D7F96F /* jupyter-katex.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363F9244B03CC00D7F96F /* jupyter-katex.min.css */; };
+		7EB36442244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363FB244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff2 */; };
+		7EB36443244B03CC00D7F96F /* KaTeX_Main-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363FC244B03CC00D7F96F /* KaTeX_Main-Regular.woff */; };
+		7EB36444244B03CC00D7F96F /* KaTeX_AMS-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363FD244B03CC00D7F96F /* KaTeX_AMS-Regular.ttf */; };
+		7EB36445244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363FE244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff */; };
+		7EB36446244B03CC00D7F96F /* KaTeX_AMS-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB363FF244B03CC00D7F96F /* KaTeX_AMS-Regular.woff2 */; };
+		7EB36447244B03CC00D7F96F /* KaTeX_Size3-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36400244B03CC00D7F96F /* KaTeX_Size3-Regular.woff2 */; };
+		7EB36448244B03CC00D7F96F /* KaTeX_Main-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36401244B03CC00D7F96F /* KaTeX_Main-Regular.woff2 */; };
+		7EB36449244B03CC00D7F96F /* KaTeX_Script-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36402244B03CC00D7F96F /* KaTeX_Script-Regular.ttf */; };
+		7EB3644A244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36403244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff2 */; };
+		7EB3644B244B03CC00D7F96F /* KaTeX_Size3-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36404244B03CC00D7F96F /* KaTeX_Size3-Regular.ttf */; };
+		7EB3644C244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36405244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff */; };
+		7EB3644D244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36406244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff */; };
+		7EB3644E244B03CC00D7F96F /* KaTeX_Typewriter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36407244B03CC00D7F96F /* KaTeX_Typewriter-Regular.ttf */; };
+		7EB3644F244B03CC00D7F96F /* KaTeX_Main-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36408244B03CC00D7F96F /* KaTeX_Main-Italic.woff */; };
+		7EB36450244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36409244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.ttf */; };
+		7EB36451244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3640A244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff2 */; };
+		7EB36452244B03CC00D7F96F /* KaTeX_Math-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3640B244B03CC00D7F96F /* KaTeX_Math-Italic.woff2 */; };
+		7EB36453244B03CC00D7F96F /* KaTeX_Size4-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3640C244B03CC00D7F96F /* KaTeX_Size4-Regular.woff2 */; };
+		7EB36454244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3640D244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff2 */; };
+		7EB36455244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3640E244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff */; };
+		7EB36456244B03CC00D7F96F /* KaTeX_SansSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3640F244B03CC00D7F96F /* KaTeX_SansSerif-Bold.ttf */; };
+		7EB36457244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36410244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff */; };
+		7EB36458244B03CC00D7F96F /* KaTeX_Main-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36411244B03CC00D7F96F /* KaTeX_Main-Bold.ttf */; };
+		7EB36459244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36412244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff2 */; };
+		7EB3645A244B03CC00D7F96F /* KaTeX_Main-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36413244B03CC00D7F96F /* KaTeX_Main-Bold.woff2 */; };
+		7EB3645B244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36414244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff2 */; };
+		7EB3645C244B03CC00D7F96F /* KaTeX_Fraktur-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36415244B03CC00D7F96F /* KaTeX_Fraktur-Regular.ttf */; };
+		7EB3645D244B03CC00D7F96F /* KaTeX_Main-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36416244B03CC00D7F96F /* KaTeX_Main-Regular.ttf */; };
+		7EB3645E244B03CC00D7F96F /* KaTeX_Size2-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36417244B03CC00D7F96F /* KaTeX_Size2-Regular.woff */; };
+		7EB3645F244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36418244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff2 */; };
+		7EB36460244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36419244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff2 */; };
+		7EB36461244B03CC00D7F96F /* KaTeX_Script-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3641A244B03CC00D7F96F /* KaTeX_Script-Regular.woff2 */; };
+		7EB36462244B03CC00D7F96F /* KaTeX_Size4-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3641B244B03CC00D7F96F /* KaTeX_Size4-Regular.woff */; };
+		7EB36463244B03CC00D7F96F /* KaTeX_Size3-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3641C244B03CC00D7F96F /* KaTeX_Size3-Regular.woff */; };
+		7EB36464244B03CC00D7F96F /* KaTeX_AMS-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3641D244B03CC00D7F96F /* KaTeX_AMS-Regular.woff */; };
+		7EB36465244B03CC00D7F96F /* KaTeX_Main-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3641E244B03CC00D7F96F /* KaTeX_Main-Bold.woff */; };
+		7EB36466244B03CC00D7F96F /* KaTeX_SansSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3641F244B03CC00D7F96F /* KaTeX_SansSerif-Italic.ttf */; };
+		7EB36467244B03CC00D7F96F /* KaTeX_Math-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36420244B03CC00D7F96F /* KaTeX_Math-Italic.ttf */; };
+		7EB36468244B03CC00D7F96F /* KaTeX_Size1-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36421244B03CC00D7F96F /* KaTeX_Size1-Regular.woff */; };
+		7EB36469244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36422244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff */; };
+		7EB3646A244B03CC00D7F96F /* KaTeX_Main-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36423244B03CC00D7F96F /* KaTeX_Main-Italic.ttf */; };
+		7EB3646B244B03CC00D7F96F /* KaTeX_Math-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36424244B03CC00D7F96F /* KaTeX_Math-Italic.woff */; };
+		7EB3646C244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36425244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff2 */; };
+		7EB3646D244B03CC00D7F96F /* KaTeX_Fraktur-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36426244B03CC00D7F96F /* KaTeX_Fraktur-Bold.ttf */; };
+		7EB3646E244B03CC00D7F96F /* KaTeX_Size2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36427244B03CC00D7F96F /* KaTeX_Size2-Regular.ttf */; };
+		7EB3646F244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36428244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff */; };
+		7EB36470244B03CC00D7F96F /* KaTeX_Main-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36429244B03CC00D7F96F /* KaTeX_Main-Italic.woff2 */; };
+		7EB36471244B03CC00D7F96F /* KaTeX_Size1-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3642A244B03CC00D7F96F /* KaTeX_Size1-Regular.woff2 */; };
+		7EB36472244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3642B244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff */; };
+		7EB36473244B03CC00D7F96F /* KaTeX_Script-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3642C244B03CC00D7F96F /* KaTeX_Script-Regular.woff */; };
+		7EB36474244B03CC00D7F96F /* KaTeX_SansSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3642D244B03CC00D7F96F /* KaTeX_SansSerif-Regular.ttf */; };
+		7EB36475244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3642E244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff */; };
+		7EB36476244B03CC00D7F96F /* KaTeX_Size1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3642F244B03CC00D7F96F /* KaTeX_Size1-Regular.ttf */; };
+		7EB36477244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36430244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.ttf */; };
+		7EB36478244B03CC00D7F96F /* KaTeX_Size4-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36431244B03CC00D7F96F /* KaTeX_Size4-Regular.ttf */; };
+		7EB36479244B03CC00D7F96F /* KaTeX_Size2-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36432244B03CC00D7F96F /* KaTeX_Size2-Regular.woff2 */; };
+		7EB3647A244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36433244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff2 */; };
+		7EB3647B244B03CC00D7F96F /* KaTeX_Main-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36434244B03CC00D7F96F /* KaTeX_Main-BoldItalic.ttf */; };
+		7EB3647C244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36435244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff */; };
+		7EB3647D244B03CC00D7F96F /* KaTeX_Math-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36436244B03CC00D7F96F /* KaTeX_Math-BoldItalic.ttf */; };
+		7EB3647E244B03CC00D7F96F /* jupyter-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36437244B03CC00D7F96F /* jupyter-main.css */; };
+		7EB3647F244B03CC00D7F96F /* shared-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB36439244B03CC00D7F96F /* shared-main.css */; };
+		7EB36480244B03CC00D7F96F /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3643A244B03CC00D7F96F /* shared-chroma.css */; };
+		7EB36482244B03CC00D7F96F /* markdown-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3643D244B03CC00D7F96F /* markdown-main.css */; };
+		7EB36484244B0CCE00D7F96F /* TablePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */; };
+		7EB7491924228549007265A4 /* JupyterPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7491824228549007265A4 /* JupyterPreviewVC.swift */; };
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
 		7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF3240CB4CC000D6970 /* ViewController.swift */; };
 		7ECC8CF6240CB4CC000D6970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */; };
-		7ECC93C8242780C000E23D99 /* markdown-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC93C7242780BF00E23D99 /* markdown-main.css */; };
-		7EFC7512242648CF0095E5D0 /* jupyter-katex-auto-render.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EFC7511242648CF0095E5D0 /* jupyter-katex-auto-render.min.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,107 +153,110 @@
 
 /* Begin PBXFileReference section */
 		7E04C0462448E0BD00B54ED1 /* UsageStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStackView.swift; sourceTree = "<group>"; };
-		7E1DC50A240E5A4B00D0A061 /* shared-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "shared-main.css"; sourceTree = "<group>"; };
-		7E1DC51E240E6CE300D0A061 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
-		7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererFactory.swift; sourceTree = "<group>"; };
-		7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRenderer.swift; sourceTree = "<group>"; };
+		7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
+		7E1DC520240E6D8000D0A061 /* MarkdownPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownPreviewVC.swift; sourceTree = "<group>"; };
+		7E1DC527240E6F4A00D0A061 /* PreviewVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVCFactory.swift; sourceTree = "<group>"; };
+		7E1DC529240E6FDE00D0A061 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		7E21C88C2438CAA500818EB2 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		7E21C89024390E3100818EB2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvRenderer.swift; sourceTree = "<group>"; };
-		7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "csv-papaparse.min.js"; sourceTree = "<group>"; };
-		7E413F852418EEC100CFBB1D /* csv-main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "csv-main.js"; sourceTree = "<group>"; };
+		7E413F7F2418DD6200CFBB1D /* CSVPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVPreviewVC.swift; sourceTree = "<group>"; };
 		7E458AEF243944810091BD0F /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		7E458AF12439474E0091BD0F /* NSMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenuItem.swift; sourceTree = "<group>"; };
 		7E458AF42439481F0091BD0F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		7E616BB1244998650043F7AB /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		7E6EF1FA240CC802009E4199 /* QLPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QLPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6EF1FC240CC802009E4199 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		7E6EF1FF240CC802009E4199 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7E6EF204240CC802009E4199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6EF205240CC802009E4199 /* QLPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLPlugin.entitlements; sourceTree = "<group>"; };
 		7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "nbtohtml-v0.4.0"; sourceTree = "<group>"; };
 		7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineWebView.swift; sourceTree = "<group>"; };
+		7E9282102449AB7100DDCFBF /* TablePreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TablePreviewView.xib; sourceTree = "<group>"; };
+		7E9282122449ACF900DDCFBF /* TablePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePreviewView.swift; sourceTree = "<group>"; };
+		7E9282142449B96600DDCFBF /* LoadableNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableNib.swift; sourceTree = "<group>"; };
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
 		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
-		7E9F0D6024164D35007F1008 /* shared-chroma.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
 		7E9F0D7A24168870007F1008 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		7E9F0D7B24168870007F1008 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
-		7E9F0D7C24168870007F1008 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
-		7EAC01E9240D2063009505D0 /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
+		7E9F0D7C24168870007F1008 /* WebAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAsset.swift; sourceTree = "<group>"; };
+		7EAC01E9240D2063009505D0 /* WebPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPreviewVC.swift; sourceTree = "<group>"; };
 		7EAC01EB240D220B009505D0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		7EB7489424228374007265A4 /* jupyter-katex.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jupyter-katex.min.css"; sourceTree = "<group>"; };
-		7EB7489524228374007265A4 /* jupyter-katex.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jupyter-katex.min.js"; sourceTree = "<group>"; };
-		7EB7489B2422851C007265A4 /* KaTeX_Typewriter-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.woff2"; sourceTree = "<group>"; };
-		7EB7489C2422851C007265A4 /* KaTeX_Main-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.woff"; sourceTree = "<group>"; };
-		7EB7489D2422851C007265A4 /* KaTeX_AMS-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.ttf"; sourceTree = "<group>"; };
-		7EB7489E2422851C007265A4 /* KaTeX_Main-BoldItalic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.woff"; sourceTree = "<group>"; };
-		7EB7489F2422851C007265A4 /* KaTeX_AMS-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748A02422851C007265A4 /* KaTeX_Size3-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748A12422851C007265A4 /* KaTeX_Main-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748A22422851C007265A4 /* KaTeX_Script-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Script-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748A32422851C007265A4 /* KaTeX_Caligraphic-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Bold.woff2"; sourceTree = "<group>"; };
-		7EB748A42422851C007265A4 /* KaTeX_Size3-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748A52422851C007265A4 /* KaTeX_Typewriter-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.woff"; sourceTree = "<group>"; };
-		7EB748A62422851C007265A4 /* KaTeX_Caligraphic-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.woff"; sourceTree = "<group>"; };
-		7EB748A72422851C007265A4 /* KaTeX_Typewriter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748A82422851C007265A4 /* KaTeX_Main-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.woff"; sourceTree = "<group>"; };
-		7EB748A92422851C007265A4 /* KaTeX_Caligraphic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Bold.ttf"; sourceTree = "<group>"; };
-		7EB748AA2422851C007265A4 /* KaTeX_SansSerif-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Bold.woff2"; sourceTree = "<group>"; };
-		7EB748AB2422851C007265A4 /* KaTeX_Math-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.woff2"; sourceTree = "<group>"; };
-		7EB748AC2422851C007265A4 /* KaTeX_Size4-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748AD2422851C007265A4 /* KaTeX_Fraktur-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Bold.woff2"; sourceTree = "<group>"; };
-		7EB748AE2422851C007265A4 /* KaTeX_Caligraphic-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Bold.woff"; sourceTree = "<group>"; };
-		7EB748AF2422851C007265A4 /* KaTeX_SansSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Bold.ttf"; sourceTree = "<group>"; };
-		7EB748B02422851C007265A4 /* KaTeX_Fraktur-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.woff"; sourceTree = "<group>"; };
-		7EB748B12422851C007265A4 /* KaTeX_Main-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.ttf"; sourceTree = "<group>"; };
-		7EB748B22422851C007265A4 /* KaTeX_SansSerif-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Italic.woff2"; sourceTree = "<group>"; };
-		7EB748B32422851C007265A4 /* KaTeX_Main-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.woff2"; sourceTree = "<group>"; };
-		7EB748B42422851C007265A4 /* KaTeX_SansSerif-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748B52422851C007265A4 /* KaTeX_Fraktur-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748B62422851C007265A4 /* KaTeX_Main-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748B72422851C007265A4 /* KaTeX_Size2-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.woff"; sourceTree = "<group>"; };
-		7EB748B82422851C007265A4 /* KaTeX_Main-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.woff2"; sourceTree = "<group>"; };
-		7EB748B92422851C007265A4 /* KaTeX_Fraktur-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748BA2422851C007265A4 /* KaTeX_Script-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Script-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748BB2422851C007265A4 /* KaTeX_Size4-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.woff"; sourceTree = "<group>"; };
-		7EB748BC2422851C007265A4 /* KaTeX_Size3-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.woff"; sourceTree = "<group>"; };
-		7EB748BD2422851C007265A4 /* KaTeX_AMS-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.woff"; sourceTree = "<group>"; };
-		7EB748BE2422851C007265A4 /* KaTeX_Main-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.woff"; sourceTree = "<group>"; };
-		7EB748BF2422851C007265A4 /* KaTeX_SansSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Italic.ttf"; sourceTree = "<group>"; };
-		7EB748C02422851C007265A4 /* KaTeX_Math-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.ttf"; sourceTree = "<group>"; };
-		7EB748C12422851C007265A4 /* KaTeX_Size1-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.woff"; sourceTree = "<group>"; };
-		7EB748C22422851C007265A4 /* KaTeX_SansSerif-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.woff"; sourceTree = "<group>"; };
-		7EB748C32422851C007265A4 /* KaTeX_Main-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.ttf"; sourceTree = "<group>"; };
-		7EB748C42422851C007265A4 /* KaTeX_Math-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.woff"; sourceTree = "<group>"; };
-		7EB748C52422851C007265A4 /* KaTeX_Math-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.woff2"; sourceTree = "<group>"; };
-		7EB748C62422851C007265A4 /* KaTeX_Fraktur-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Bold.ttf"; sourceTree = "<group>"; };
-		7EB748C72422851C007265A4 /* KaTeX_Size2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748C82422851C007265A4 /* KaTeX_SansSerif-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Italic.woff"; sourceTree = "<group>"; };
-		7EB748C92422851C007265A4 /* KaTeX_Main-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.woff2"; sourceTree = "<group>"; };
-		7EB748CA2422851C007265A4 /* KaTeX_Size1-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748CB2422851C007265A4 /* KaTeX_Fraktur-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Bold.woff"; sourceTree = "<group>"; };
-		7EB748CC2422851C007265A4 /* KaTeX_Script-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Script-Regular.woff"; sourceTree = "<group>"; };
-		7EB748CD2422851C007265A4 /* KaTeX_SansSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748CE2422851C007265A4 /* KaTeX_Math-BoldItalic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.woff"; sourceTree = "<group>"; };
-		7EB748CF2422851C007265A4 /* KaTeX_Size1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748D02422851C007265A4 /* KaTeX_Caligraphic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748D12422851C007265A4 /* KaTeX_Size4-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.ttf"; sourceTree = "<group>"; };
-		7EB748D22422851C007265A4 /* KaTeX_Size2-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748D32422851C007265A4 /* KaTeX_Caligraphic-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.woff2"; sourceTree = "<group>"; };
-		7EB748D42422851C007265A4 /* KaTeX_Main-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.ttf"; sourceTree = "<group>"; };
-		7EB748D52422851C007265A4 /* KaTeX_SansSerif-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Bold.woff"; sourceTree = "<group>"; };
-		7EB748D62422851C007265A4 /* KaTeX_Math-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.ttf"; sourceTree = "<group>"; };
-		7EB7491824228549007265A4 /* JupyterRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JupyterRenderer.swift; sourceTree = "<group>"; };
-		7EB7491E242287AB007265A4 /* jupyter-main.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "jupyter-main.css"; sourceTree = "<group>"; };
+		7EB363F7244B03CC00D7F96F /* jupyter-katex.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jupyter-katex.min.js"; sourceTree = "<group>"; };
+		7EB363F8244B03CC00D7F96F /* jupyter-katex-auto-render.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jupyter-katex-auto-render.min.js"; sourceTree = "<group>"; };
+		7EB363F9244B03CC00D7F96F /* jupyter-katex.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jupyter-katex.min.css"; sourceTree = "<group>"; };
+		7EB363FB244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.woff2"; sourceTree = "<group>"; };
+		7EB363FC244B03CC00D7F96F /* KaTeX_Main-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.woff"; sourceTree = "<group>"; };
+		7EB363FD244B03CC00D7F96F /* KaTeX_AMS-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.ttf"; sourceTree = "<group>"; };
+		7EB363FE244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.woff"; sourceTree = "<group>"; };
+		7EB363FF244B03CC00D7F96F /* KaTeX_AMS-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.woff2"; sourceTree = "<group>"; };
+		7EB36400244B03CC00D7F96F /* KaTeX_Size3-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.woff2"; sourceTree = "<group>"; };
+		7EB36401244B03CC00D7F96F /* KaTeX_Main-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.woff2"; sourceTree = "<group>"; };
+		7EB36402244B03CC00D7F96F /* KaTeX_Script-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Script-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36403244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Bold.woff2"; sourceTree = "<group>"; };
+		7EB36404244B03CC00D7F96F /* KaTeX_Size3-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36405244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.woff"; sourceTree = "<group>"; };
+		7EB36406244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.woff"; sourceTree = "<group>"; };
+		7EB36407244B03CC00D7F96F /* KaTeX_Typewriter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Typewriter-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36408244B03CC00D7F96F /* KaTeX_Main-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.woff"; sourceTree = "<group>"; };
+		7EB36409244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Bold.ttf"; sourceTree = "<group>"; };
+		7EB3640A244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Bold.woff2"; sourceTree = "<group>"; };
+		7EB3640B244B03CC00D7F96F /* KaTeX_Math-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.woff2"; sourceTree = "<group>"; };
+		7EB3640C244B03CC00D7F96F /* KaTeX_Size4-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.woff2"; sourceTree = "<group>"; };
+		7EB3640D244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Bold.woff2"; sourceTree = "<group>"; };
+		7EB3640E244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Bold.woff"; sourceTree = "<group>"; };
+		7EB3640F244B03CC00D7F96F /* KaTeX_SansSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Bold.ttf"; sourceTree = "<group>"; };
+		7EB36410244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.woff"; sourceTree = "<group>"; };
+		7EB36411244B03CC00D7F96F /* KaTeX_Main-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.ttf"; sourceTree = "<group>"; };
+		7EB36412244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Italic.woff2"; sourceTree = "<group>"; };
+		7EB36413244B03CC00D7F96F /* KaTeX_Main-Bold.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.woff2"; sourceTree = "<group>"; };
+		7EB36414244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.woff2"; sourceTree = "<group>"; };
+		7EB36415244B03CC00D7F96F /* KaTeX_Fraktur-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36416244B03CC00D7F96F /* KaTeX_Main-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36417244B03CC00D7F96F /* KaTeX_Size2-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.woff"; sourceTree = "<group>"; };
+		7EB36418244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.woff2"; sourceTree = "<group>"; };
+		7EB36419244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Regular.woff2"; sourceTree = "<group>"; };
+		7EB3641A244B03CC00D7F96F /* KaTeX_Script-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Script-Regular.woff2"; sourceTree = "<group>"; };
+		7EB3641B244B03CC00D7F96F /* KaTeX_Size4-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.woff"; sourceTree = "<group>"; };
+		7EB3641C244B03CC00D7F96F /* KaTeX_Size3-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size3-Regular.woff"; sourceTree = "<group>"; };
+		7EB3641D244B03CC00D7F96F /* KaTeX_AMS-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_AMS-Regular.woff"; sourceTree = "<group>"; };
+		7EB3641E244B03CC00D7F96F /* KaTeX_Main-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Bold.woff"; sourceTree = "<group>"; };
+		7EB3641F244B03CC00D7F96F /* KaTeX_SansSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Italic.ttf"; sourceTree = "<group>"; };
+		7EB36420244B03CC00D7F96F /* KaTeX_Math-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.ttf"; sourceTree = "<group>"; };
+		7EB36421244B03CC00D7F96F /* KaTeX_Size1-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.woff"; sourceTree = "<group>"; };
+		7EB36422244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.woff"; sourceTree = "<group>"; };
+		7EB36423244B03CC00D7F96F /* KaTeX_Main-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.ttf"; sourceTree = "<group>"; };
+		7EB36424244B03CC00D7F96F /* KaTeX_Math-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-Italic.woff"; sourceTree = "<group>"; };
+		7EB36425244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.woff2"; sourceTree = "<group>"; };
+		7EB36426244B03CC00D7F96F /* KaTeX_Fraktur-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Bold.ttf"; sourceTree = "<group>"; };
+		7EB36427244B03CC00D7F96F /* KaTeX_Size2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36428244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Italic.woff"; sourceTree = "<group>"; };
+		7EB36429244B03CC00D7F96F /* KaTeX_Main-Italic.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-Italic.woff2"; sourceTree = "<group>"; };
+		7EB3642A244B03CC00D7F96F /* KaTeX_Size1-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.woff2"; sourceTree = "<group>"; };
+		7EB3642B244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Fraktur-Bold.woff"; sourceTree = "<group>"; };
+		7EB3642C244B03CC00D7F96F /* KaTeX_Script-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Script-Regular.woff"; sourceTree = "<group>"; };
+		7EB3642D244B03CC00D7F96F /* KaTeX_SansSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Regular.ttf"; sourceTree = "<group>"; };
+		7EB3642E244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.woff"; sourceTree = "<group>"; };
+		7EB3642F244B03CC00D7F96F /* KaTeX_Size1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size1-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36430244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36431244B03CC00D7F96F /* KaTeX_Size4-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size4-Regular.ttf"; sourceTree = "<group>"; };
+		7EB36432244B03CC00D7F96F /* KaTeX_Size2-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Size2-Regular.woff2"; sourceTree = "<group>"; };
+		7EB36433244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Caligraphic-Regular.woff2"; sourceTree = "<group>"; };
+		7EB36434244B03CC00D7F96F /* KaTeX_Main-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Main-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7EB36435244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_SansSerif-Bold.woff"; sourceTree = "<group>"; };
+		7EB36436244B03CC00D7F96F /* KaTeX_Math-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaTeX_Math-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7EB36437244B03CC00D7F96F /* jupyter-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jupyter-main.css"; sourceTree = "<group>"; };
+		7EB36439244B03CC00D7F96F /* shared-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "shared-main.css"; sourceTree = "<group>"; };
+		7EB3643A244B03CC00D7F96F /* shared-chroma.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
+		7EB3643D244B03CC00D7F96F /* markdown-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-main.css"; sourceTree = "<group>"; };
+		7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePreviewVC.swift; sourceTree = "<group>"; };
+		7EB7491824228549007265A4 /* JupyterPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JupyterPreviewVC.swift; sourceTree = "<group>"; };
 		7ECC8CEE240CB4CC000D6970 /* Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ECC8CF3240CB4CC000D6970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECC8CFA240CB4CC000D6970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ECC8CFB240CB4CC000D6970 /* Glance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Glance.entitlements; sourceTree = "<group>"; };
-		7ECC93C7242780BF00E23D99 /* markdown-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-main.css"; sourceTree = "<group>"; };
-		7EFC7511242648CF0095E5D0 /* jupyter-katex-auto-render.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jupyter-katex-auto-render.min.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +267,7 @@
 				7E9F0D5D24164260007F1008 /* chroma-v0.7.0 in Frameworks */,
 				7E8DEDAE242BE20F00F2DABB /* SwiftExec in Frameworks */,
 				7E8DEDAB242BE1FA00F2DABB /* Down in Frameworks */,
+				7E616BB0244997420043F7AB /* SwiftCSV in Frameworks */,
 				7E8DEDB2242BEF4500F2DABB /* nbtohtml-v0.4.0 in Frameworks */,
 				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
 			);
@@ -278,8 +286,9 @@
 		7E1DC51C240E674300D0A061 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7E9F0D7924168870007F1008 /* Asset */,
+				7E9F0D7924168870007F1008 /* WebAsset */,
 				7EAC01EB240D220B009505D0 /* File.swift */,
+				7E9282142449B96600DDCFBF /* LoadableNib.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -287,8 +296,11 @@
 		7E1DC51D240E68AF00D0A061 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7EAC01E9240D2063009505D0 /* PreviewWebView.swift */,
-				7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */,
+				7E1DC527240E6F4A00D0A061 /* PreviewVCFactory.swift */,
+				7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */,
+				7E616BB42449A4E00043F7AB /* General */,
+				7E616BB324499A380043F7AB /* ViewTypes */,
+				7E1DC52C240E9A3700D0A061 /* FileTypes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,32 +308,22 @@
 		7E1DC52B240E91FC00D0A061 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				7E413F7E2418DD3000CFBB1D /* csv */,
-				7EB7489224228374007265A4 /* jupyter */,
-				7ECC93C6242780BF00E23D99 /* markdown */,
-				7E1DC52D240E9D2C00D0A061 /* shared */,
+				7EB363F6244B03CC00D7F96F /* jupyter */,
+				7EB3643B244B03CC00D7F96F /* markdown */,
+				7EB36438244B03CC00D7F96F /* shared */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		7E1DC52C240E9A3700D0A061 /* FileTypeRenderers */ = {
+		7E1DC52C240E9A3700D0A061 /* FileTypes */ = {
 			isa = PBXGroup;
 			children = (
-				7E1DC529240E6FDE00D0A061 /* CodeRenderer.swift */,
-				7E413F7F2418DD6200CFBB1D /* CsvRenderer.swift */,
-				7EB7491824228549007265A4 /* JupyterRenderer.swift */,
-				7E1DC520240E6D8000D0A061 /* MarkdownRenderer.swift */,
+				7E1DC529240E6FDE00D0A061 /* CodePreviewVC.swift */,
+				7E413F7F2418DD6200CFBB1D /* CSVPreviewVC.swift */,
+				7EB7491824228549007265A4 /* JupyterPreviewVC.swift */,
+				7E1DC520240E6D8000D0A061 /* MarkdownPreviewVC.swift */,
 			);
-			path = FileTypeRenderers;
-			sourceTree = "<group>";
-		};
-		7E1DC52D240E9D2C00D0A061 /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				7E9F0D6024164D35007F1008 /* shared-chroma.css */,
-				7E1DC50A240E5A4B00D0A061 /* shared-main.css */,
-			);
-			path = shared;
+			path = FileTypes;
 			sourceTree = "<group>";
 		};
 		7E21C88F24390E2400818EB2 /* Utils */ = {
@@ -338,15 +340,6 @@
 				7E21C89024390E3100818EB2 /* Date.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		7E413F7E2418DD3000CFBB1D /* csv */ = {
-			isa = PBXGroup;
-			children = (
-				7E413F852418EEC100CFBB1D /* csv-main.js */,
-				7E413F812418EB4B00CFBB1D /* csv-papaparse.min.js */,
-			);
-			path = csv;
 			sourceTree = "<group>";
 		};
 		7E458AEC243917600091BD0F /* Shared */ = {
@@ -375,6 +368,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7E616BB324499A380043F7AB /* ViewTypes */ = {
+			isa = PBXGroup;
+			children = (
+				7E9282102449AB7100DDCFBF /* TablePreviewView.xib */,
+				7E9282122449ACF900DDCFBF /* TablePreviewView.swift */,
+				7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */,
+				7EAC01E9240D2063009505D0 /* WebPreviewVC.swift */,
+			);
+			path = ViewTypes;
+			sourceTree = "<group>";
+		};
+		7E616BB42449A4E00043F7AB /* General */ = {
+			isa = PBXGroup;
+			children = (
+				7E8DEDBE242C20A000F2DABB /* OfflineWebView.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		7E6EF1FB240CC802009E4199 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,14 +399,13 @@
 		7E6EF1FE240CC802009E4199 /* QLPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				7E1DC52B240E91FC00D0A061 /* Assets */,
-				7E9F0D5B24162920007F1008 /* Binaries */,
 				7E1DC51D240E68AF00D0A061 /* Views */,
-				7EAC01E1240D1E94009505D0 /* Renderers */,
 				7E1DC51C240E674300D0A061 /* Utils */,
-				7E6EF1FF240CC802009E4199 /* PreviewViewController.swift */,
+				7EB363E3244B036900D7F96F /* Resources */,
 				7E6EF204240CC802009E4199 /* Info.plist */,
 				7E6EF205240CC802009E4199 /* QLPlugin.entitlements */,
+				7E616BB1244998650043F7AB /* MainVC.xib */,
+				7E6EF1FF240CC802009E4199 /* MainVC.swift */,
 			);
 			path = QLPlugin;
 			sourceTree = "<group>";
@@ -408,104 +419,119 @@
 			path = Binaries;
 			sourceTree = "<group>";
 		};
-		7E9F0D7924168870007F1008 /* Asset */ = {
+		7E9F0D7924168870007F1008 /* WebAsset */ = {
 			isa = PBXGroup;
 			children = (
-				7E9F0D7A24168870007F1008 /* Stylesheet.swift */,
 				7E9F0D7B24168870007F1008 /* Script.swift */,
-				7E9F0D7C24168870007F1008 /* Asset.swift */,
+				7E9F0D7A24168870007F1008 /* Stylesheet.swift */,
+				7E9F0D7C24168870007F1008 /* WebAsset.swift */,
 			);
-			path = Asset;
+			path = WebAsset;
 			sourceTree = "<group>";
 		};
-		7EAC01E1240D1E94009505D0 /* Renderers */ = {
+		7EB363E3244B036900D7F96F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7E1DC527240E6F4A00D0A061 /* RendererFactory.swift */,
-				7E1DC51E240E6CE300D0A061 /* Renderer.swift */,
-				7E1DC52C240E9A3700D0A061 /* FileTypeRenderers */,
+				7E1DC52B240E91FC00D0A061 /* Assets */,
+				7E9F0D5B24162920007F1008 /* Binaries */,
 			);
-			path = Renderers;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		7EB7489224228374007265A4 /* jupyter */ = {
+		7EB363F6244B03CC00D7F96F /* jupyter */ = {
 			isa = PBXGroup;
 			children = (
-				7EB7489A2422851C007265A4 /* fonts */,
-				7EB7489424228374007265A4 /* jupyter-katex.min.css */,
-				7EB7489524228374007265A4 /* jupyter-katex.min.js */,
-				7EFC7511242648CF0095E5D0 /* jupyter-katex-auto-render.min.js */,
-				7EB7491E242287AB007265A4 /* jupyter-main.css */,
+				7EB363FA244B03CC00D7F96F /* fonts */,
+				7EB363F7244B03CC00D7F96F /* jupyter-katex.min.js */,
+				7EB363F8244B03CC00D7F96F /* jupyter-katex-auto-render.min.js */,
+				7EB363F9244B03CC00D7F96F /* jupyter-katex.min.css */,
+				7EB36437244B03CC00D7F96F /* jupyter-main.css */,
 			);
-			name = jupyter;
-			path = QLPlugin/Assets/jupyter;
-			sourceTree = SOURCE_ROOT;
+			path = jupyter;
+			sourceTree = "<group>";
 		};
-		7EB7489A2422851C007265A4 /* fonts */ = {
+		7EB363FA244B03CC00D7F96F /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7EB7489B2422851C007265A4 /* KaTeX_Typewriter-Regular.woff2 */,
-				7EB7489C2422851C007265A4 /* KaTeX_Main-Regular.woff */,
-				7EB7489D2422851C007265A4 /* KaTeX_AMS-Regular.ttf */,
-				7EB7489E2422851C007265A4 /* KaTeX_Main-BoldItalic.woff */,
-				7EB7489F2422851C007265A4 /* KaTeX_AMS-Regular.woff2 */,
-				7EB748A02422851C007265A4 /* KaTeX_Size3-Regular.woff2 */,
-				7EB748A12422851C007265A4 /* KaTeX_Main-Regular.woff2 */,
-				7EB748A22422851C007265A4 /* KaTeX_Script-Regular.ttf */,
-				7EB748A32422851C007265A4 /* KaTeX_Caligraphic-Bold.woff2 */,
-				7EB748A42422851C007265A4 /* KaTeX_Size3-Regular.ttf */,
-				7EB748A52422851C007265A4 /* KaTeX_Typewriter-Regular.woff */,
-				7EB748A62422851C007265A4 /* KaTeX_Caligraphic-Regular.woff */,
-				7EB748A72422851C007265A4 /* KaTeX_Typewriter-Regular.ttf */,
-				7EB748A82422851C007265A4 /* KaTeX_Main-Italic.woff */,
-				7EB748A92422851C007265A4 /* KaTeX_Caligraphic-Bold.ttf */,
-				7EB748AA2422851C007265A4 /* KaTeX_SansSerif-Bold.woff2 */,
-				7EB748AB2422851C007265A4 /* KaTeX_Math-Italic.woff2 */,
-				7EB748AC2422851C007265A4 /* KaTeX_Size4-Regular.woff2 */,
-				7EB748AD2422851C007265A4 /* KaTeX_Fraktur-Bold.woff2 */,
-				7EB748AE2422851C007265A4 /* KaTeX_Caligraphic-Bold.woff */,
-				7EB748AF2422851C007265A4 /* KaTeX_SansSerif-Bold.ttf */,
-				7EB748B02422851C007265A4 /* KaTeX_Fraktur-Regular.woff */,
-				7EB748B12422851C007265A4 /* KaTeX_Main-Bold.ttf */,
-				7EB748B22422851C007265A4 /* KaTeX_SansSerif-Italic.woff2 */,
-				7EB748B32422851C007265A4 /* KaTeX_Main-Bold.woff2 */,
-				7EB748B42422851C007265A4 /* KaTeX_SansSerif-Regular.woff2 */,
-				7EB748B52422851C007265A4 /* KaTeX_Fraktur-Regular.ttf */,
-				7EB748B62422851C007265A4 /* KaTeX_Main-Regular.ttf */,
-				7EB748B72422851C007265A4 /* KaTeX_Size2-Regular.woff */,
-				7EB748B82422851C007265A4 /* KaTeX_Main-BoldItalic.woff2 */,
-				7EB748B92422851C007265A4 /* KaTeX_Fraktur-Regular.woff2 */,
-				7EB748BA2422851C007265A4 /* KaTeX_Script-Regular.woff2 */,
-				7EB748BB2422851C007265A4 /* KaTeX_Size4-Regular.woff */,
-				7EB748BC2422851C007265A4 /* KaTeX_Size3-Regular.woff */,
-				7EB748BD2422851C007265A4 /* KaTeX_AMS-Regular.woff */,
-				7EB748BE2422851C007265A4 /* KaTeX_Main-Bold.woff */,
-				7EB748BF2422851C007265A4 /* KaTeX_SansSerif-Italic.ttf */,
-				7EB748C02422851C007265A4 /* KaTeX_Math-Italic.ttf */,
-				7EB748C12422851C007265A4 /* KaTeX_Size1-Regular.woff */,
-				7EB748C22422851C007265A4 /* KaTeX_SansSerif-Regular.woff */,
-				7EB748C32422851C007265A4 /* KaTeX_Main-Italic.ttf */,
-				7EB748C42422851C007265A4 /* KaTeX_Math-Italic.woff */,
-				7EB748C52422851C007265A4 /* KaTeX_Math-BoldItalic.woff2 */,
-				7EB748C62422851C007265A4 /* KaTeX_Fraktur-Bold.ttf */,
-				7EB748C72422851C007265A4 /* KaTeX_Size2-Regular.ttf */,
-				7EB748C82422851C007265A4 /* KaTeX_SansSerif-Italic.woff */,
-				7EB748C92422851C007265A4 /* KaTeX_Main-Italic.woff2 */,
-				7EB748CA2422851C007265A4 /* KaTeX_Size1-Regular.woff2 */,
-				7EB748CB2422851C007265A4 /* KaTeX_Fraktur-Bold.woff */,
-				7EB748CC2422851C007265A4 /* KaTeX_Script-Regular.woff */,
-				7EB748CD2422851C007265A4 /* KaTeX_SansSerif-Regular.ttf */,
-				7EB748CE2422851C007265A4 /* KaTeX_Math-BoldItalic.woff */,
-				7EB748CF2422851C007265A4 /* KaTeX_Size1-Regular.ttf */,
-				7EB748D02422851C007265A4 /* KaTeX_Caligraphic-Regular.ttf */,
-				7EB748D12422851C007265A4 /* KaTeX_Size4-Regular.ttf */,
-				7EB748D22422851C007265A4 /* KaTeX_Size2-Regular.woff2 */,
-				7EB748D32422851C007265A4 /* KaTeX_Caligraphic-Regular.woff2 */,
-				7EB748D42422851C007265A4 /* KaTeX_Main-BoldItalic.ttf */,
-				7EB748D52422851C007265A4 /* KaTeX_SansSerif-Bold.woff */,
-				7EB748D62422851C007265A4 /* KaTeX_Math-BoldItalic.ttf */,
+				7EB363FB244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff2 */,
+				7EB363FC244B03CC00D7F96F /* KaTeX_Main-Regular.woff */,
+				7EB363FD244B03CC00D7F96F /* KaTeX_AMS-Regular.ttf */,
+				7EB363FE244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff */,
+				7EB363FF244B03CC00D7F96F /* KaTeX_AMS-Regular.woff2 */,
+				7EB36400244B03CC00D7F96F /* KaTeX_Size3-Regular.woff2 */,
+				7EB36401244B03CC00D7F96F /* KaTeX_Main-Regular.woff2 */,
+				7EB36402244B03CC00D7F96F /* KaTeX_Script-Regular.ttf */,
+				7EB36403244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff2 */,
+				7EB36404244B03CC00D7F96F /* KaTeX_Size3-Regular.ttf */,
+				7EB36405244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff */,
+				7EB36406244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff */,
+				7EB36407244B03CC00D7F96F /* KaTeX_Typewriter-Regular.ttf */,
+				7EB36408244B03CC00D7F96F /* KaTeX_Main-Italic.woff */,
+				7EB36409244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.ttf */,
+				7EB3640A244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff2 */,
+				7EB3640B244B03CC00D7F96F /* KaTeX_Math-Italic.woff2 */,
+				7EB3640C244B03CC00D7F96F /* KaTeX_Size4-Regular.woff2 */,
+				7EB3640D244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff2 */,
+				7EB3640E244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff */,
+				7EB3640F244B03CC00D7F96F /* KaTeX_SansSerif-Bold.ttf */,
+				7EB36410244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff */,
+				7EB36411244B03CC00D7F96F /* KaTeX_Main-Bold.ttf */,
+				7EB36412244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff2 */,
+				7EB36413244B03CC00D7F96F /* KaTeX_Main-Bold.woff2 */,
+				7EB36414244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff2 */,
+				7EB36415244B03CC00D7F96F /* KaTeX_Fraktur-Regular.ttf */,
+				7EB36416244B03CC00D7F96F /* KaTeX_Main-Regular.ttf */,
+				7EB36417244B03CC00D7F96F /* KaTeX_Size2-Regular.woff */,
+				7EB36418244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff2 */,
+				7EB36419244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff2 */,
+				7EB3641A244B03CC00D7F96F /* KaTeX_Script-Regular.woff2 */,
+				7EB3641B244B03CC00D7F96F /* KaTeX_Size4-Regular.woff */,
+				7EB3641C244B03CC00D7F96F /* KaTeX_Size3-Regular.woff */,
+				7EB3641D244B03CC00D7F96F /* KaTeX_AMS-Regular.woff */,
+				7EB3641E244B03CC00D7F96F /* KaTeX_Main-Bold.woff */,
+				7EB3641F244B03CC00D7F96F /* KaTeX_SansSerif-Italic.ttf */,
+				7EB36420244B03CC00D7F96F /* KaTeX_Math-Italic.ttf */,
+				7EB36421244B03CC00D7F96F /* KaTeX_Size1-Regular.woff */,
+				7EB36422244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff */,
+				7EB36423244B03CC00D7F96F /* KaTeX_Main-Italic.ttf */,
+				7EB36424244B03CC00D7F96F /* KaTeX_Math-Italic.woff */,
+				7EB36425244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff2 */,
+				7EB36426244B03CC00D7F96F /* KaTeX_Fraktur-Bold.ttf */,
+				7EB36427244B03CC00D7F96F /* KaTeX_Size2-Regular.ttf */,
+				7EB36428244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff */,
+				7EB36429244B03CC00D7F96F /* KaTeX_Main-Italic.woff2 */,
+				7EB3642A244B03CC00D7F96F /* KaTeX_Size1-Regular.woff2 */,
+				7EB3642B244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff */,
+				7EB3642C244B03CC00D7F96F /* KaTeX_Script-Regular.woff */,
+				7EB3642D244B03CC00D7F96F /* KaTeX_SansSerif-Regular.ttf */,
+				7EB3642E244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff */,
+				7EB3642F244B03CC00D7F96F /* KaTeX_Size1-Regular.ttf */,
+				7EB36430244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.ttf */,
+				7EB36431244B03CC00D7F96F /* KaTeX_Size4-Regular.ttf */,
+				7EB36432244B03CC00D7F96F /* KaTeX_Size2-Regular.woff2 */,
+				7EB36433244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff2 */,
+				7EB36434244B03CC00D7F96F /* KaTeX_Main-BoldItalic.ttf */,
+				7EB36435244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff */,
+				7EB36436244B03CC00D7F96F /* KaTeX_Math-BoldItalic.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		7EB36438244B03CC00D7F96F /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				7EB36439244B03CC00D7F96F /* shared-main.css */,
+				7EB3643A244B03CC00D7F96F /* shared-chroma.css */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		7EB3643B244B03CC00D7F96F /* markdown */ = {
+			isa = PBXGroup;
+			children = (
+				7EB3643D244B03CC00D7F96F /* markdown-main.css */,
+			);
+			path = markdown;
 			sourceTree = "<group>";
 		};
 		7ECC8CE5240CB4CC000D6970 = {
@@ -545,14 +571,6 @@
 			path = Glance;
 			sourceTree = "<group>";
 		};
-		7ECC93C6242780BF00E23D99 /* markdown */ = {
-			isa = PBXGroup;
-			children = (
-				7ECC93C7242780BF00E23D99 /* markdown-main.css */,
-			);
-			path = markdown;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -573,6 +591,7 @@
 			packageProductDependencies = (
 				7E8DEDAA242BE1FA00F2DABB /* Down */,
 				7E8DEDAD242BE20F00F2DABB /* SwiftExec */,
+				7E616BAF244997420043F7AB /* SwiftCSV */,
 			);
 			productName = QLPlugin;
 			productReference = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */;
@@ -627,6 +646,7 @@
 			packageReferences = (
 				7E8DEDA9242BE1FA00F2DABB /* XCRemoteSwiftPackageReference "Down" */,
 				7E8DEDAC242BE20F00F2DABB /* XCRemoteSwiftPackageReference "swift-exec" */,
+				7E616BAE244997420043F7AB /* XCRemoteSwiftPackageReference "SwiftCSV" */,
 			);
 			productRefGroup = 7ECC8CEF240CB4CC000D6970 /* Products */;
 			projectDirPath = "";
@@ -643,76 +663,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EB748F42422851D007265A4 /* KaTeX_Fraktur-Regular.ttf in Resources */,
-				7EB7490A2422851D007265A4 /* KaTeX_Fraktur-Bold.woff in Resources */,
-				7EB748FE2422851D007265A4 /* KaTeX_SansSerif-Italic.ttf in Resources */,
-				7EB749152422851D007265A4 /* KaTeX_Math-BoldItalic.ttf in Resources */,
-				7EB748FB2422851D007265A4 /* KaTeX_Size3-Regular.woff in Resources */,
-				7EB749012422851D007265A4 /* KaTeX_SansSerif-Regular.woff in Resources */,
-				7EB749122422851D007265A4 /* KaTeX_Caligraphic-Regular.woff2 in Resources */,
-				7E1DC515240E5A4B00D0A061 /* shared-main.css in Resources */,
-				7EB748E42422851D007265A4 /* KaTeX_Typewriter-Regular.woff in Resources */,
-				7EB748DD2422851D007265A4 /* KaTeX_Main-BoldItalic.woff in Resources */,
+				7EB36475244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff in Resources */,
+				7EB36474244B03CC00D7F96F /* KaTeX_SansSerif-Regular.ttf in Resources */,
+				7EB36455244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff in Resources */,
+				7EB3646F244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff in Resources */,
+				7EB3644F244B03CC00D7F96F /* KaTeX_Main-Italic.woff in Resources */,
+				7EB36448244B03CC00D7F96F /* KaTeX_Main-Regular.woff2 in Resources */,
+				7EB36460244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff2 in Resources */,
+				7EB36441244B03CC00D7F96F /* jupyter-katex.min.css in Resources */,
+				7EB36471244B03CC00D7F96F /* KaTeX_Size1-Regular.woff2 in Resources */,
+				7EB36465244B03CC00D7F96F /* KaTeX_Main-Bold.woff in Resources */,
+				7EB36456244B03CC00D7F96F /* KaTeX_SansSerif-Bold.ttf in Resources */,
 				7E8DEDB0242BEF3700F2DABB /* nbtohtml-v0.4.0 in Resources */,
-				7EB748E02422851D007265A4 /* KaTeX_Main-Regular.woff2 in Resources */,
-				7EB748DA2422851D007265A4 /* KaTeX_Typewriter-Regular.woff2 in Resources */,
-				7EB749102422851D007265A4 /* KaTeX_Size4-Regular.ttf in Resources */,
-				7EB7490F2422851D007265A4 /* KaTeX_Caligraphic-Regular.ttf in Resources */,
-				7EB748DF2422851D007265A4 /* KaTeX_Size3-Regular.woff2 in Resources */,
-				7EB748FF2422851D007265A4 /* KaTeX_Math-Italic.ttf in Resources */,
-				7EB749082422851D007265A4 /* KaTeX_Main-Italic.woff2 in Resources */,
-				7EB748E62422851D007265A4 /* KaTeX_Typewriter-Regular.ttf in Resources */,
-				7EB748E92422851D007265A4 /* KaTeX_SansSerif-Bold.woff2 in Resources */,
-				7EB7489824228374007265A4 /* jupyter-katex.min.js in Resources */,
-				7EB748DC2422851D007265A4 /* KaTeX_AMS-Regular.ttf in Resources */,
-				7ECC93C8242780C000E23D99 /* markdown-main.css in Resources */,
-				7EB749022422851D007265A4 /* KaTeX_Main-Italic.ttf in Resources */,
-				7EB748EE2422851D007265A4 /* KaTeX_SansSerif-Bold.ttf in Resources */,
-				7EB748E32422851D007265A4 /* KaTeX_Size3-Regular.ttf in Resources */,
-				7EB7489724228374007265A4 /* jupyter-katex.min.css in Resources */,
-				7EB748FA2422851D007265A4 /* KaTeX_Size4-Regular.woff in Resources */,
-				7EB749052422851D007265A4 /* KaTeX_Fraktur-Bold.ttf in Resources */,
-				7EB7491F242287AB007265A4 /* jupyter-main.css in Resources */,
-				7EB748E52422851D007265A4 /* KaTeX_Caligraphic-Regular.woff in Resources */,
-				7EB749072422851D007265A4 /* KaTeX_SansSerif-Italic.woff in Resources */,
-				7EB748EA2422851D007265A4 /* KaTeX_Math-Italic.woff2 in Resources */,
-				7EB748F92422851D007265A4 /* KaTeX_Script-Regular.woff2 in Resources */,
-				7EB7490E2422851D007265A4 /* KaTeX_Size1-Regular.ttf in Resources */,
-				7EB748F72422851D007265A4 /* KaTeX_Main-BoldItalic.woff2 in Resources */,
-				7EB748F12422851D007265A4 /* KaTeX_SansSerif-Italic.woff2 in Resources */,
-				7EB748FD2422851D007265A4 /* KaTeX_Main-Bold.woff in Resources */,
-				7EB748F62422851D007265A4 /* KaTeX_Size2-Regular.woff in Resources */,
-				7E9F0D6124164D35007F1008 /* shared-chroma.css in Resources */,
-				7EB749142422851D007265A4 /* KaTeX_SansSerif-Bold.woff in Resources */,
-				7E413F862418EEC100CFBB1D /* csv-main.js in Resources */,
-				7EB748ED2422851D007265A4 /* KaTeX_Caligraphic-Bold.woff in Resources */,
-				7EB749042422851D007265A4 /* KaTeX_Math-BoldItalic.woff2 in Resources */,
-				7EB7490B2422851D007265A4 /* KaTeX_Script-Regular.woff in Resources */,
-				7EB748EF2422851D007265A4 /* KaTeX_Fraktur-Regular.woff in Resources */,
-				7EB748F82422851D007265A4 /* KaTeX_Fraktur-Regular.woff2 in Resources */,
-				7EB748F22422851D007265A4 /* KaTeX_Main-Bold.woff2 in Resources */,
-				7EB749032422851D007265A4 /* KaTeX_Math-Italic.woff in Resources */,
-				7EB749062422851D007265A4 /* KaTeX_Size2-Regular.ttf in Resources */,
-				7EB7490D2422851D007265A4 /* KaTeX_Math-BoldItalic.woff in Resources */,
-				7EB748FC2422851D007265A4 /* KaTeX_AMS-Regular.woff in Resources */,
-				7E413F822418EB4B00CFBB1D /* csv-papaparse.min.js in Resources */,
-				7EFC7512242648CF0095E5D0 /* jupyter-katex-auto-render.min.js in Resources */,
-				7EB748E72422851D007265A4 /* KaTeX_Main-Italic.woff in Resources */,
-				7EB748EB2422851D007265A4 /* KaTeX_Size4-Regular.woff2 in Resources */,
-				7EB748E12422851D007265A4 /* KaTeX_Script-Regular.ttf in Resources */,
-				7EB749002422851D007265A4 /* KaTeX_Size1-Regular.woff in Resources */,
-				7EB748F32422851D007265A4 /* KaTeX_SansSerif-Regular.woff2 in Resources */,
-				7EB748DE2422851D007265A4 /* KaTeX_AMS-Regular.woff2 in Resources */,
-				7EB748E82422851D007265A4 /* KaTeX_Caligraphic-Bold.ttf in Resources */,
-				7EB748EC2422851D007265A4 /* KaTeX_Fraktur-Bold.woff2 in Resources */,
-				7EB749092422851D007265A4 /* KaTeX_Size1-Regular.woff2 in Resources */,
-				7EB749112422851D007265A4 /* KaTeX_Size2-Regular.woff2 in Resources */,
-				7EB7490C2422851D007265A4 /* KaTeX_SansSerif-Regular.ttf in Resources */,
-				7EB748F02422851D007265A4 /* KaTeX_Main-Bold.ttf in Resources */,
-				7EB748E22422851D007265A4 /* KaTeX_Caligraphic-Bold.woff2 in Resources */,
-				7EB748F52422851D007265A4 /* KaTeX_Main-Regular.ttf in Resources */,
-				7EB749132422851D007265A4 /* KaTeX_Main-BoldItalic.ttf in Resources */,
-				7EB748DB2422851D007265A4 /* KaTeX_Main-Regular.woff in Resources */,
+				7EB36459244B03CC00D7F96F /* KaTeX_SansSerif-Italic.woff2 in Resources */,
+				7EB36468244B03CC00D7F96F /* KaTeX_Size1-Regular.woff in Resources */,
+				7EB3646B244B03CC00D7F96F /* KaTeX_Math-Italic.woff in Resources */,
+				7EB36451244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff2 in Resources */,
+				7EB36442244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff2 in Resources */,
+				7E9282112449AB7100DDCFBF /* TablePreviewView.xib in Resources */,
+				7EB36480244B03CC00D7F96F /* shared-chroma.css in Resources */,
+				7EB36473244B03CC00D7F96F /* KaTeX_Script-Regular.woff in Resources */,
+				7EB36470244B03CC00D7F96F /* KaTeX_Main-Italic.woff2 in Resources */,
+				7EB3647B244B03CC00D7F96F /* KaTeX_Main-BoldItalic.ttf in Resources */,
+				7EB3645F244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff2 in Resources */,
+				7EB3646C244B03CC00D7F96F /* KaTeX_Math-BoldItalic.woff2 in Resources */,
+				7EB36461244B03CC00D7F96F /* KaTeX_Script-Regular.woff2 in Resources */,
+				7EB36440244B03CC00D7F96F /* jupyter-katex-auto-render.min.js in Resources */,
+				7EB36466244B03CC00D7F96F /* KaTeX_SansSerif-Italic.ttf in Resources */,
+				7EB3644E244B03CC00D7F96F /* KaTeX_Typewriter-Regular.ttf in Resources */,
+				7EB36476244B03CC00D7F96F /* KaTeX_Size1-Regular.ttf in Resources */,
+				7EB36443244B03CC00D7F96F /* KaTeX_Main-Regular.woff in Resources */,
+				7EB3645B244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff2 in Resources */,
+				7E616BB2244998650043F7AB /* MainVC.xib in Resources */,
+				7EB36447244B03CC00D7F96F /* KaTeX_Size3-Regular.woff2 in Resources */,
+				7EB3645E244B03CC00D7F96F /* KaTeX_Size2-Regular.woff in Resources */,
+				7EB3643F244B03CC00D7F96F /* jupyter-katex.min.js in Resources */,
+				7EB36449244B03CC00D7F96F /* KaTeX_Script-Regular.ttf in Resources */,
+				7EB3647A244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff2 in Resources */,
+				7EB3645C244B03CC00D7F96F /* KaTeX_Fraktur-Regular.ttf in Resources */,
+				7EB36446244B03CC00D7F96F /* KaTeX_AMS-Regular.woff2 in Resources */,
+				7EB3644C244B03CC00D7F96F /* KaTeX_Typewriter-Regular.woff in Resources */,
+				7EB36454244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff2 in Resources */,
+				7EB36478244B03CC00D7F96F /* KaTeX_Size4-Regular.ttf in Resources */,
+				7EB3647F244B03CC00D7F96F /* shared-main.css in Resources */,
+				7EB36457244B03CC00D7F96F /* KaTeX_Fraktur-Regular.woff in Resources */,
+				7EB3645A244B03CC00D7F96F /* KaTeX_Main-Bold.woff2 in Resources */,
+				7EB36445244B03CC00D7F96F /* KaTeX_Main-BoldItalic.woff in Resources */,
+				7EB3646E244B03CC00D7F96F /* KaTeX_Size2-Regular.ttf in Resources */,
+				7EB36452244B03CC00D7F96F /* KaTeX_Math-Italic.woff2 in Resources */,
+				7EB3647C244B03CC00D7F96F /* KaTeX_SansSerif-Bold.woff in Resources */,
+				7EB3647E244B03CC00D7F96F /* jupyter-main.css in Resources */,
+				7EB36472244B03CC00D7F96F /* KaTeX_Fraktur-Bold.woff in Resources */,
+				7EB36469244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff in Resources */,
+				7EB36479244B03CC00D7F96F /* KaTeX_Size2-Regular.woff2 in Resources */,
+				7EB36477244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.ttf in Resources */,
+				7EB36453244B03CC00D7F96F /* KaTeX_Size4-Regular.woff2 in Resources */,
+				7EB36458244B03CC00D7F96F /* KaTeX_Main-Bold.ttf in Resources */,
+				7EB3646A244B03CC00D7F96F /* KaTeX_Main-Italic.ttf in Resources */,
+				7EB36444244B03CC00D7F96F /* KaTeX_AMS-Regular.ttf in Resources */,
+				7EB36464244B03CC00D7F96F /* KaTeX_AMS-Regular.woff in Resources */,
+				7EB36482244B03CC00D7F96F /* markdown-main.css in Resources */,
+				7EB36462244B03CC00D7F96F /* KaTeX_Size4-Regular.woff in Resources */,
+				7EB3644A244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.woff2 in Resources */,
+				7EB3644D244B03CC00D7F96F /* KaTeX_Caligraphic-Regular.woff in Resources */,
+				7EB36467244B03CC00D7F96F /* KaTeX_Math-Italic.ttf in Resources */,
+				7EB36463244B03CC00D7F96F /* KaTeX_Size3-Regular.woff in Resources */,
+				7EB3647D244B03CC00D7F96F /* KaTeX_Math-BoldItalic.ttf in Resources */,
+				7EB3644B244B03CC00D7F96F /* KaTeX_Size3-Regular.ttf in Resources */,
+				7EB3646D244B03CC00D7F96F /* KaTeX_Fraktur-Bold.ttf in Resources */,
+				7EB3645D244B03CC00D7F96F /* KaTeX_Main-Regular.ttf in Resources */,
+				7EB36450244B03CC00D7F96F /* KaTeX_Caligraphic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,17 +754,20 @@
 			files = (
 				7EAC01EC240D220B009505D0 /* File.swift in Sources */,
 				7E458AED2439176B0091BD0F /* Date.swift in Sources */,
-				7EB7491924228549007265A4 /* JupyterRenderer.swift in Sources */,
+				7EB7491924228549007265A4 /* JupyterPreviewVC.swift in Sources */,
 				7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */,
 				7E21C88E24390BE400818EB2 /* Stats.swift in Sources */,
-				7EAC01EA240D2063009505D0 /* PreviewWebView.swift in Sources */,
-				7E1DC51F240E6CE300D0A061 /* Renderer.swift in Sources */,
-				7E9F0D7F24168870007F1008 /* Asset.swift in Sources */,
-				7E6EF200240CC802009E4199 /* PreviewViewController.swift in Sources */,
-				7E1DC528240E6F4A00D0A061 /* RendererFactory.swift in Sources */,
-				7E1DC521240E6D8000D0A061 /* MarkdownRenderer.swift in Sources */,
-				7E413F802418DD6200CFBB1D /* CsvRenderer.swift in Sources */,
-				7E1DC52A240E6FDE00D0A061 /* CodeRenderer.swift in Sources */,
+				7EAC01EA240D2063009505D0 /* WebPreviewVC.swift in Sources */,
+				7E9282132449ACF900DDCFBF /* TablePreviewView.swift in Sources */,
+				7E1DC51F240E6CE300D0A061 /* PreviewVC.swift in Sources */,
+				7E9F0D7F24168870007F1008 /* WebAsset.swift in Sources */,
+				7E6EF200240CC802009E4199 /* MainVC.swift in Sources */,
+				7E9282152449B96600DDCFBF /* LoadableNib.swift in Sources */,
+				7E1DC528240E6F4A00D0A061 /* PreviewVCFactory.swift in Sources */,
+				7EB36484244B0CCE00D7F96F /* TablePreviewVC.swift in Sources */,
+				7E1DC521240E6D8000D0A061 /* MarkdownPreviewVC.swift in Sources */,
+				7E413F802418DD6200CFBB1D /* CSVPreviewVC.swift in Sources */,
+				7E1DC52A240E6FDE00D0A061 /* CodePreviewVC.swift in Sources */,
 				7E9F0D7E24168870007F1008 /* Script.swift in Sources */,
 				7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */,
 			);
@@ -1008,6 +1031,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7E616BAE244997420043F7AB /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.5.6;
+			};
+		};
 		7E8DEDA9242BE1FA00F2DABB /* XCRemoteSwiftPackageReference "Down" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/iwasrobbed/Down";
@@ -1027,6 +1058,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7E616BAF244997420043F7AB /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E616BAE244997420043F7AB /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
 		7E8DEDAA242BE1FA00F2DABB /* Down */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E8DEDA9242BE1FA00F2DABB /* XCRemoteSwiftPackageReference "Down" */;

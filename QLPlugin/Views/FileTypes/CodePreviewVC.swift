@@ -20,9 +20,9 @@ let fileExtensionLexers = [
 	"sty": "tex", // LaTeX styles file
 ]
 
-class CodeRenderer: Renderer {
-	private let chromaBinUrl = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
-	private let chromaCssUrl = Bundle.main.url(forResource: "shared-chroma", withExtension: "css")
+class CodePreviewVC: WebPreviewVC {
+	private let chromaBinaryURL = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
+	private let chromaCSSURL = Bundle.main.url(forResource: "shared-chroma", withExtension: "css")
 
 	/// Returns the name of the Chroma lexer to use for the file. This is determined based on the
 	/// file name/extension
@@ -38,23 +38,23 @@ class CodeRenderer: Renderer {
 
 	override func getStylesheets() -> [Stylesheet] {
 		var stylesheets = super.getStylesheets()
-		if let cssUrl = chromaCssUrl {
-			stylesheets.append(Stylesheet(url: cssUrl))
+		if let cssURL = chromaCSSURL {
+			stylesheets.append(Stylesheet(url: cssURL))
 		} else {
 			os_log("Could not find Chroma stylesheet", type: .error)
 		}
 		return stylesheets
 	}
 
-	override func getHtml() throws -> String {
-		guard let chromaBinUrl = chromaBinUrl else {
+	override func getHTML() throws -> String {
+		guard let chromaBinaryURL = chromaBinaryURL else {
 			os_log("Could not find nbtohtml binary", type: .error)
-			throw RendererError.resourceNotFoundError(resourceName: "nbtohtml binary")
+			throw PreviewVCError.resourceNotFoundError(resourceName: "nbtohtml binary")
 		}
 
 		do {
 			let result = try exec(
-				program: chromaBinUrl.path,
+				program: chromaBinaryURL.path,
 				arguments: [file.path, "--html", "--html-only", "--lexer", getLexer()]
 			)
 			return result.stdout ?? ""

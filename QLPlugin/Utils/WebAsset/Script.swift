@@ -1,6 +1,6 @@
 import Foundation
 
-class Script: Asset {
+class Script: WebAsset {
 	private var content: String?
 	private var url: URL?
 
@@ -12,7 +12,7 @@ class Script: Asset {
 		self.url = url
 	}
 
-	func getHtml() -> String {
+	func getHTML() -> String {
 		if let url = url {
 			return "<script src=\"\(url.path)\"></script>"
 		} else {

@@ -1,6 +1,6 @@
 import Foundation
 
-class Stylesheet: Asset {
+class Stylesheet: WebAsset {
 	private var content: String?
 	private var url: URL?
 
@@ -12,7 +12,7 @@ class Stylesheet: Asset {
 		self.url = url
 	}
 
-	func getHtml() -> String {
+	func getHTML() -> String {
 		if let url = url {
 			return "<link rel=\"stylesheet\" type=\"text/css\" href=\"\(url.path)\" />"
 		} else {

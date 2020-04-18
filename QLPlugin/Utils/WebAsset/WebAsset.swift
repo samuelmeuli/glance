@@ -1,7 +1,7 @@
 import Foundation
 
-protocol Asset {
+protocol WebAsset {
 	init(content: String)
 	init(url: URL)
-	func getHtml() -> String
+	func getHTML() -> String
 }
