@@ -86,6 +86,9 @@ class WebPreviewVC: NSViewController, PreviewVC {
 		let webView = OfflineWebView(frame: view.frame, configuration: configuration)
 		webView.autoresizingMask = [.height, .width]
 
+		// Remove background to prevent white flicker on load in Dark Mode
+		webView.setValue(false, forKey: "drawsBackground")
+
 		// Load HTML/CSS/JS into web view
 		let htmlString = renderPage(
 			htmlBody: try getHTML(),
