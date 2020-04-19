@@ -108,6 +108,9 @@
 		7EB36480244B03CC00D7F96F /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3643A244B03CC00D7F96F /* shared-chroma.css */; };
 		7EB36482244B03CC00D7F96F /* markdown-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3643D244B03CC00D7F96F /* markdown-main.css */; };
 		7EB36484244B0CCE00D7F96F /* TablePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */; };
+		7EB3648C244B6C8B00D7F96F /* OutlinePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3648B244B6C8B00D7F96F /* OutlinePreviewView.xib */; };
+		7EB3648E244B6DC100D7F96F /* OutlinePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3648D244B6DC100D7F96F /* OutlinePreviewView.swift */; };
+		7EB36490244B6EF600D7F96F /* OutlinePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3648F244B6EF600D7F96F /* OutlinePreviewVC.swift */; };
 		7EB7491924228549007265A4 /* JupyterPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7491824228549007265A4 /* JupyterPreviewVC.swift */; };
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
 		7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF3240CB4CC000D6970 /* ViewController.swift */; };
@@ -252,6 +255,9 @@
 		7EB3643A244B03CC00D7F96F /* shared-chroma.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
 		7EB3643D244B03CC00D7F96F /* markdown-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-main.css"; sourceTree = "<group>"; };
 		7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePreviewVC.swift; sourceTree = "<group>"; };
+		7EB3648B244B6C8B00D7F96F /* OutlinePreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutlinePreviewView.xib; sourceTree = "<group>"; };
+		7EB3648D244B6DC100D7F96F /* OutlinePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinePreviewView.swift; sourceTree = "<group>"; };
+		7EB3648F244B6EF600D7F96F /* OutlinePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinePreviewVC.swift; sourceTree = "<group>"; };
 		7EB7491824228549007265A4 /* JupyterPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JupyterPreviewVC.swift; sourceTree = "<group>"; };
 		7ECC8CEE240CB4CC000D6970 /* Glance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -372,6 +378,9 @@
 		7E616BB324499A380043F7AB /* ViewTypes */ = {
 			isa = PBXGroup;
 			children = (
+				7EB3648B244B6C8B00D7F96F /* OutlinePreviewView.xib */,
+				7EB3648D244B6DC100D7F96F /* OutlinePreviewView.swift */,
+				7EB3648F244B6EF600D7F96F /* OutlinePreviewVC.swift */,
 				7E9282102449AB7100DDCFBF /* TablePreviewView.xib */,
 				7E9282122449ACF900DDCFBF /* TablePreviewView.swift */,
 				7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */,
@@ -703,6 +712,7 @@
 				7EB3644E244B03CC00D7F96F /* KaTeX_Typewriter-Regular.ttf in Resources */,
 				7EB36476244B03CC00D7F96F /* KaTeX_Size1-Regular.ttf in Resources */,
 				7EB36443244B03CC00D7F96F /* KaTeX_Main-Regular.woff in Resources */,
+				7EB3648C244B6C8B00D7F96F /* OutlinePreviewView.xib in Resources */,
 				7EB3645B244B03CC00D7F96F /* KaTeX_SansSerif-Regular.woff2 in Resources */,
 				7E616BB2244998650043F7AB /* MainVC.xib in Resources */,
 				7EB36447244B03CC00D7F96F /* KaTeX_Size3-Regular.woff2 in Resources */,
@@ -764,6 +774,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAC01EC240D220B009505D0 /* File.swift in Sources */,
+				7EB36490244B6EF600D7F96F /* OutlinePreviewVC.swift in Sources */,
+				7EB3648E244B6DC100D7F96F /* OutlinePreviewView.swift in Sources */,
 				7E458AED2439176B0091BD0F /* Date.swift in Sources */,
 				7EB7491924228549007265A4 /* JupyterPreviewVC.swift in Sources */,
 				7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */,

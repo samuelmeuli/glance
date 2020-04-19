@@ -1,6 +1,6 @@
 import Cocoa
 
-class TablePreviewVC: NSViewController {
+class OutlinePreviewVC: NSViewController {
 	/// File to render
 	let file: File
 
@@ -23,9 +23,9 @@ class TablePreviewVC: NSViewController {
 		view = NSView()
 	}
 
-	func loadData(tableData: [[String: String]]) {
-		let tableView = TablePreviewView(frame: view.frame, tableData: tableData)
-		tableView.autoresizingMask = [.height, .width]
-		view.addSubview(tableView)
+	func loadData(outlineData: [FileNode]) {
+		let outlineView = OutlinePreviewView(frame: view.frame, outlineData: outlineData)
+		outlineView.autoresizingMask = [.height, .width]
+		view.addSubview(outlineView)
 	}
 }

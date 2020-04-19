@@ -22,6 +22,6 @@ class CSVPreviewVC: TablePreviewVC, PreviewVC {
 			throw error
 		}
 
-		loadTable(tableData: csv.namedRows)
+		loadData(tableData: csv.namedRows)
 	}
 }
