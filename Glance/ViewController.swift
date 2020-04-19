@@ -17,7 +17,9 @@ class ViewController: NSViewController {
 		let extensionCounts = stats.getExtensionCounts()
 
 		let nrPreviews = stats.getTotalCount()
-		let averagePreviewsPerDay = lround(Double(nrPreviews) / Double(stats.getDateCounts().count))
+		let averagePreviewsPerDay = nrPreviews == 0
+			? 0
+			: lround(Double(nrPreviews) / Double(stats.getDateCounts().count))
 		let mostPopularExtension = extensionCounts.max { a, b in a.value < b.value }
 
 		totalStatsValueLabel.stringValue = String(nrPreviews)
