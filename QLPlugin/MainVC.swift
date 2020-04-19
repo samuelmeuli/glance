@@ -9,8 +9,8 @@ enum PreviewError: Error {
 extension PreviewError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
-		case let .fileSizeError(path):
-			return NSLocalizedString("File \(path) is too large to preview", comment: "")
+			case let .fileSizeError(path):
+				return NSLocalizedString("File \(path) is too large to preview", comment: "")
 		}
 	}
 }

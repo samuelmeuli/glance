@@ -9,11 +9,11 @@ enum PreviewVCError {
 extension PreviewVCError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
-		case let .resourceNotFoundError(resourceName):
-			return NSLocalizedString(
-				"Could not find preview resource \"\(resourceName)\"",
-				comment: ""
-			)
+			case let .resourceNotFoundError(resourceName):
+				return NSLocalizedString(
+					"Could not find preview resource \"\(resourceName)\"",
+					comment: ""
+				)
 		}
 	}
 }

@@ -5,14 +5,14 @@ import Foundation
 class PreviewVCFactory {
 	static func getView(fileExtension: String) -> PreviewVC.Type {
 		switch fileExtension {
-		case "csv", "tab", "tsv":
-			return CSVPreviewVC.self
-		case "md", "markdown", "mdown", "mkdn", "mkd":
-			return MarkdownPreviewVC.self
-		case "ipynb":
-			return JupyterPreviewVC.self
-		default:
-			return CodePreviewVC.self
+			case "csv", "tab", "tsv":
+				return CSVPreviewVC.self
+			case "md", "markdown", "mdown", "mkdn", "mkd":
+				return MarkdownPreviewVC.self
+			case "ipynb":
+				return JupyterPreviewVC.self
+			default:
+				return CodePreviewVC.self
 		}
 	}
 }

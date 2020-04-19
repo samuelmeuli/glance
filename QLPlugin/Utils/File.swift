@@ -9,14 +9,18 @@ enum FileError: Error {
 extension FileError: LocalizedError {
 	public var errorDescription: String? {
 		switch self {
-		case let .fileAttributeError(path, message):
-			return NSLocalizedString(
-				"Could not get attributes for file at path \(path): \(message)", comment: ""
-			)
-		case let .fileNotFoundError(path):
-			return NSLocalizedString("Could not find file at path \(path)", comment: "")
-		case let .fileReadError(path, message):
-			return NSLocalizedString("Could not read file at path \(path): \(message)", comment: "")
+			case let .fileAttributeError(path, message):
+				return NSLocalizedString(
+					"Could not get attributes for file at path \(path): \(message)",
+					comment: ""
+				)
+			case let .fileNotFoundError(path):
+				return NSLocalizedString("Could not find file at path \(path)", comment: "")
+			case let .fileReadError(path, message):
+				return NSLocalizedString(
+					"Could not read file at path \(path): \(message)",
+					comment: ""
+				)
 		}
 	}
 }

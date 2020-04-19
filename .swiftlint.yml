@@ -1,9 +1,5 @@
 # Source: https://github.com/sindresorhus/swiftlint-sindre (with modifications)
 
-# Added
-excluded:
-  - .build # Ignore Swift Package Manager dependencies
-
 # Rules covered by SwiftFormat are commented out
 whitelist_rules:
   - anyobject_protocol
@@ -109,7 +105,7 @@ whitelist_rules:
   - static_operator
   - strong_iboutlet
   - superfluous_disable_command
-  - switch_case_alignment
+  # - switch_case_alignment
   - switch_case_on_newline
   - syntactic_sugar
   - todo
