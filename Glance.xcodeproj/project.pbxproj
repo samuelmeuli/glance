@@ -290,7 +290,6 @@
 			children = (
 				7E9F0D7924168870007F1008 /* WebAsset */,
 				7EAC01EB240D220B009505D0 /* File.swift */,
-				7E9282142449B96600DDCFBF /* LoadableNib.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -401,6 +400,7 @@
 		7E6EF1FE240CC802009E4199 /* QLPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				7EB36485244B65BC00D7F96F /* Protocols */,
 				7E1DC51D240E68AF00D0A061 /* Views */,
 				7E1DC51C240E674300D0A061 /* Utils */,
 				7EB363E3244B036900D7F96F /* Resources */,
@@ -534,6 +534,14 @@
 				7EB3643D244B03CC00D7F96F /* markdown-main.css */,
 			);
 			path = markdown;
+			sourceTree = "<group>";
+		};
+		7EB36485244B65BC00D7F96F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7E9282142449B96600DDCFBF /* LoadableNib.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		7ECC8CE5240CB4CC000D6970 = {
