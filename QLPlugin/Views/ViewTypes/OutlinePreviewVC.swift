@@ -27,5 +27,6 @@ class OutlinePreviewVC: NSViewController {
 		let outlineView = OutlinePreviewView(frame: view.frame, fileTree: fileTree)
 		outlineView.autoresizingMask = [.height, .width]
 		view.addSubview(outlineView)
+		outlineView.expandFirstLevel()
 	}
 }

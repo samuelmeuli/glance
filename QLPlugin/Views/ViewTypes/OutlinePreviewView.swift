@@ -43,6 +43,14 @@ class OutlinePreviewView: NSView, LoadableNib {
 			options: nil
 		)
 	}
+
+	/// Expands all first-level tree nodes.
+	func expandFirstLevel() {
+		let proxyRoot = treeController.arrangedObjects
+		for node in proxyRoot.children ?? [] {
+			outlineView.expandItem(node)
+		}
+	}
 }
 
 extension OutlinePreviewView: NSOutlineViewDelegate {
