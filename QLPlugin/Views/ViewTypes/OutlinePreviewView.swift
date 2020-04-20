@@ -6,12 +6,18 @@ class OutlinePreviewView: NSView, LoadableNib {
 	@IBOutlet internal var contentView: NSView!
 	@IBOutlet private var label: NSTextField!
 	@IBOutlet private var outlineView: NSOutlineView!
+
 	@objc dynamic var fileTreeNodes: [FileTreeNode]
+	let labelText: String
+
 	private let treeController = NSTreeController()
 
-	required init(frame: CGRect, fileTree: FileTree) {
+	required init(frame: CGRect, fileTree: FileTree, labelText: String) {
 		fileTreeNodes = Array(fileTree.root.children.values)
+		self.labelText = labelText
+
 		super.init(frame: frame)
+
 		loadViewFromNib(nibName: "OutlinePreviewView")
 		setUpView()
 	}
@@ -42,6 +48,8 @@ class OutlinePreviewView: NSView, LoadableNib {
 			withKeyPath: "arrangedObjects",
 			options: nil
 		)
+
+		label.stringValue = labelText
 	}
 
 	/// Expands all first-level tree nodes.

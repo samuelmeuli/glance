@@ -23,8 +23,12 @@ class OutlinePreviewVC: NSViewController {
 		view = NSView()
 	}
 
-	func loadData(fileTree: FileTree) {
-		let outlineView = OutlinePreviewView(frame: view.frame, fileTree: fileTree)
+	func loadData(fileTree: FileTree, labelText: String) {
+		let outlineView = OutlinePreviewView(
+			frame: view.frame,
+			fileTree: fileTree,
+			labelText: labelText
+		)
 		outlineView.autoresizingMask = [.height, .width]
 		view.addSubview(outlineView)
 		outlineView.expandFirstLevel()
