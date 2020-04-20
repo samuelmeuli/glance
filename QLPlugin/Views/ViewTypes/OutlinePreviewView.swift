@@ -1,45 +1,16 @@
 import Cocoa
 
-/// Node used for representing a file in an `NSOutlineView`
-class FileNode: NSObject {
-	@objc let name: String
-	@objc let size: Int
-	@objc let dateModified: Date
-	@objc let isDirectory: Bool
-	@objc let children: [FileNode]
-
-	/// Number of children (required by `NSOutlineView`)
-	@objc var count: Int { children.count }
-
-	/// Whether the current node has any children (required by `NSOutlineView`)
-	@objc var isLeaf: Bool { children.isEmpty }
-
-	init(
-		name: String,
-		size: Int,
-		dateModified: Date,
-		isDirectory: Bool,
-		children: [FileNode]
-	) {
-		self.name = name
-		self.size = size
-		self.dateModified = dateModified
-		self.isDirectory = isDirectory
-		self.children = children
-	}
-}
-
 /// Implementation of a `NSOutlineView` for file hiearchies
 class OutlinePreviewView: NSView, LoadableNib {
 	// swiftlint:disable:next private_outlet
 	@IBOutlet internal var contentView: NSView!
 	@IBOutlet private var label: NSTextField!
 	@IBOutlet private var outlineView: NSOutlineView!
-	@objc dynamic var outlineData = [FileNode]()
+	@objc dynamic var fileTreeNodes: [FileTreeNode]
 	private let treeController = NSTreeController()
 
-	required init(frame: CGRect, outlineData: [FileNode]) {
-		self.outlineData = outlineData
+	required init(frame: CGRect, fileTree: FileTree) {
+		fileTreeNodes = Array(fileTree.root.children.values)
 		super.init(frame: frame)
 		loadViewFromNib(nibName: "OutlinePreviewView")
 		setUpView()
@@ -53,15 +24,16 @@ class OutlinePreviewView: NSView, LoadableNib {
 	private func setUpView() {
 		outlineView.delegate = self
 
-		treeController.objectClass = FileNode.self
-		treeController.childrenKeyPath = "children"
-		treeController.countKeyPath = "count"
-		treeController.leafKeyPath = "isLeaf"
+		// See `FileTreeNode`'s computed properties
+		treeController.objectClass = FileTreeNode.self
+		treeController.childrenKeyPath = "childrenList"
+		treeController.countKeyPath = "childrenCount"
+		treeController.leafKeyPath = "hasChildren"
 
 		treeController.bind(
 			NSBindingName(rawValue: "contentArray"),
 			to: self,
-			withKeyPath: "outlineData",
+			withKeyPath: "fileTreeNodes",
 			options: nil
 		)
 		outlineView.bind(
