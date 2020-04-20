@@ -40,6 +40,9 @@
 				<!-- Base UTI -->
 				<string>public.data</string>
 
+				<!-- Archive -->
+				<string>public.zip-archive</string> <!-- .zip -->
+
 				<!-- CSV -->
 				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
 				<string>public.comma-separated-values-text</string> <!-- .csv -->

@@ -109,6 +109,8 @@
 		7EB36480244B03CC00D7F96F /* shared-chroma.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3643A244B03CC00D7F96F /* shared-chroma.css */; };
 		7EB36482244B03CC00D7F96F /* markdown-main.css in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3643D244B03CC00D7F96F /* markdown-main.css */; };
 		7EB36484244B0CCE00D7F96F /* TablePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */; };
+		7EB36488244B65D900D7F96F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB36487244B65D900D7F96F /* String.swift */; };
+		7EB3648A244B665700D7F96F /* ZIPPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB36489244B665700D7F96F /* ZIPPreviewVC.swift */; };
 		7EB3648C244B6C8B00D7F96F /* OutlinePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3648B244B6C8B00D7F96F /* OutlinePreviewView.xib */; };
 		7EB3648E244B6DC100D7F96F /* OutlinePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3648D244B6DC100D7F96F /* OutlinePreviewView.swift */; };
 		7EB36490244B6EF600D7F96F /* OutlinePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3648F244B6EF600D7F96F /* OutlinePreviewVC.swift */; };
@@ -257,6 +259,8 @@
 		7EB3643A244B03CC00D7F96F /* shared-chroma.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "shared-chroma.css"; sourceTree = "<group>"; };
 		7EB3643D244B03CC00D7F96F /* markdown-main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "markdown-main.css"; sourceTree = "<group>"; };
 		7EB36483244B0CCE00D7F96F /* TablePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePreviewVC.swift; sourceTree = "<group>"; };
+		7EB36487244B65D900D7F96F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7EB36489244B665700D7F96F /* ZIPPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZIPPreviewVC.swift; sourceTree = "<group>"; };
 		7EB3648B244B6C8B00D7F96F /* OutlinePreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutlinePreviewView.xib; sourceTree = "<group>"; };
 		7EB3648D244B6DC100D7F96F /* OutlinePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinePreviewView.swift; sourceTree = "<group>"; };
 		7EB3648F244B6EF600D7F96F /* OutlinePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinePreviewVC.swift; sourceTree = "<group>"; };
@@ -332,6 +336,7 @@
 				7E413F7F2418DD6200CFBB1D /* CSVPreviewVC.swift */,
 				7EB7491824228549007265A4 /* JupyterPreviewVC.swift */,
 				7E1DC520240E6D8000D0A061 /* MarkdownPreviewVC.swift */,
+				7EB36489244B665700D7F96F /* ZIPPreviewVC.swift */,
 			);
 			path = FileTypes;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 		7E6EF1FE240CC802009E4199 /* QLPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				7EB36486244B65D900D7F96F /* Extensions */,
 				7EB36485244B65BC00D7F96F /* Protocols */,
 				7E1DC51D240E68AF00D0A061 /* Views */,
 				7E1DC51C240E674300D0A061 /* Utils */,
@@ -554,6 +560,14 @@
 				7E9282142449B96600DDCFBF /* LoadableNib.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7EB36486244B65D900D7F96F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EB36487244B65D900D7F96F /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7ECC8CE5240CB4CC000D6970 = {
@@ -776,6 +790,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB36488244B65D900D7F96F /* String.swift in Sources */,
 				7EAC01EC240D220B009505D0 /* File.swift in Sources */,
 				7EB36490244B6EF600D7F96F /* OutlinePreviewVC.swift in Sources */,
 				7EB3648E244B6DC100D7F96F /* OutlinePreviewView.swift in Sources */,
@@ -796,6 +811,7 @@
 				7E413F802418DD6200CFBB1D /* CSVPreviewVC.swift in Sources */,
 				7E1DC52A240E6FDE00D0A061 /* CodePreviewVC.swift in Sources */,
 				7E9F0D7E24168870007F1008 /* Script.swift in Sources */,
+				7EB3648A244B665700D7F96F /* ZIPPreviewVC.swift in Sources */,
 				7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

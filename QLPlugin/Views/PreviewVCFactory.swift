@@ -11,6 +11,8 @@ class PreviewVCFactory {
 				return MarkdownPreviewVC.self
 			case "ipynb":
 				return JupyterPreviewVC.self
+			case "zip":
+				return ZIPPreviewVC.self
 			default:
 				return CodePreviewVC.self
 		}
