@@ -35,7 +35,7 @@ class WebPreviewVC: NSViewController, PreviewVC {
 		if let sharedCSSURL = sharedCSSURL {
 			stylesheets.append(Stylesheet(url: sharedCSSURL))
 		} else {
-			os_log("Could not find shared stylesheet", type: .error)
+			os_log("Could not find shared stylesheet", log: Log.render, type: .error)
 		}
 
 		return stylesheets

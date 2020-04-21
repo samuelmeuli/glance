@@ -61,7 +61,7 @@ class MainVC: NSViewController, QLPreviewingController {
 		}
 
 		// Render file preview
-		os_log("Generating preview for file %s", type: .debug, fileUrl.path)
+		os_log("Generating preview for file %{public}s", log: Log.general, type: .info, file.path)
 		do {
 			try previewFile(file: file)
 		} catch {
@@ -92,7 +92,12 @@ class MainVC: NSViewController, QLPreviewingController {
 			previewVC.view.frame = view.frame
 			view.addSubview(previewVC.view)
 		} else {
-			os_log("Skipping preview for file %s: File type not supported", type: .debug, file.path)
+			os_log(
+				"Skipping preview for file %{public}s: File type not supported",
+				log: Log.general,
+				type: .info,
+				file.path
+			)
 		}
 	}
 }

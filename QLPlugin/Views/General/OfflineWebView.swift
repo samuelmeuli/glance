@@ -41,7 +41,8 @@ class OfflineWebView: WKWebView {
 		) { contentRuleList, error in
 			if let error = error {
 				os_log(
-					"Error compiling WKWebView content rule list: %s",
+					"Error compiling WKWebView content rule list: %{public}s",
+					log: Log.render,
 					type: .error,
 					error.localizedDescription
 				)
@@ -50,6 +51,7 @@ class OfflineWebView: WKWebView {
 			} else {
 				os_log(
 					"Error adding WKWebView content rule list: Content rule list is not defined",
+					log: Log.render,
 					type: .error
 				)
 			}

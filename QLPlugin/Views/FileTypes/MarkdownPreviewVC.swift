@@ -13,7 +13,7 @@ class MarkdownPreviewVC: WebPreviewVC {
 		if let cssURL = githubMarkdownCSSURL {
 			stylesheets.append(Stylesheet(url: cssURL))
 		} else {
-			os_log("Could not find `github-markdown-css` stylesheet", type: .error)
+			os_log("Could not find `github-markdown-css` stylesheet", log: Log.render, type: .error)
 		}
 		return stylesheets
 	}
@@ -23,7 +23,12 @@ class MarkdownPreviewVC: WebPreviewVC {
 		do {
 			fileContent = try file.read()
 		} catch {
-			os_log("Could not read Markdown file: %s", type: .error, error.localizedDescription)
+			os_log(
+				"Could not read Markdown file: %{public}s",
+				log: Log.parse,
+				type: .error,
+				error.localizedDescription
+			)
 			throw error
 		}
 
@@ -34,7 +39,8 @@ class MarkdownPreviewVC: WebPreviewVC {
 			return "<div class=\"markdown-body\">\(html)</div>"
 		} catch {
 			os_log(
-				"Down could not generate HTML from Markdown: %s",
+				"Down could not generate HTML from Markdown: %{public}s",
+				log: Log.render,
 				type: .error,
 				error.localizedDescription
 			)

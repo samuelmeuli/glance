@@ -23,21 +23,21 @@ class JupyterPreviewVC: WebPreviewVC {
 		if let mainCSSURL = mainCSSURL {
 			stylesheets.append(Stylesheet(url: mainCSSURL))
 		} else {
-			os_log("Could not find main Jupyter stylesheet", type: .error)
+			os_log("Could not find main Jupyter stylesheet", log: Log.render, type: .error)
 		}
 
 		// Chroma stylesheet (for code syntax highlighting)
 		if let chromaCSSURL = chromaCSSURL {
 			stylesheets.append(Stylesheet(url: chromaCSSURL))
 		} else {
-			os_log("Could not find Chroma stylesheet", type: .error)
+			os_log("Could not find Chroma stylesheet", log: Log.render, type: .error)
 		}
 
 		// KaTeX stylesheet (for rendering LaTeX math)
 		if let katexCSSURL = katexCSSURL {
 			stylesheets.append(Stylesheet(url: katexCSSURL))
 		} else {
-			os_log("Could not find KaTeX stylesheet", type: .error)
+			os_log("Could not find KaTeX stylesheet", log: Log.render, type: .error)
 		}
 
 		return stylesheets
@@ -45,7 +45,7 @@ class JupyterPreviewVC: WebPreviewVC {
 
 	override func getHTML() throws -> String {
 		guard let nbtohtmlBinaryURL = nbtohtmlBinaryURL else {
-			os_log("Could not find nbtohtml binary", type: .error)
+			os_log("Could not find nbtohtml binary", log: Log.render, type: .error)
 			throw PreviewVCError.resourceNotFoundError(resourceName: "nbtohtml binary")
 		}
 
@@ -57,7 +57,8 @@ class JupyterPreviewVC: WebPreviewVC {
 			return result.stdout ?? ""
 		} catch {
 			os_log(
-				"Error trying to convert Jupyter Notebook to HTML using nbtohtml: %s",
+				"Error trying to convert Jupyter Notebook to HTML using nbtohtml: %{public}s",
+				log: Log.render,
 				type: .error,
 				error.localizedDescription
 			)
@@ -72,14 +73,14 @@ class JupyterPreviewVC: WebPreviewVC {
 		if let katexJSURL = katexJSURL {
 			scripts.append(Script(url: katexJSURL))
 		} else {
-			os_log("Could not find KaTeX script", type: .error)
+			os_log("Could not find KaTeX script", log: Log.render, type: .error)
 		}
 
 		// KaTeX auto-renderer (finds LaTeX math ond the page and calls KaTeX on it)
 		if let katexAutoRenderJSURL = katexAutoRenderJSURL {
 			scripts.append(Script(url: katexAutoRenderJSURL))
 		} else {
-			os_log("Could not find KaTeX auto-render script", type: .error)
+			os_log("Could not find KaTeX auto-render script", log: Log.render, type: .error)
 		}
 
 		// Main script (calls the KaTeX auto-renderer)

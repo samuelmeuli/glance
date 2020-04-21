@@ -13,7 +13,11 @@ class Stats {
 	init() {
 		defaults = UserDefaults(suiteName: "group.com.samuelmeuli.glance")
 		if defaults == nil {
-			os_log("Unable to initialize user defaults: Object is null", type: .error)
+			os_log(
+				"Unable to initialize user defaults: Object is null",
+				log: Log.general,
+				type: .error
+			)
 		}
 	}
 

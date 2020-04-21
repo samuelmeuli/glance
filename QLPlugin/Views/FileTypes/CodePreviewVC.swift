@@ -41,14 +41,14 @@ class CodePreviewVC: WebPreviewVC {
 		if let cssURL = chromaCSSURL {
 			stylesheets.append(Stylesheet(url: cssURL))
 		} else {
-			os_log("Could not find Chroma stylesheet", type: .error)
+			os_log("Could not find Chroma stylesheet", log: Log.render, type: .error)
 		}
 		return stylesheets
 	}
 
 	override func getHTML() throws -> String {
 		guard let chromaBinaryURL = chromaBinaryURL else {
-			os_log("Could not find nbtohtml binary", type: .error)
+			os_log("Could not find nbtohtml binary", log: Log.render, type: .error)
 			throw PreviewVCError.resourceNotFoundError(resourceName: "nbtohtml binary")
 		}
 
@@ -60,7 +60,8 @@ class CodePreviewVC: WebPreviewVC {
 			return result.stdout ?? ""
 		} catch {
 			os_log(
-				"Error trying to convert source code to HTML using Chroma: %s",
+				"Error trying to convert source code to HTML using Chroma: %{public}s",
+				log: Log.render,
 				type: .error,
 				error.localizedDescription
 			)

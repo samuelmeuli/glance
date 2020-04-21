@@ -15,7 +15,8 @@ class CSVPreviewVC: TablePreviewVC, PreviewVC {
 			csv = try CSV(url: file.url, delimiter: delimiter)
 		} catch {
 			os_log(
-				"Could not parse CSV file: %s",
+				"Could not parse CSV file: %{public}s",
+				log: Log.parse,
 				type: .error,
 				error.localizedDescription
 			)

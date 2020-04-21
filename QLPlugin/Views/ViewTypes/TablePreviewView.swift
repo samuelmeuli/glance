@@ -32,11 +32,19 @@ class TablePreviewView: NSView, LoadableNib {
 
 	private func createColumns() {
 		guard let firstRow = tableData.first else {
-			os_log("Skipping creation of table columns (no rows in `tableData`)")
+			os_log(
+				"Skipping creation of table columns (no rows in `tableData`)",
+				log: Log.render,
+				type: .info
+			)
 			return
 		}
 		guard !firstRow.isEmpty else {
-			os_log("Skipping creation of table columns (no columns in `tableData`)")
+			os_log(
+				"Skipping creation of table columns (no columns in `tableData`)",
+				log: Log.render,
+				type: .info
+			)
 			return
 		}
 

@@ -65,7 +65,7 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 					dateModified: parseDate(dateString: match[3]) ?? Date()
 				)
 			} catch {
-				os_log("%s", type: .error, error.localizedDescription)
+				os_log("%{public}s", log: Log.parse, type: .error, error.localizedDescription)
 			}
 		}
 

@@ -58,7 +58,7 @@ class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
 						dateModified: dateFormatter.date(from: match[3]) ?? Date()
 					)
 				} catch {
-					os_log("%s", type: .error, error.localizedDescription)
+					os_log("%{public}s", log: Log.parse, type: .error, error.localizedDescription)
 				}
 			}
 		}

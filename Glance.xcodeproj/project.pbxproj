@@ -119,6 +119,8 @@
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
 		7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF3240CB4CC000D6970 /* ViewController.swift */; };
 		7ECC8CF6240CB4CC000D6970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */; };
+		7EE10F84244F679B007214D8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE10F82244F6774007214D8 /* Log.swift */; };
+		7EE10F85244F696F007214D8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE10F82244F6774007214D8 /* Log.swift */; };
 		7EF0E071244B8A1C00211DB0 /* nbtohtml-v0.4.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; };
 		7EF0E072244B8A2200211DB0 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 /* End PBXBuildFile section */
@@ -273,6 +275,7 @@
 		7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECC8CFA240CB4CC000D6970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ECC8CFB240CB4CC000D6970 /* Glance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Glance.entitlements; sourceTree = "<group>"; };
+		7EE10F82244F6774007214D8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +350,7 @@
 		7E21C88F24390E2400818EB2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7EE10F82244F6774007214D8 /* Log.swift */,
 				7E21C88C2438CAA500818EB2 /* Stats.swift */,
 			);
 			path = Utils;
@@ -800,6 +804,7 @@
 				7E458AED2439176B0091BD0F /* Date.swift in Sources */,
 				7EB7491924228549007265A4 /* JupyterPreviewVC.swift in Sources */,
 				7E8DEDBF242C20A000F2DABB /* OfflineWebView.swift in Sources */,
+				7EE10F84244F679B007214D8 /* Log.swift in Sources */,
 				7E21C88E24390BE400818EB2 /* Stats.swift in Sources */,
 				7EAC01EA240D2063009505D0 /* WebPreviewVC.swift in Sources */,
 				7E9282132449ACF900DDCFBF /* TablePreviewView.swift in Sources */,
@@ -826,6 +831,7 @@
 			files = (
 				7E458AF0243944810091BD0F /* URL.swift in Sources */,
 				7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */,
+				7EE10F85244F696F007214D8 /* Log.swift in Sources */,
 				7E458AF52439481F0091BD0F /* Menu.swift in Sources */,
 				7E21C88D2438CAA500818EB2 /* Stats.swift in Sources */,
 				7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */,
