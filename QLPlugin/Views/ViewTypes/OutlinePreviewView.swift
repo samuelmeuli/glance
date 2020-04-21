@@ -8,11 +8,11 @@ class OutlinePreviewView: NSView, LoadableNib {
 	@IBOutlet private var outlineView: NSOutlineView!
 
 	@objc dynamic var fileTreeNodes: [FileTreeNode]
-	let labelText: String
+	let labelText: String?
 
 	private let treeController = NSTreeController()
 
-	required init(frame: CGRect, fileTree: FileTree, labelText: String) {
+	required init(frame: CGRect, fileTree: FileTree, labelText: String?) {
 		fileTreeNodes = Array(fileTree.root.children.values)
 		self.labelText = labelText
 
@@ -49,7 +49,7 @@ class OutlinePreviewView: NSView, LoadableNib {
 			options: nil
 		)
 
-		label.stringValue = labelText
+		label.stringValue = labelText ?? ""
 	}
 
 	/// Expands all first-level tree nodes.

@@ -41,6 +41,8 @@
 				<string>public.data</string>
 
 				<!-- Archive -->
+				<string>org.gnu.gnu-zip-archive</string> <!-- .gz -->
+				<string>public.tar-archive</string> <!-- .tar -->
 				<string>public.zip-archive</string> <!-- .zip -->
 
 				<!-- CSV -->

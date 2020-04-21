@@ -23,7 +23,7 @@ class OutlinePreviewVC: NSViewController {
 		view = NSView()
 	}
 
-	func loadData(fileTree: FileTree, labelText: String) {
+	func loadData(fileTree: FileTree, labelText: String?) {
 		let outlineView = OutlinePreviewView(
 			frame: view.frame,
 			fileTree: fileTree,

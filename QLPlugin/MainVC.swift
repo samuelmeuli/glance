@@ -81,16 +81,18 @@ class MainVC: NSViewController, QLPreviewingController {
 	/// Generates a preview of the selected file and adds the corresponding child view controller
 	private func previewFile(file: File) throws {
 		// Initialize `PreviewVC` for the file type
-		let previewVCType = PreviewVCFactory.getView(fileExtension: file.url.pathExtension)
-		let previewVC = previewVCType.init(file: file)
+		if let previewVCType = PreviewVCFactory.getView(fileURL: file.url) {
+			// Generate file preview
+			let previewVC = previewVCType.init(file: file)
+			try previewVC.loadPreview()
 
-		// Generate file preview
-		try previewVC.loadPreview()
-
-		// Add `PreviewVC` as a child view controller
-		addChild(previewVC)
-		previewVC.view.autoresizingMask = [.height, .width]
-		previewVC.view.frame = view.frame
-		view.addSubview(previewVC.view)
+			// Add `PreviewVC` as a child view controller
+			addChild(previewVC)
+			previewVC.view.autoresizingMask = [.height, .width]
+			previewVC.view.frame = view.frame
+			view.addSubview(previewVC.view)
+		} else {
+			os_log("Skipping preview for file %s: File type not supported", type: .debug, file.path)
+		}
 	}
 }
