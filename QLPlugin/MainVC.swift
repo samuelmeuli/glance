@@ -27,10 +27,10 @@ class MainVC: NSViewController, QLPreviewingController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		configureView()
+		setUpView()
 	}
 
-	private func configureView() {
+	private func setUpView() {
 		// Draw border around previews, in similar style to macOS's default previews
 		view.wantsLayer = true
 		view.layer?.borderWidth = 1
