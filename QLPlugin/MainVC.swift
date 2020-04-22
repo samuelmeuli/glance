@@ -43,39 +43,46 @@ class MainVC: NSViewController, QLPreviewingController {
 		at fileUrl: URL,
 		completionHandler handler: @escaping (Error?) -> Void
 	) {
-		// Read information about the file to preview
-		var file: File
-		do {
-			file = try File(url: fileUrl)
-		} catch {
-			handler(error)
-			return
+		DispatchQueue.main.async {
+			// Read information about the file to preview
+			var file: File
+			do {
+				file = try File(url: fileUrl)
+			} catch {
+				handler(error)
+				return
+			}
+
+			// Skip preview if the file is too large
+			if !file.isDirectory, file.size > self.maxFileSize {
+				// Log error and fall back to default preview (by calling the completion handler
+				// with the error)
+				handler(PreviewError.fileSizeError(path: file.path))
+				return
+			}
+
+			// Render file preview
+			os_log(
+				"Generating preview for file %{public}s",
+				log: Log.general,
+				type: .info,
+				file.path
+			)
+			do {
+				try self.previewFile(file: file)
+			} catch {
+				// Log error and fall back to default preview (by calling the completion handler
+				// with the error)
+				handler(error)
+				return
+			}
+
+			// Update stats
+			self.stats.increaseStatsCounts(fileExtension: file.url.pathExtension)
+
+			// Hide preview loading spinner
+			handler(nil)
 		}
-
-		// Skip preview if the file is too large
-		if !file.isDirectory, file.size > maxFileSize {
-			// Log error and fall back to default preview (by calling the completion handler with
-			// the error)
-			handler(PreviewError.fileSizeError(path: file.path))
-			return
-		}
-
-		// Render file preview
-		os_log("Generating preview for file %{public}s", log: Log.general, type: .info, file.path)
-		do {
-			try previewFile(file: file)
-		} catch {
-			// Log error and fall back to default preview (by calling the completion handler with
-			// the error)
-			handler(error)
-			return
-		}
-
-		// Update stats
-		stats.increaseStatsCounts(fileExtension: file.url.pathExtension)
-
-		// Hide preview loading spinner
-		handler(nil)
 	}
 
 	/// Generates a preview of the selected file and adds the corresponding child view controller
