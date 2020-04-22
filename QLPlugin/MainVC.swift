@@ -17,7 +17,7 @@ extension PreviewError: LocalizedError {
 
 class MainVC: NSViewController, QLPreviewingController {
 	/// Max size of files to render
-	let maxFileSize = 10_000_000 // 1000000 B = 10 MB
+	let maxFileSize = 10_000_000 // 10 MB
 
 	let stats = Stats()
 

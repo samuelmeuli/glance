@@ -7,6 +7,18 @@ let privacyPolicyURL = URL(string: "https://github.com/samuelmeuli/glance/blob/m
 let websiteURL = URL(string: "https://github.com/samuelmeuli/glance")!
 
 /// Used as a subclass for the menu item in Interface Builder
+final class SupportedFilesMenuItem: NSMenuItem {
+	required init(coder decoder: NSCoder) {
+		super.init(coder: decoder)
+
+		onAction = { _ in
+			let supportedFilesWC = SupportedFilesWC(windowNibName: NSNib.Name("SupportedFilesWC"))
+			supportedFilesWC.showWindow(nil)
+		}
+	}
+}
+
+/// Used as a subclass for the menu item in Interface Builder
 final class FeedbackMenuItem: NSMenuItem {
 	required init(coder decoder: NSCoder) {
 		super.init(coder: decoder)
