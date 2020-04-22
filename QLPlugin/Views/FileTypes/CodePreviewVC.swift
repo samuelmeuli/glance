@@ -21,7 +21,7 @@ let fileExtensionLexers = [
 ]
 
 class CodePreviewVC: WebPreviewVC {
-	private let chromaBinaryURL = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.0")
+	private let chromaBinaryURL = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.2")
 	private let chromaCSSURL = Bundle.main.url(forResource: "shared-chroma", withExtension: "css")
 
 	/// Returns the name of the Chroma lexer to use for the file. This is determined based on the
@@ -53,9 +53,10 @@ class CodePreviewVC: WebPreviewVC {
 		}
 
 		do {
+			let lexer = getLexer()
 			let result = try exec(
 				program: chromaBinaryURL.path,
-				arguments: [file.path, "--html", "--html-only", "--lexer", getLexer()]
+				arguments: [file.path, "--html", "--html-only", "--lexer", lexer]
 			)
 			return result.stdout ?? ""
 		} catch {

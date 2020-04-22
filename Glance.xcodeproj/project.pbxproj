@@ -29,7 +29,6 @@
 		7E6EF200240CC802009E4199 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EF1FF240CC802009E4199 /* MainVC.swift */; };
 		7E6EF208240CC802009E4199 /* QLPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E6EF1FA240CC802009E4199 /* QLPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7E7A9DAD244F24B900276E51 /* TARPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A9DAC244F24B900276E51 /* TARPreviewVC.swift */; };
-		7E8492E0244B8BA60013E55A /* chroma-v0.7.0 in Copy Files */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E8492E1244B8BA80013E55A /* nbtohtml-v0.4.0 in Copy Files */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7E8DEDAB242BE1FA00F2DABB /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8DEDAA242BE1FA00F2DABB /* Down */; };
 		7E8DEDAE242BE20F00F2DABB /* SwiftExec in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8DEDAD242BE20F00F2DABB /* SwiftExec */; };
@@ -119,10 +118,11 @@
 		7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */; };
 		7ECC8CF4240CB4CC000D6970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF3240CB4CC000D6970 /* ViewController.swift */; };
 		7ECC8CF6240CB4CC000D6970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */; };
+		7EDA9CF0244FBEBC002A6751 /* chroma-v0.7.2 in Copy Files */ = {isa = PBXBuildFile; fileRef = 7EDA9CEE244FBEAC002A6751 /* chroma-v0.7.2 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7EDA9CF1244FBEC2002A6751 /* chroma-v0.7.2 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDA9CEE244FBEAC002A6751 /* chroma-v0.7.2 */; };
 		7EE10F84244F679B007214D8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE10F82244F6774007214D8 /* Log.swift */; };
 		7EE10F85244F696F007214D8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE10F82244F6774007214D8 /* Log.swift */; };
 		7EF0E071244B8A1C00211DB0 /* nbtohtml-v0.4.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */; };
-		7EF0E072244B8A2200211DB0 /* chroma-v0.7.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9F0D592416286A007F1008 /* chroma-v0.7.0 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +153,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				7E8492E0244B8BA60013E55A /* chroma-v0.7.0 in Copy Files */,
+				7EDA9CF0244FBEBC002A6751 /* chroma-v0.7.2 in Copy Files */,
 				7E8492E1244B8BA80013E55A /* nbtohtml-v0.4.0 in Copy Files */,
 			);
 			name = "Copy Files";
@@ -189,7 +189,6 @@
 		7E9282122449ACF900DDCFBF /* TablePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePreviewView.swift; sourceTree = "<group>"; };
 		7E9282142449B96600DDCFBF /* LoadableNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableNib.swift; sourceTree = "<group>"; };
 		7E9F0D582416284A007F1008 /* chroma */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = chroma; path = "../../../Downloads/chroma-0.7.0-darwin-amd64/chroma"; sourceTree = "<group>"; };
-		7E9F0D592416286A007F1008 /* chroma-v0.7.0 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.0"; sourceTree = "<group>"; };
 		7E9F0D7A24168870007F1008 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		7E9F0D7B24168870007F1008 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		7E9F0D7C24168870007F1008 /* WebAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAsset.swift; sourceTree = "<group>"; };
@@ -275,6 +274,7 @@
 		7ECC8CF5240CB4CC000D6970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECC8CFA240CB4CC000D6970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ECC8CFB240CB4CC000D6970 /* Glance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Glance.entitlements; sourceTree = "<group>"; };
+		7EDA9CEE244FBEAC002A6751 /* chroma-v0.7.2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "chroma-v0.7.2"; sourceTree = "<group>"; };
 		7EE10F82244F6774007214D8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,7 +287,7 @@
 				7E8DEDAB242BE1FA00F2DABB /* Down in Frameworks */,
 				7E616BB0244997420043F7AB /* SwiftCSV in Frameworks */,
 				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
-				7EF0E072244B8A2200211DB0 /* chroma-v0.7.0 in Frameworks */,
+				7EDA9CF1244FBEC2002A6751 /* chroma-v0.7.2 in Frameworks */,
 				7EF0E071244B8A1C00211DB0 /* nbtohtml-v0.4.0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +440,7 @@
 		7E9F0D5B24162920007F1008 /* Binaries */ = {
 			isa = PBXGroup;
 			children = (
-				7E9F0D592416286A007F1008 /* chroma-v0.7.0 */,
+				7EDA9CEE244FBEAC002A6751 /* chroma-v0.7.2 */,
 				7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */,
 			);
 			path = Binaries;
