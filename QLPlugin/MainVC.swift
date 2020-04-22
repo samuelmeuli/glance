@@ -17,7 +17,7 @@ extension PreviewError: LocalizedError {
 
 class MainVC: NSViewController, QLPreviewingController {
 	/// Max size of files to render
-	let maxFileSize = 1_000_000 // 1000000 B = 1 MB
+	let maxFileSize = 10_000_000 // 1000000 B = 10 MB
 
 	let stats = Stats()
 
@@ -54,7 +54,7 @@ class MainVC: NSViewController, QLPreviewingController {
 			}
 
 			// Skip preview if the file is too large
-			if !file.isDirectory, file.size > self.maxFileSize {
+			if !file.isDirectory, !file.isArchive, file.size > self.maxFileSize {
 				// Log error and fall back to default preview (by calling the completion handler
 				// with the error)
 				handler(PreviewError.fileSizeError(path: file.path))

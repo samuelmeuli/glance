@@ -305,9 +305,9 @@
 		7E1DC51C240E674300D0A061 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7E9F0D7924168870007F1008 /* WebAsset */,
 				7EAC01EB240D220B009505D0 /* File.swift */,
 				7E45F898244DA45500BFB869 /* FileTree.swift */,
+				7E9F0D7924168870007F1008 /* WebAsset */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
