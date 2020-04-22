@@ -56,13 +56,17 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 		// - Digits before date indicate number of bytes
 		let linesMatched = lines.matchRegex(regex: linesRegex)
 		for match in linesMatched {
+			let permissions = match[1]
+			let sizeString = match[2]
+			let dateModifiedString = match[3]
+			let path = match[4]
 			do {
 				// Add file/directory node to tree
 				try fileTree.addNode(
-					path: match[4],
-					isDirectory: match[1].first == "d",
-					size: Int(match[2]) ?? -1,
-					dateModified: parseDate(dateString: match[3]) ?? Date()
+					path: path,
+					isDirectory: permissions.first == "d",
+					size: Int(sizeString) ?? -1,
+					dateModified: parseDate(dateString: dateModifiedString) ?? Date()
 				)
 			} catch {
 				os_log("%{public}s", log: Log.parse, type: .error, error.localizedDescription)

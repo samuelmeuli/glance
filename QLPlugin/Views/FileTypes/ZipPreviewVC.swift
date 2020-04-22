@@ -47,15 +47,19 @@ class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
 		let contentLinesString = lines[2 ... lines.count - 2].joined(separator: "\n")
 		let contentLinesMatched = contentLinesString.matchRegex(regex: contentLinesRegex)
 		for match in contentLinesMatched {
+			let permissions = match[1]
+			let sizeString = match[2]
+			let dateModifiedString = match[3]
+			let path = match[4]
 			// Ignore "__MACOSX" subdirectory (ZIP resource fork created by macOS)
-			if !match[3].hasPrefix("__MACOSX/") {
+			if !path.hasPrefix("__MACOSX") {
 				do {
 					// Add file/directory node to tree
 					try fileTree.addNode(
-						path: match[4],
-						isDirectory: match[1].first == "d",
-						size: Int(match[2]) ?? -1,
-						dateModified: dateFormatter.date(from: match[3]) ?? Date()
+						path: path,
+						isDirectory: permissions.first == "d",
+						size: Int(sizeString) ?? -1,
+						dateModified: dateFormatter.date(from: dateModifiedString) ?? Date()
 					)
 				} catch {
 					os_log("%{public}s", log: Log.parse, type: .error, error.localizedDescription)
