@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E04C0472448E0BD00B54ED1 /* UsageStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04C0462448E0BD00B54ED1 /* UsageStackView.swift */; };
 		7E1DC51F240E6CE300D0A061 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */; };
 		7E1DC521240E6D8000D0A061 /* MarkdownPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC520240E6D8000D0A061 /* MarkdownPreviewVC.swift */; };
 		7E1DC528240E6F4A00D0A061 /* PreviewVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC527240E6F4A00D0A061 /* PreviewVCFactory.swift */; };
@@ -162,7 +161,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E04C0462448E0BD00B54ED1 /* UsageStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStackView.swift; sourceTree = "<group>"; };
 		7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 		7E1DC520240E6D8000D0A061 /* MarkdownPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownPreviewVC.swift; sourceTree = "<group>"; };
 		7E1DC527240E6F4A00D0A061 /* PreviewVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVCFactory.swift; sourceTree = "<group>"; };
@@ -602,7 +600,6 @@
 				7E4AA666244C4049001C9B45 /* Credits.rtf */,
 				7ECC8CF1240CB4CC000D6970 /* AppDelegate.swift */,
 				7ECC8CF3240CB4CC000D6970 /* ViewController.swift */,
-				7E04C0462448E0BD00B54ED1 /* UsageStackView.swift */,
 			);
 			path = Glance;
 			sourceTree = "<group>";
@@ -827,7 +824,6 @@
 				7E458AF52439481F0091BD0F /* Menu.swift in Sources */,
 				7E21C88D2438CAA500818EB2 /* Stats.swift in Sources */,
 				7ECC8CF2240CB4CC000D6970 /* AppDelegate.swift in Sources */,
-				7E04C0472448E0BD00B54ED1 /* UsageStackView.swift in Sources */,
 				7E458AF22439474E0091BD0F /* NSMenuItem.swift in Sources */,
 				7E21C89124390E3100818EB2 /* Date.swift in Sources */,
 			);
