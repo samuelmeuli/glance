@@ -324,14 +324,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7E1DC52B240E91FC00D0A061 /* Assets */ = {
+		7E1DC52B240E91FC00D0A061 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				7EB363F6244B03CC00D7F96F /* jupyter */,
 				7EB3643B244B03CC00D7F96F /* markdown */,
 				7EB36438244B03CC00D7F96F /* shared */,
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7E1DC52C240E9A3700D0A061 /* FileTypes */ = {
@@ -428,7 +428,8 @@
 				7EB36485244B65BC00D7F96F /* Protocols */,
 				7E1DC51D240E68AF00D0A061 /* Views */,
 				7E1DC51C240E674300D0A061 /* Utils */,
-				7EB363E3244B036900D7F96F /* Resources */,
+				7E1DC52B240E91FC00D0A061 /* Resources */,
+				7E9F0D5B24162920007F1008 /* Vendor */,
 				7E6EF204240CC802009E4199 /* Info.plist */,
 				7E6EF205240CC802009E4199 /* QLPlugin.entitlements */,
 				7E616BB1244998650043F7AB /* MainVC.xib */,
@@ -437,13 +438,13 @@
 			path = QLPlugin;
 			sourceTree = "<group>";
 		};
-		7E9F0D5B24162920007F1008 /* Binaries */ = {
+		7E9F0D5B24162920007F1008 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				7EDA9CEE244FBEAC002A6751 /* chroma-v0.7.2 */,
 				7E8DEDAF242BEF3700F2DABB /* nbtohtml-v0.4.0 */,
 			);
-			path = Binaries;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		7E9F0D7924168870007F1008 /* WebAsset */ = {
@@ -454,15 +455,6 @@
 				7E9F0D7C24168870007F1008 /* WebAsset.swift */,
 			);
 			path = WebAsset;
-			sourceTree = "<group>";
-		};
-		7EB363E3244B036900D7F96F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7E1DC52B240E91FC00D0A061 /* Assets */,
-				7E9F0D5B24162920007F1008 /* Binaries */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		7EB363F6244B03CC00D7F96F /* jupyter */ = {
