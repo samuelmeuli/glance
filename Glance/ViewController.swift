@@ -7,12 +7,16 @@ class ViewController: NSViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 		updateStats()
 	}
 
+	@IBAction private func openSupportedFilesWindow(_: NSButton) {
+		let supportedFilesWC = SupportedFilesWC(windowNibName: NSNib.Name("SupportedFilesWC"))
+		supportedFilesWC.showWindow(nil)
+	}
+
 	/// Updates the statistics text fields with the actual usage data
-	func updateStats() {
+	private func updateStats() {
 		let stats = Stats()
 		let extensionCounts = stats.getExtensionCounts()
 
