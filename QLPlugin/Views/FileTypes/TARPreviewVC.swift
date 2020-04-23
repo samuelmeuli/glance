@@ -5,7 +5,8 @@ import SwiftExec
 
 /// View controller for previewing tarballs (may be gzipped).
 class TARPreviewVC: OutlinePreviewVC, PreviewVC {
-	let linesRegex = #"([\w-]{10})  \d+ .+ .+ + (\d+) (\w{3} \d+ +[\d:]+) (.*)"#
+	let filesRegex = #"([\w-]{10})  \d+ .+ .+ + (\d+) (\w{3} \d+ +[\d:]+) (.*)"#
+	let sizeRegex = #" +\d+ +(\d+) +([\d.]+)% .+"#
 
 	let byteCountFormatter = ByteCountFormatter()
 	let dateFormatter1 = DateFormatter()
@@ -30,6 +31,25 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 		dateFormatter2.dateFormat = "MMM dd  yyyy"
 	}
 
+	private func runTARFilesCommand(filePath: String) throws -> String {
+		let result = try exec(
+			program: "/usr/bin/tar",
+			arguments: [
+				"--gzip", // Allows listing contents of `.tar.gz` files
+				"--list",
+				"--verbose",
+				"--file",
+				filePath,
+			]
+		)
+		return result.stdout ?? ""
+	}
+
+	private func runGZIPSizeCommand(filePath: String) throws -> String {
+		let result = try exec(program: "/usr/bin/gzip", arguments: ["--list", filePath])
+		return result.stdout ?? ""
+	}
+
 	/// Parses a date string from `tar` output to a `Date` object.
 	private func parseDate(dateString: String) -> Date? {
 		if dateString.contains(":") {
@@ -39,8 +59,7 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 		}
 	}
 
-	/// Parses the output of the `tar` command.
-	private func parseTARFileTree(file: File, lines: String) -> FileTree {
+	private func parseTARFiles(file: File, lines: String) -> FileTree {
 		let fileTree = FileTree()
 
 		// Create node for root directory (not contained in `tar` output)
@@ -54,19 +73,19 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 		// Content lines: "-rw-r--r--  0 user staff     642 Dec 29  2018 my-tar/file.ext"
 		// - "-" as first character indicates a file, "d" a directory
 		// - Digits before date indicate number of bytes
-		let linesMatched = lines.matchRegex(regex: linesRegex)
-		for match in linesMatched {
-			let permissions = match[1]
-			let sizeString = match[2]
-			let dateModifiedString = match[3]
-			let path = match[4]
+		let fileMatches = lines.matchRegex(regex: filesRegex)
+		for fileMatch in fileMatches {
+			let permissions = fileMatch[1]
+			let size = Int(fileMatch[2]) ?? 0
+			let dateModified = parseDate(dateString: fileMatch[3]) ?? Date()
+			let path = fileMatch[4]
 			do {
 				// Add file/directory node to tree
 				try fileTree.addNode(
 					path: path,
 					isDirectory: permissions.first == "d",
-					size: Int(sizeString) ?? -1,
-					dateModified: parseDate(dateString: dateModifiedString) ?? Date()
+					size: size,
+					dateModified: dateModified
 				)
 			} catch {
 				os_log("%{public}s", log: Log.parse, type: .error, error.localizedDescription)
@@ -76,23 +95,35 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 		return fileTree
 	}
 
-	func loadPreview() throws {
-		// Run `tar` command
-		let result = try exec(
-			program: "/usr/bin/tar",
-			arguments: [
-				"--gzip", // Allows listing contents of `.tar.gz` files
-				"--list",
-				"--verbose",
-				"--file",
-				file.path,
-			]
-		)
+	private func parseGZIPSize(lines: String)
+		-> (sizeUncompressed: Int?, compressionRatio: Double?) {
+		let sizeMatches = lines.matchRegex(regex: sizeRegex)
+		let sizeUncompressed = Int(sizeMatches[0][1])
+		let compressionRatio = Double(sizeMatches[0][2])
+		return (sizeUncompressed, compressionRatio)
+	}
 
-		// Parse command output
-		let fileTree = parseTARFileTree(file: file, lines: result.stdout ?? "")
+	func loadPreview() throws {
+		let isGzipped = file.path.hasSuffix(".tar.gz")
+
+		// Parse TAR contents
+		let filesOutput = try runTARFilesCommand(filePath: file.path)
+		let fileTree = parseTARFiles(file: file, lines: filesOutput)
+		var labelText =
+			"\(isGzipped ? "Compressed" : "Size"): \(byteCountFormatter.string(for: file.size) ?? "--")"
+
+		// If tarball is gzipped: Get compression information
+		if isGzipped {
+			let sizeOutput = try runGZIPSizeCommand(filePath: file.path)
+			let (sizeUncompressed, compressionRatio) = parseGZIPSize(lines: sizeOutput)
+			labelText += """
+
+			Uncompressed: \(byteCountFormatter.string(for: sizeUncompressed) ?? "--")
+			Compression ratio: \(compressionRatio == nil ? "--" : String(compressionRatio!)) %
+			"""
+		}
 
 		// Load data into outline view
-		loadData(fileTree: fileTree, labelText: nil)
+		loadData(fileTree: fileTree, labelText: labelText)
 	}
 }

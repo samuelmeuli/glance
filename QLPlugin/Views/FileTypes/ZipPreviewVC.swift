@@ -3,22 +3,9 @@ import Foundation
 import os.log
 import SwiftExec
 
-struct ZIPInfo {
-	/// Percentage by which the ZIP contents have been compressed
-	let compressionFactor: Double
-	/// Compressed content size in bytes
-	let sizeCompressed: Int
-	/// Uncompressed content size in bytes
-	let sizeUncompressed: Int
-	/// Files in the ZIP archive
-	let fileTree: FileTree
-}
-
 class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
-	let secondLineRegex = #"Zip file size: (\d+) bytes, number of entries: \d+"#
-	let contentLinesRegex =
-		#"([\w-]{10})  .* \w+ +(\d+) \w+ \w+ (\d{2}-\w{3}-\d{2} \d{2}:\d{2}) (.*)"#
-	let lastLineRegex = #"^\d+ files, (\d+) bytes uncompressed, \d+ bytes compressed: +([\d.]+)%$"#
+	let filesRegex = #"([\w-]{10})  .* \w+ +(\d+) \w+ \w+ (\d{2}-\w{3}-\d{2} \d{2}:\d{2}) (.*)"#
+	let sizeRegex = #"^\d+ files, (\d+) bytes uncompressed, \d+ bytes compressed: +([\d.]+)%$"#
 
 	let byteCountFormatter = ByteCountFormatter()
 	let dateFormatter = DateFormatter()
@@ -28,29 +15,33 @@ class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
 		dateFormatter.dateFormat = "yy-MMM-dd HH:mm" // Date format used in `zipinfo` output
 	}
 
+	private func runZIPInfoCommand(filePath _: String) throws -> String {
+		let result = try exec(
+			program: "/usr/bin/zipinfo",
+			arguments: [file.path]
+		)
+		return result.stdout ?? ""
+	}
+
 	/// Parses the output of the `zipinfo` command
-	private func parseZIPInfo(lines: [String.SubSequence]) -> ZIPInfo {
-		var compressionFactor: Double = 0
-		var sizeCompressed: Int = 0
-		var sizeUncompressed: Int = 0
+	private func parseZIPInfo(lines: String) -> (
+		fileTree: FileTree,
+		sizeUncompressed: Int?,
+		compressionRatio: Double?
+	) {
 		let fileTree = FileTree()
-
-		// First line: "Archive:  my-zip.zip" -> Skip
-
-		// Second line: "Zip file size: 99791 bytes, number of entries: 152"
-		let secondLineMatched = String(lines[1]).matchRegex(regex: secondLineRegex)
-		sizeCompressed = Int(secondLineMatched[0][1]) ?? -1
+		let linesSplit = lines.split(separator: "\n")
 
 		// Content lines: "drwxr-xr-x  2.0 unx        0 bx stor 20-Jan-13 19:38 my-zip/dir/"
 		// - "-" as first character indicates a file, "d" a directory
 		// - "0 bx" indicates the number of bytes
-		let contentLinesString = lines[2 ... lines.count - 2].joined(separator: "\n")
-		let contentLinesMatched = contentLinesString.matchRegex(regex: contentLinesRegex)
-		for match in contentLinesMatched {
-			let permissions = match[1]
-			let sizeString = match[2]
-			let dateModifiedString = match[3]
-			let path = match[4]
+		let filesString = linesSplit[2 ... linesSplit.count - 2].joined(separator: "\n")
+		let fileMatches = filesString.matchRegex(regex: filesRegex)
+		for fileMatch in fileMatches {
+			let permissions = fileMatch[1]
+			let size = Int(fileMatch[2]) ?? 0
+			let dateModified = dateFormatter.date(from: fileMatch[3]) ?? Date()
+			let path = fileMatch[4]
 			// Ignore "__MACOSX" subdirectory (ZIP resource fork created by macOS)
 			if !path.hasPrefix("__MACOSX") {
 				do {
@@ -58,8 +49,8 @@ class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
 					try fileTree.addNode(
 						path: path,
 						isDirectory: permissions.first == "d",
-						size: Int(sizeString) ?? -1,
-						dateModified: dateFormatter.date(from: dateModifiedString) ?? Date()
+						size: size,
+						dateModified: dateModified
 					)
 				} catch {
 					os_log("%{public}s", log: Log.parse, type: .error, error.localizedDescription)
@@ -68,36 +59,26 @@ class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
 		}
 
 		// Last line: "152 files, 192919 bytes uncompressed, 65061 bytes compressed:  66.3%"
-		let lastLineMatched = String(lines.last ?? "").matchRegex(regex: lastLineRegex)
-		sizeUncompressed = Int(lastLineMatched[0][1]) ?? -1
-		compressionFactor = Double(lastLineMatched[0][2]) ?? -1
+		let sizeMatches = String(linesSplit.last ?? "").matchRegex(regex: sizeRegex)
+		let sizeUncompressed = Int(sizeMatches[0][1])
+		let compressionRatio = Double(sizeMatches[0][2])
 
-		return ZIPInfo(
-			compressionFactor: compressionFactor,
-			sizeCompressed: sizeCompressed,
-			sizeUncompressed: sizeUncompressed,
-			fileTree: fileTree
-		)
+		return (fileTree, sizeUncompressed, compressionRatio)
 	}
 
 	func loadPreview() throws {
-		// Run `zipinfo` command
-		let result = try exec(
-			program: "/usr/bin/zipinfo",
-			arguments: [file.path]
-		)
+		let zipInfoOutput = try runZIPInfoCommand(filePath: file.path)
 
 		// Parse command output
-		let stdoutLines = (result.stdout ?? "").split(separator: "\n")
-		let zipInfo = parseZIPInfo(lines: stdoutLines)
+		let (fileTree, sizeUncompressed, compressionRatio) = parseZIPInfo(lines: zipInfoOutput)
 
 		// Load data into outline view
 		loadData(
-			fileTree: zipInfo.fileTree,
+			fileTree: fileTree,
 			labelText: """
-			Size uncompressed: \(byteCountFormatter.string(for: zipInfo.sizeUncompressed) ?? "--")
-			Size compressed: \(byteCountFormatter.string(for: zipInfo.sizeCompressed) ?? "--")
-			Compression factor: \(zipInfo.compressionFactor)
+			Compressed: \(byteCountFormatter.string(for: file.size) ?? "--")
+			Uncompressed: \(byteCountFormatter.string(for: sizeUncompressed) ?? "--")
+			Compression ratio: \(compressionRatio == nil ? "--" : String(compressionRatio!)) %
 			"""
 		)
 	}

@@ -36,7 +36,7 @@ class File {
 	var url: URL
 
 	var isArchive: Bool { archiveExtensions.contains(url.pathExtension) }
-	var size: UInt64 { attributes[.size] as? UInt64 ?? UInt64(0) }
+	var size: Int { attributes[.size] as? Int ?? 0 }
 
 	/// Looks for a file at the provided URL and saves its metadata as object properties
 	init(url: URL) throws {
