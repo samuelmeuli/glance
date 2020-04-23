@@ -45,16 +45,15 @@
 				<string>public.tar-archive</string> <!-- .tar -->
 				<string>public.zip-archive</string> <!-- .zip -->
 
-				<!-- CSV -->
-				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
-				<string>public.comma-separated-values-text</string> <!-- .csv -->
-				<string>public.tab-separated-values-text</string> <!-- .tsv -->
-
 				<!-- Jupyter Notebook -->
 				<string>dyn.ah62d4rv4ge80w6d3r3va</string> <!-- .ipynb -->
 
 				<!-- Markdown -->
 				<string>net.daringfireball.markdown</string> <!-- .md -->
+
+				<!-- TSV -->
+				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
+				<string>public.tab-separated-values-text</string> <!-- .tsv -->
 
 				<!-- Code / plain text -->
 				<string>com.adobe.actionscript</string>

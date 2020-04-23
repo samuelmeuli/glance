@@ -5,8 +5,6 @@ import Foundation
 class PreviewVCFactory {
 	static func getView(fileURL: URL) -> PreviewVC.Type? {
 		switch fileURL.pathExtension {
-			case "csv", "tab", "tsv":
-				return CSVPreviewVC.self
 			case "gz":
 				// `gzip` is only supported for tarballs
 				return fileURL.path.hasSuffix(".tar.gz") ? TARPreviewVC.self : nil
@@ -16,6 +14,8 @@ class PreviewVCFactory {
 				return JupyterPreviewVC.self
 			case "tar":
 				return TARPreviewVC.self
+			case "tab", "tsv":
+				return TSVPreviewVC.self
 			case "zip":
 				return ZIPPreviewVC.self
 			default:
