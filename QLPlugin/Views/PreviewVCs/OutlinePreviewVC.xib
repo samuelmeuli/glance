@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="label" destination="7b9-nX-pMc" id="ELE-wZ-ZEz"/>
                 <outlet property="outlineView" destination="2wT-Jc-MDD" id="EvP-P0-FRL"/>
+                <outlet property="treeController" destination="Bni-mu-PmG" id="OsI-dd-NSA"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -25,7 +26,7 @@
                         <rect key="frame" x="1" y="0.0" width="478" height="151"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" enabled="NO" rowSizeStyle="automatic" headerView="EYl-Hx-akw" viewBased="YES" indentationPerLevel="16" outlineTableColumn="cVG-qP-ybE" id="2wT-Jc-MDD">
+                            <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" enabled="NO" rowSizeStyle="automatic" headerView="EYl-Hx-akw" viewBased="YES" indentationPerLevel="16" outlineTableColumn="cVG-qP-ybE" id="2wT-Jc-MDD">
                                 <rect key="frame" x="0.0" y="0.0" width="478" height="126"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -56,6 +57,9 @@
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="eL8-z7-vpW" name="value" keyPath="objectValue.name" id="V8T-i6-l3k"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
@@ -63,6 +67,9 @@
                                                 </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
+                                        <connections>
+                                            <binding destination="Bni-mu-PmG" name="value" keyPath="arrangedObjects.name" id="ra8-As-OWq"/>
+                                        </connections>
                                     </tableColumn>
                                     <tableColumn identifier="dateModified" width="131" minWidth="40" maxWidth="1000" id="wVE-uQ-ANX">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" enabled="NO" borderStyle="border" title="Date Modified">
@@ -89,6 +96,9 @@
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="bGz-mP-JvV" name="value" keyPath="objectValue.dateModified" id="HTZ-fQ-kiV"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
@@ -96,6 +106,9 @@
                                                 </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
+                                        <connections>
+                                            <binding destination="Bni-mu-PmG" name="value" keyPath="arrangedObjects.dateModified" id="xL4-Ii-1Kw"/>
+                                        </connections>
                                     </tableColumn>
                                     <tableColumn identifier="size" width="71" minWidth="10" maxWidth="3.4028234663852886e+38" id="SeO-kM-MOD">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" enabled="NO" borderStyle="border" alignment="left" title="Size">
@@ -122,6 +135,9 @@
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="26A-8F-Xta" name="value" keyPath="objectValue.size" id="YAY-50-rhy"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
@@ -129,6 +145,9 @@
                                                 </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
+                                        <connections>
+                                            <binding destination="Bni-mu-PmG" name="value" keyPath="arrangedObjects.size" id="ylw-2o-J3h"/>
+                                        </connections>
                                     </tableColumn>
                                 </tableColumns>
                             </outlineView>
@@ -167,5 +186,6 @@
             </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </customView>
+        <treeController childrenKeyPath="childrenList" countKeyPath="childrenCount" leafKeyPath="hasChildren" id="Bni-mu-PmG"/>
     </objects>
 </document>

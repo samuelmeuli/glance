@@ -77,9 +77,6 @@ class ZIPPreview: Preview {
 		Compression ratio: \(compressionRatio == nil ? "--" : String(compressionRatio!)) %
 		"""
 
-		return OutlinePreviewVC(
-			fileTreeNodes: Array(fileTree.root.children.values),
-			labelText: labelText
-		)
+		return OutlinePreviewVC(root: fileTree.root, labelText: labelText)
 	}
 }
