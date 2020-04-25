@@ -54,6 +54,8 @@ class TablePreviewVC: NSViewController, PreviewVC {
 			let columnID = NSUserInterfaceItemIdentifier(rawValue: header)
 			let column = NSTableColumn(identifier: columnID)
 			column.title = header
+			column.minWidth = 50
+			column.maxWidth = 500
 			tableView.addTableColumn(column)
 		}
 	}
@@ -78,6 +80,7 @@ extension TablePreviewVC: NSTableViewDataSource, NSTableViewDelegate {
 		textField.isEditable = false
 		textField.isBordered = false
 		textField.drawsBackground = false
+		textField.lineBreakMode = .byTruncatingTail
 
 		return textField
 	}
