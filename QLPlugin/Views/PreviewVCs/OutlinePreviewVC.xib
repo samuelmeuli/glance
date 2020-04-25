@@ -45,25 +45,39 @@
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="eL8-z7-vpW">
+                                            <tableCellView id="axo-St-AXO">
                                                 <rect key="frame" x="1" y="1" width="267" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGI-NQ-lLj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="17"/>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9km-VR-ixn">
+                                                        <rect key="frame" x="3" y="0.0" width="17" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="27y-M6-wJQ"/>
+                                                        <connections>
+                                                            <binding destination="axo-St-AXO" name="value" keyPath="objectValue.isDirectory" id="Iby-Wf-LIy">
+                                                                <dictionary key="options">
+                                                                    <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                                                    <string key="NSValueTransformerName">IconTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </imageView>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYe-wN-pQI">
+                                                        <rect key="frame" x="25" y="0.0" width="242" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="p1X-Mq-u9d">
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="V0a-Du-VA3">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="eL8-z7-vpW" name="value" keyPath="objectValue.name" id="V8T-i6-l3k"/>
+                                                            <binding destination="axo-St-AXO" name="value" keyPath="objectValue.name" id="Fnr-Ee-Jjs"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
-                                                    <outlet property="textField" destination="FGI-NQ-lLj" id="F8t-kV-Zuf"/>
+                                                    <outlet property="imageView" destination="9km-VR-ixn" id="qBS-ju-1w5"/>
+                                                    <outlet property="textField" destination="EYe-wN-pQI" id="EFs-N1-xm3"/>
                                                 </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
@@ -130,13 +144,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="F1O-FW-zMk">
-                                                            <byteCountFormatter key="formatter" allowsNonnumericFormatting="NO" id="WW4-b3-s1f"/>
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="26A-8F-Xta" name="value" keyPath="objectValue.size" id="YAY-50-rhy"/>
+                                                            <binding destination="26A-8F-Xta" name="value" keyPath="objectValue.size" id="FRp-CI-nu6">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">SizeTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -146,7 +163,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                         <connections>
-                                            <binding destination="Bni-mu-PmG" name="value" keyPath="arrangedObjects.size" id="ylw-2o-J3h"/>
+                                            <binding destination="Bni-mu-PmG" name="value" keyPath="arrangedObjects.size" id="OKA-ec-r16"/>
                                         </connections>
                                     </tableColumn>
                                 </tableColumns>
@@ -188,4 +205,7 @@
         </customView>
         <treeController childrenKeyPath="childrenList" countKeyPath="childrenCount" leafKeyPath="hasChildren" id="Bni-mu-PmG"/>
     </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
 </document>
