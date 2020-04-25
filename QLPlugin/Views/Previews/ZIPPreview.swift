@@ -1,29 +1,27 @@
-import Cocoa
 import Foundation
 import os.log
 import SwiftExec
 
-class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
+class ZIPPreview: Preview {
 	let filesRegex = #"([\w-]{10})  .* \w+ +(\d+) \w+ \w+ (\d{2}-\w{3}-\d{2} \d{2}:\d{2}) (.*)"#
 	let sizeRegex = #"^\d+ files, (\d+) bytes uncompressed, \d+ bytes compressed: +([\d.]+)%$"#
 
 	let byteCountFormatter = ByteCountFormatter()
 	let dateFormatter = DateFormatter()
 
-	override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?, file: File) {
-		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil, file: file)
+	required init() {
 		dateFormatter.dateFormat = "yy-MMM-dd HH:mm" // Date format used in `zipinfo` output
 	}
 
-	private func runZIPInfoCommand(filePath _: String) throws -> String {
+	private func runZIPInfoCommand(filePath: String) throws -> String {
 		let result = try exec(
 			program: "/usr/bin/zipinfo",
-			arguments: [file.path]
+			arguments: [filePath]
 		)
 		return result.stdout ?? ""
 	}
 
-	/// Parses the output of the `zipinfo` command
+	/// Parses the output of the `zipinfo` command.
 	private func parseZIPInfo(lines: String) -> (
 		fileTree: FileTree,
 		sizeUncompressed: Int?,
@@ -66,20 +64,22 @@ class ZIPPreviewVC: OutlinePreviewVC, PreviewVC {
 		return (fileTree, sizeUncompressed, compressionRatio)
 	}
 
-	func loadPreview() throws {
+	func createPreviewVC(file: File) throws -> PreviewVC {
 		let zipInfoOutput = try runZIPInfoCommand(filePath: file.path)
 
 		// Parse command output
 		let (fileTree, sizeUncompressed, compressionRatio) = parseZIPInfo(lines: zipInfoOutput)
 
-		// Load data into outline view
-		loadData(
-			fileTree: fileTree,
-			labelText: """
-			Compressed: \(byteCountFormatter.string(for: file.size) ?? "--")
-			Uncompressed: \(byteCountFormatter.string(for: sizeUncompressed) ?? "--")
-			Compression ratio: \(compressionRatio == nil ? "--" : String(compressionRatio!)) %
-			"""
+		// Build label
+		let labelText = """
+		Compressed: \(byteCountFormatter.string(for: file.size) ?? "--")
+		Uncompressed: \(byteCountFormatter.string(for: sizeUncompressed) ?? "--")
+		Compression ratio: \(compressionRatio == nil ? "--" : String(compressionRatio!)) %
+		"""
+
+		return OutlinePreviewVC(
+			fileTreeNodes: Array(fileTree.root.children.values),
+			labelText: labelText
 		)
 	}
 }

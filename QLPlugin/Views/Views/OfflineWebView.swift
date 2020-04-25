@@ -56,12 +56,10 @@ class OfflineWebView: WKWebView {
 				)
 			}
 		}
-
 		super.init(frame: frame, configuration: configuration)
 	}
 
-	@available(*, unavailable)
-	required init?(coder _: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+	required init?(coder decoder: NSCoder) {
+		super.init(coder: decoder)
 	}
 }

@@ -1,11 +1,10 @@
-import Cocoa
-import Foundation
 import os.log
 import SwiftCSV
 
-/// View controller for previewing TSV files
-class TSVPreviewVC: TablePreviewVC, PreviewVC {
-	func loadPreview() throws {
+class TSVPreview: Preview {
+	required init() {}
+
+	func createPreviewVC(file: File) throws -> PreviewVC {
 		// Read and parse TSV file
 		var csv: CSV
 		do {
@@ -20,6 +19,6 @@ class TSVPreviewVC: TablePreviewVC, PreviewVC {
 			throw error
 		}
 
-		loadData(tableData: csv.namedRows)
+		return TablePreviewVC(tableData: csv.namedRows)
 	}
 }

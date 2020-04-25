@@ -1,30 +1,38 @@
 import Cocoa
 
-/// Implementation of a `NSOutlineView` for file hiearchies
-class OutlinePreviewView: NSView, LoadableNib {
-	// swiftlint:disable:next private_outlet
-	@IBOutlet internal var contentView: NSView!
-	@IBOutlet private var label: NSTextField!
-	@IBOutlet private var outlineView: NSOutlineView!
-
-	@objc dynamic var fileTreeNodes: [FileTreeNode]
-	let labelText: String?
+class OutlinePreviewVC: NSViewController, PreviewVC {
+	@objc dynamic let fileTreeNodes: [FileTreeNode]
+	private let labelText: String?
 
 	private let treeController = NSTreeController()
 
-	required init(frame: CGRect, fileTree: FileTree, labelText: String?) {
-		fileTreeNodes = Array(fileTree.root.children.values)
+	@IBOutlet private var outlineView: NSOutlineView!
+	@IBOutlet private var label: NSTextField!
+
+	required convenience init(fileTreeNodes: [FileTreeNode], labelText: String?) {
+		self.init(nibName: nil, bundle: nil, fileTreeNodes: fileTreeNodes, labelText: labelText)
+	}
+
+	init(
+		nibName nibNameOrNil: NSNib.Name?,
+		bundle nibBundleOrNil: Bundle?,
+		fileTreeNodes: [FileTreeNode],
+		labelText: String?
+	) {
+		self.fileTreeNodes = fileTreeNodes
 		self.labelText = labelText
-
-		super.init(frame: frame)
-
-		loadViewFromNib(nibName: "OutlinePreviewView")
-		setUpView()
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 	}
 
 	@available(*, unavailable)
 	required init?(coder _: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setUpView()
+		expandFirstLevel()
 	}
 
 	private func setUpView() {
@@ -61,7 +69,7 @@ class OutlinePreviewView: NSView, LoadableNib {
 	}
 }
 
-extension OutlinePreviewView: NSOutlineViewDelegate {
+extension OutlinePreviewVC: NSOutlineViewDelegate {
 	public func outlineView(
 		_ outlineView: NSOutlineView,
 		viewFor tableColumn: NSTableColumn?,

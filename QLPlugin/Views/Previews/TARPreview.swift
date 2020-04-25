@@ -1,10 +1,9 @@
-import Cocoa
 import Foundation
 import os.log
 import SwiftExec
 
 /// View controller for previewing tarballs (may be gzipped).
-class TARPreviewVC: OutlinePreviewVC, PreviewVC {
+class TARPreview: Preview {
 	let filesRegex = #"([\w-]{10})  \d+ .+ .+ + (\d+) (\w{3} \d+ +[\d:]+) (.*)"#
 	let sizeRegex = #" +\d+ +(\d+) +([\d.]+)% .+"#
 
@@ -12,8 +11,7 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 	let dateFormatter1 = DateFormatter()
 	let dateFormatter2 = DateFormatter()
 
-	override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?, file: File) {
-		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil, file: file)
+	required init() {
 		initDateFormatters()
 	}
 
@@ -103,7 +101,7 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 		return (sizeUncompressed, compressionRatio)
 	}
 
-	func loadPreview() throws {
+	func createPreviewVC(file: File) throws -> PreviewVC {
 		let isGzipped = file.path.hasSuffix(".tar.gz")
 
 		// Parse TAR contents
@@ -123,7 +121,9 @@ class TARPreviewVC: OutlinePreviewVC, PreviewVC {
 			"""
 		}
 
-		// Load data into outline view
-		loadData(fileTree: fileTree, labelText: labelText)
+		return OutlinePreviewVC(
+			fileTreeNodes: Array(fileTree.root.children.values),
+			labelText: labelText
+		)
 	}
 }

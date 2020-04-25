@@ -25,7 +25,7 @@ extension FileError: LocalizedError {
 	}
 }
 
-/// Utility class for reading the content and metadata of the corresponding file
+/// Utility class for reading the content and metadata of the corresponding file.
 class File {
 	let archiveExtensions = ["tar", "tar.gz", "zip"]
 	let fileManager = FileManager.default
@@ -38,7 +38,7 @@ class File {
 	var isArchive: Bool { archiveExtensions.contains(url.pathExtension) }
 	var size: Int { attributes[.size] as? Int ?? 0 }
 
-	/// Looks for a file at the provided URL and saves its metadata as object properties
+	/// Looks for a file at the provided URL and saves its metadata as object properties.
 	init(url: URL) throws {
 		self.url = url
 		path = url.path
@@ -58,7 +58,7 @@ class File {
 		}
 	}
 
-	/// Reads and returns the file's content as an UTF-8 string
+	/// Reads and returns the file's content as an UTF-8 string.
 	func read() throws -> String {
 		do {
 			return try String(contentsOf: url, encoding: .utf8)

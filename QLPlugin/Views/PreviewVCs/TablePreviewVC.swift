@@ -1,22 +1,22 @@
 import Cocoa
 import os.log
 
-class TablePreviewView: NSView, LoadableNib {
-	private let tableData: [[String: String]]
-
-	// swiftlint:disable:next private_outlet
-	@IBOutlet internal var contentView: NSView!
+class TablePreviewVC: NSViewController, PreviewVC {
+	let tableData: [[String: String]]
 
 	@IBOutlet private var tableView: NSTableView!
 
-	required init(frame: CGRect, tableData: [[String: String]]) {
+	required convenience init(tableData: [[String: String]]) {
+		self.init(nibName: nil, bundle: nil, tableData: tableData)
+	}
+
+	init(
+		nibName nibNameOrNil: NSNib.Name?,
+		bundle nibBundleOrNil: Bundle?,
+		tableData: [[String: String]]
+	) {
 		self.tableData = tableData
-
-		super.init(frame: frame)
-
-		loadViewFromNib(nibName: "TablePreviewView")
-		setUpView()
-		createColumns()
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 	}
 
 	@available(*, unavailable)
@@ -24,12 +24,28 @@ class TablePreviewView: NSView, LoadableNib {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setUpView()
+		deleteDefaultColumns()
+		createColumns()
+	}
+
 	private func setUpView() {
-		contentView.autoresizingMask = [.height, .width]
 		tableView.delegate = self
 		tableView.dataSource = self
 	}
 
+	/// Deletes all columns created by default using Interface Builder.
+	private func deleteDefaultColumns() {
+		while !tableView.tableColumns.isEmpty {
+			if let column = tableView.tableColumns.first {
+				tableView.removeTableColumn(column)
+			}
+		}
+	}
+
+	/// Creates table columns for all headers.
 	private func createColumns() {
 		guard let firstRow = tableData.first else {
 			os_log(
@@ -57,12 +73,12 @@ class TablePreviewView: NSView, LoadableNib {
 	}
 }
 
-extension TablePreviewView: NSTableViewDataSource, NSTableViewDelegate {
+extension TablePreviewVC: NSTableViewDataSource, NSTableViewDelegate {
 	func numberOfRows(in _: NSTableView) -> Int {
 		tableData.count
 	}
 
-	/// Fills the table with the `tableData`
+	/// Fills the table with the `tableData`.
 	func tableView(
 		_: NSTableView,
 		viewFor tableColumn: NSTableColumn?,
