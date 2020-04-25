@@ -19,6 +19,6 @@ class TSVPreview: Preview {
 			throw error
 		}
 
-		return TablePreviewVC(tableData: csv.namedRows)
+		return TablePreviewVC(headers: csv.header, cells: csv.namedRows)
 	}
 }

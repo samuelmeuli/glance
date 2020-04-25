@@ -2,20 +2,23 @@ import Cocoa
 import os.log
 
 class TablePreviewVC: NSViewController, PreviewVC {
-	let tableData: [[String: String]]
+	let headers: [String]
+	let cells: [[String: String]]
 
 	@IBOutlet private var tableView: NSTableView!
 
-	required convenience init(tableData: [[String: String]]) {
-		self.init(nibName: nil, bundle: nil, tableData: tableData)
+	required convenience init(headers: [String], cells: [[String: String]]) {
+		self.init(nibName: nil, bundle: nil, headers: headers, cells: cells)
 	}
 
 	init(
 		nibName nibNameOrNil: NSNib.Name?,
 		bundle nibBundleOrNil: Bundle?,
-		tableData: [[String: String]]
+		headers: [String],
+		cells: [[String: String]]
 	) {
-		self.tableData = tableData
+		self.headers = headers
+		self.cells = cells
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 	}
 
@@ -47,27 +50,10 @@ class TablePreviewVC: NSViewController, PreviewVC {
 
 	/// Creates table columns for all headers.
 	private func createColumns() {
-		guard let firstRow = tableData.first else {
-			os_log(
-				"Skipping creation of table columns (no rows in `tableData`)",
-				log: Log.render,
-				type: .info
-			)
-			return
-		}
-		guard !firstRow.isEmpty else {
-			os_log(
-				"Skipping creation of table columns (no columns in `tableData`)",
-				log: Log.render,
-				type: .info
-			)
-			return
-		}
-
-		for columnName in firstRow.keys {
-			let columnID = NSUserInterfaceItemIdentifier(rawValue: columnName)
+		for header in headers {
+			let columnID = NSUserInterfaceItemIdentifier(rawValue: header)
 			let column = NSTableColumn(identifier: columnID)
-			column.title = columnName
+			column.title = header
 			tableView.addTableColumn(column)
 		}
 	}
@@ -75,7 +61,7 @@ class TablePreviewVC: NSViewController, PreviewVC {
 
 extension TablePreviewVC: NSTableViewDataSource, NSTableViewDelegate {
 	func numberOfRows(in _: NSTableView) -> Int {
-		tableData.count
+		cells.count
 	}
 
 	/// Fills the table with the `tableData`.
@@ -84,7 +70,7 @@ extension TablePreviewVC: NSTableViewDataSource, NSTableViewDelegate {
 		viewFor tableColumn: NSTableColumn?,
 		row rowIndex: Int
 	) -> NSView? {
-		let row = tableData[rowIndex]
+		let row = cells[rowIndex]
 		let cellValue = row[tableColumn!.identifier.rawValue] ?? ""
 
 		let textField = NSTextField()
