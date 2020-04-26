@@ -35,7 +35,7 @@ class CodePreview: Preview {
 			return dotfileLexers[fileURL.lastPathComponent, default: "autodetect"]
 		} else {
 			// File with extension
-			return fileExtensionLexers[fileURL.pathExtension, default: "autodetect"]
+			return fileExtensionLexers[fileURL.pathExtension, default: fileURL.pathExtension]
 		}
 	}
 
