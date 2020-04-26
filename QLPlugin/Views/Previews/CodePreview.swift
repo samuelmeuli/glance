@@ -1,6 +1,5 @@
 import Foundation
 import os.log
-import SwiftExec
 
 let dotfileLexers = [
 	".dockerignore": "bash",
@@ -21,7 +20,6 @@ let fileExtensionLexers = [
 ]
 
 class CodePreview: Preview {
-	private let chromaBinaryURL = Bundle.main.url(forAuxiliaryExecutable: "chroma-v0.7.2")
 	private let chromaStylesheetURL = Bundle.main.url(
 		forResource: "shared-chroma",
 		withExtension: "css"
@@ -41,17 +39,26 @@ class CodePreview: Preview {
 		}
 	}
 
-	private func getHTML(fileURL: URL) throws -> String {
+	private func getHTML(file: File) throws -> String {
+		var source: String
 		do {
-			let lexer = getLexer(fileURL: fileURL)
-			let result = try exec(
-				program: chromaBinaryURL!.path,
-				arguments: [fileURL.path, "--html", "--html-only", "--lexer", lexer]
-			)
-			return result.stdout ?? ""
+			source = try file.read()
 		} catch {
 			os_log(
-				"Error trying to convert source code to HTML using Chroma: %{public}s",
+				"Could not read code file: %{public}s",
+				log: Log.parse,
+				type: .error,
+				error.localizedDescription
+			)
+			throw error
+		}
+
+		let lexer = getLexer(fileURL: file.url)
+		do {
+			return try HTMLRenderer.renderCode(source, lexer: lexer)
+		} catch {
+			os_log(
+				"Could not generate code HTML: %{public}s",
 				log: Log.render,
 				type: .error,
 				error.localizedDescription
@@ -75,7 +82,7 @@ class CodePreview: Preview {
 
 	func createPreviewVC(file: File) throws -> PreviewVC {
 		WebPreviewVC(
-			html: try getHTML(fileURL: file.url),
+			html: try getHTML(file: file),
 			stylesheets: getStylesheets()
 		)
 	}

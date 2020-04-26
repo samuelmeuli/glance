@@ -1,6 +1,5 @@
 import Foundation
 import os.log
-import SwiftExec
 
 class JupyterPreview: Preview {
 	private let chromaStylesheetURL = Bundle.main.url(
@@ -23,20 +22,28 @@ class JupyterPreview: Preview {
 		forResource: "jupyter-main",
 		withExtension: "css"
 	)
-	private let nbtohtmlBinaryURL = Bundle.main.url(forAuxiliaryExecutable: "nbtohtml-v0.4.0")
 
 	required init() {}
 
-	private func getHTML(filePath: String) throws -> String {
+	private func getHTML(file: File) throws -> String {
+		var source: String
 		do {
-			let result = try exec(
-				program: nbtohtmlBinaryURL!.path,
-				arguments: ["convert", filePath]
-			)
-			return result.stdout ?? ""
+			source = try file.read()
 		} catch {
 			os_log(
-				"Could not generate Jupyter Notebook HTML using nbtohtml: %{public}s",
+				"Could not read Jupyter Notebook file: %{public}s",
+				log: Log.parse,
+				type: .error,
+				error.localizedDescription
+			)
+			throw error
+		}
+
+		do {
+			return try HTMLRenderer.renderNotebook(source)
+		} catch {
+			os_log(
+				"Could not generate Jupyter Notebook HTML: %{public}s",
 				log: Log.render,
 				type: .error,
 				error.localizedDescription
@@ -97,7 +104,7 @@ class JupyterPreview: Preview {
 
 	func createPreviewVC(file: File) throws -> PreviewVC {
 		WebPreviewVC(
-			html: try getHTML(filePath: file.path),
+			html: try getHTML(file: file),
 			stylesheets: getStylesheets(),
 			scripts: getScripts()
 		)
