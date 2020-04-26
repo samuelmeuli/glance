@@ -4,6 +4,8 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 	@objc dynamic var root: FileTreeNode
 	private let labelText: String?
 
+	@objc dynamic var customSortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+
 	@IBOutlet private var treeController: NSTreeController!
 	@IBOutlet private var outlineView: NSOutlineView!
 	@IBOutlet private var label: NSTextField!
@@ -38,7 +40,7 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 		expandFirstLevel()
 	}
 
-	func setUpView() {
+	private func setUpView() {
 		// Add file tree to `treeController`
 		treeController.addObject(root)
 
@@ -47,7 +49,7 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 	}
 
 	/// Expands all first-level tree nodes.
-	func expandFirstLevel() {
+	private func expandFirstLevel() {
 		let root = treeController.arrangedObjects
 		for node in root.children ?? [] {
 			outlineView.expandItem(node)
