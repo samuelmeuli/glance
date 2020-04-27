@@ -43,7 +43,7 @@
                                             </attributes>
                                         </fragment>
                                         <fragment>
-                                            <string key="content"> .js, .json, .swift, .yml, …
+                                            <string key="content"> .cpp, .js, .json, .py, .swift, .yml and many more
 
 </string>
                                             <attributes>
