@@ -14,13 +14,24 @@ import (
 	"gopkg.in/russross/blackfriday.v2"
 )
 
+// Functions for conversion between C and Go strings. Required here because cgo cannot be used in
+// tests.
+
+func convertToCString(goString string) *C.char {
+	return C.CString(goString)
+}
+
+func convertToGoString(cString *C.char) string {
+	return C.GoString(cString)
+}
+
 // Convention: Because all functions return C strings, errors are implemented as return values which
 // start with "error: ".
 
 //export convertCodeToHTML
 func convertCodeToHTML(source *C.char, lexer *C.char) *C.char {
-	sourceString := C.GoString(source)
-	lexerString := C.GoString(lexer)
+	sourceString := convertToGoString(source)
+	lexerString := convertToGoString(lexer)
 	htmlBuffer := new(bytes.Buffer)
 
 	// Set up lexer for programming language
@@ -42,23 +53,23 @@ func convertCodeToHTML(source *C.char, lexer *C.char) *C.char {
 	iterator, err := l.Tokenise(nil, sourceString)
 	if err != nil {
 		errMessage := fmt.Sprintf("error: Could not render source code (tokenization error): %d", err)
-		return C.CString(errMessage)
+		return convertToCString(errMessage)
 	}
 
 	err = formatter.Format(htmlBuffer, styles.GitHub, iterator)
 	if err != nil {
 		errMessage := fmt.Sprintf("error: Could not render source code (formatting error): %d", err)
-		return C.CString(errMessage)
+		return convertToCString(errMessage)
 	}
 
 	// Chroma escapes tags, so HTML should be safe from code injection
 	htmlString := htmlBuffer.String()
-	return C.CString(htmlString)
+	return convertToCString(htmlString)
 }
 
 //export convertMarkdownToHTML
 func convertMarkdownToHTML(source *C.char) *C.char {
-	sourceString := C.GoString(source)
+	sourceString := convertToGoString(source)
 
 	// Sanitize output but keep classes (required for syntax highlighting)
 	policy := bluemonday.UGCPolicy()
@@ -73,21 +84,21 @@ func convertMarkdownToHTML(source *C.char) *C.char {
 	html := blackfriday.Run([]byte(sourceString), blackfriday.WithRenderer(renderer))
 	htmlString := string(html)
 	htmlStringSanitized := policy.Sanitize(htmlString)
-	return C.CString(htmlStringSanitized)
+	return convertToCString(htmlStringSanitized)
 }
 
 //export convertNotebookToHTML
 func convertNotebookToHTML(source *C.char) *C.char {
-	sourceString := C.GoString(source)
+	sourceString := convertToGoString(source)
 
 	html := new(bytes.Buffer)
 	err := nbtohtml.ConvertString(html, sourceString)
 	if err != nil {
 		errMessage := fmt.Sprintf("error: Could not convert Notebook to HTML: %d", err)
-		return C.CString(errMessage)
+		return convertToCString(errMessage)
 	}
 	htmlString := html.String()
-	return C.CString(htmlString)
+	return convertToCString(htmlString)
 }
 
 // Main function is required for `c-archive` builds.
