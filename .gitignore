@@ -1,3 +1,7 @@
 # Xcode
 project.xcworkspace/
 xcuserdata/
+
+# `go build` output
+HTMLConverter/htmlconverter.a
+HTMLConverter/htmlconverter.h

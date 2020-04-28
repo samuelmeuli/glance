@@ -590,6 +590,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E6EF20C240CC802009E4199 /* Build configuration list for PBXNativeTarget "QLPlugin" */;
 			buildPhases = (
+				7EAB42232458DBD5005DC89B /* ShellScript */,
 				7E6EF1F6240CC802009E4199 /* Sources */,
 				7E9F0D5E2416427B007F1008 /* Copy Files */,
 				7E6EF1F7240CC802009E4199 /* Frameworks */,
@@ -759,6 +760,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EAB42232458DBD5005DC89B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ./HTMLConverter/\ngo build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter.a\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E6EF1F6240CC802009E4199 /* Sources */ = {
