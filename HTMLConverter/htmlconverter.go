@@ -4,6 +4,8 @@ import (
 	"C"
 	"bytes"
 	"fmt"
+	"regexp"
+
 	"github.com/Depado/bfchroma"
 	"github.com/alecthomas/chroma"
 	htmlFormatter "github.com/alecthomas/chroma/formatters/html"
@@ -12,7 +14,6 @@ import (
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/samuelmeuli/nbtohtml"
 	"gopkg.in/russross/blackfriday.v2"
-	"regexp"
 )
 
 // Regex for YAML front matter in a Markdown document
@@ -33,6 +34,8 @@ func convertToGoString(cString *C.char) string {
 // start with "error: ".
 
 //export convertCodeToHTML
+// convertCodeToHTML converts the provided source code string to HTML. Classes for syntax
+// highlighting are generated using Chroma.
 func convertCodeToHTML(source *C.char, lexer *C.char) *C.char {
 	sourceString := convertToGoString(source)
 	lexerString := convertToGoString(lexer)
@@ -72,6 +75,8 @@ func convertCodeToHTML(source *C.char, lexer *C.char) *C.char {
 }
 
 //export convertMarkdownToHTML
+// convertMarkdownToHTML converts the provided Markdown string to HTML using Blackfriday. Classes
+// for syntax highlighting inside code blocks are generated using Chroma.
 func convertMarkdownToHTML(source *C.char) *C.char {
 	sourceString := convertToGoString(source)
 
@@ -96,6 +101,7 @@ func convertMarkdownToHTML(source *C.char) *C.char {
 }
 
 //export convertNotebookToHTML
+// convertNotebookToHTML converts the provided Jupyter Notebook JSON to HTML using `nbtohtml`.
 func convertNotebookToHTML(source *C.char) *C.char {
 	sourceString := convertToGoString(source)
 

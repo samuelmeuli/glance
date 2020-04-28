@@ -69,9 +69,17 @@ extern "C" {
 #endif
 
 
+// convertCodeToHTML converts the provided source code string to HTML. Classes for syntax
+// highlighting are generated using Chroma.
+
 extern char* convertCodeToHTML(char* p0, char* p1);
 
+// convertMarkdownToHTML converts the provided Markdown string to HTML using Blackfriday. Classes
+// for syntax highlighting inside code blocks are generated using Chroma.
+
 extern char* convertMarkdownToHTML(char* p0);
+
+// convertNotebookToHTML converts the provided Jupyter Notebook JSON to HTML using `nbtohtml`.
 
 extern char* convertNotebookToHTML(char* p0);
 

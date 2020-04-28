@@ -1,0 +1,25 @@
+output:
+  print-issued-lines: false
+
+linters:
+  enable-all: true
+  disable:
+    - funlen
+    - gochecknoglobals
+    - gocognit
+    - gomnd
+    - maligned
+    - testpackage
+    - wsl
+
+linters-settings:
+  lll:
+    max-length: 100
+    tab-width: 2
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  exclude-use-default: false
+  exclude:
+    - "Line contains TODO/BUG/FIXME"

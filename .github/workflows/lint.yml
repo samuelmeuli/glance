@@ -5,7 +5,7 @@ on:
   - pull_request
 
 jobs:
-  lint:
+  lint-swift:
     name: Lint
     runs-on: macos-latest
 
@@ -31,3 +31,31 @@ jobs:
         run: |
           mint run swiftlint --quiet --strict
           mint run swiftformat --lint .
+
+  lint-go:
+    name: Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./HTMLConverter/
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.14
+
+      - name: Restore Go Modules cache
+        id: go-mod-cache
+        uses: actions/cache@v1
+        with:
+          path: ~/go/pkg/mod/
+          key: ${{ runner.os }}-go-mod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-mod-
+
+      - name: Run linters
+        run: docker run --rm -v $(pwd):/app -w /app golangci/golangci-lint:v1.25.1 golangci-lint run
