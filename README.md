@@ -71,6 +71,8 @@ It's possible that your file's extension or [UTI](https://en.wikipedia.org/wiki/
 
 Suggestions and contributions are always welcome! Please discuss larger changes (e.g. adding support for a new file type) via issue before submitting a pull request.
 
+Xcode, Swift and Go need to be installed to build the app locally.
+
 To add previews for a new file extension, please follow these steps:
 
 1. Create a new class for your file type in [this directory](./QLPlugin/Views/Previews/). It should implement the `Preview` protocol. See the other files in the directory for examples.
