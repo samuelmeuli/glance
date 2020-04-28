@@ -7,5 +7,5 @@ Using this helper library, the code, Markdown and Jupyter Notebook renderers can
 To build the C archive, run the following command:
 
 ```sh
-go build --buildmode=c-archive -o htmlconverter.a
+go build --buildmode=c-archive -ldflags "-s -w" -o htmlconverter.a
 ```

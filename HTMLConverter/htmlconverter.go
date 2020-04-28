@@ -6,18 +6,30 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/Depado/bfchroma"
 	"github.com/alecthomas/chroma"
 	htmlFormatter "github.com/alecthomas/chroma/formatters/html"
 	"github.com/alecthomas/chroma/lexers"
 	"github.com/alecthomas/chroma/styles"
-	"github.com/microcosm-cc/bluemonday"
 	"github.com/samuelmeuli/nbtohtml"
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/yuin/goldmark"
+	highlighting "github.com/yuin/goldmark-highlighting"
+	"github.com/yuin/goldmark/extension"
 )
 
 // Regex for YAML front matter in a Markdown document
 var markdownFrontMatterRegex = regexp.MustCompile(`---\n[\s\S]*?\n---\n`)
+
+// Enable syntax highlighting in Markdown
+var markdownParser = goldmark.New(
+	goldmark.WithExtensions(
+		extension.GFM,
+		highlighting.NewHighlighting(
+			highlighting.WithFormatOptions(
+				htmlFormatter.WithClasses(true),
+			),
+		),
+	),
+)
 
 // Functions for conversion between C and Go strings. Required here because cgo cannot be used in
 // tests.
@@ -75,29 +87,23 @@ func convertCodeToHTML(source *C.char, lexer *C.char) *C.char {
 }
 
 //export convertMarkdownToHTML
-// convertMarkdownToHTML converts the provided Markdown string to HTML using Blackfriday. Classes
-// for syntax highlighting inside code blocks are generated using Chroma.
+// convertMarkdownToHTML converts the provided Markdown string to HTML using goldmark. Classes for
+// syntax highlighting inside code blocks are generated using Chroma.
 func convertMarkdownToHTML(source *C.char) *C.char {
 	sourceString := convertToGoString(source)
-
-	// Sanitize output but keep classes (required for syntax highlighting)
-	policy := bluemonday.UGCPolicy()
-	policy.AllowStyling()
-
-	// Use Chroma for syntax highlighting in code blocks
-	renderer := bfchroma.NewRenderer(
-		bfchroma.WithoutAutodetect(),
-		bfchroma.ChromaOptions(htmlFormatter.WithClasses(true)),
-	)
 
 	// Strip YAML front matter
 	sourceString = markdownFrontMatterRegex.ReplaceAllString(sourceString, "")
 
 	// Convert Markdown to HTML
-	html := blackfriday.Run([]byte(sourceString), blackfriday.WithRenderer(renderer))
-	htmlString := string(html)
-	htmlStringSanitized := policy.Sanitize(htmlString)
-	return convertToCString(htmlStringSanitized)
+	var htmlBuffer bytes.Buffer
+	if err := markdownParser.Convert([]byte(sourceString), &htmlBuffer); err != nil {
+		errMessage := fmt.Sprintf("error: Could not convert Markdown to HTML: %d", err)
+		return convertToCString(errMessage)
+	}
+	// goldmark does not render raw HTML or potentially-dangerous URLs, so HTML should be safe from
+	// code injection
+	return convertToCString(htmlBuffer.String())
 }
 
 //export convertNotebookToHTML

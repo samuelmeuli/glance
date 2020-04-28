@@ -20,7 +20,7 @@ TODO: Main app screenshot
 
   TODO: Add screenshot
 
-- **Markdown** (rendered using [Blackfriday](https://github.com/russross/blackfriday)): `.md`, `.markdown`, `.mdown`, `.mkdn`, `.mkd`, `.Rmd`
+- **Markdown** (rendered using [goldmark](https://github.com/yuin/goldmark)): `.md`, `.markdown`, `.mdown`, `.mkdn`, `.mkd`, `.Rmd`
 
   TODO: Add screenshot
 

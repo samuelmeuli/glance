@@ -74,8 +74,8 @@ extern "C" {
 
 extern char* convertCodeToHTML(char* p0, char* p1);
 
-// convertMarkdownToHTML converts the provided Markdown string to HTML using Blackfriday. Classes
-// for syntax highlighting inside code blocks are generated using Chroma.
+// convertMarkdownToHTML converts the provided Markdown string to HTML using goldmark. Classes for
+// syntax highlighting inside code blocks are generated using Chroma.
 
 extern char* convertMarkdownToHTML(char* p0);
 
