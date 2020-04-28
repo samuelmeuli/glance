@@ -13,13 +13,21 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          brew install mint
-          mint install nicklockwood/SwiftFormat@0.44.7
-          mint install realm/SwiftLint@0.39.2
+      - name: Install Homebrew dependencies
+        run: brew install mint
 
-      - name: Lint
+      - name: Restore Mint cache
+        id: mint-cache
+        uses: actions/cache@v1
+        with:
+          path: /usr/local/lib/mint/
+          key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
+
+      - name: Install Mint dependencies
+        if: steps.mint-cache.outputs.cache-hit != 'true'
+        run: mint bootstrap
+
+      - name: Run linters
         run: |
-          swiftlint --quiet --strict
-          swiftformat --lint .
+          mint run swiftlint --quiet --strict
+          mint run swiftformat --lint .
