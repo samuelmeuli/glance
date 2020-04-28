@@ -12,7 +12,11 @@ import (
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/samuelmeuli/nbtohtml"
 	"gopkg.in/russross/blackfriday.v2"
+	"regexp"
 )
+
+// Regex for YAML front matter in a Markdown document
+var markdownFrontMatterRegex = regexp.MustCompile(`---\n[\s\S]*?\n---\n`)
 
 // Functions for conversion between C and Go strings. Required here because cgo cannot be used in
 // tests.
@@ -81,6 +85,10 @@ func convertMarkdownToHTML(source *C.char) *C.char {
 		bfchroma.ChromaOptions(htmlFormatter.WithClasses(true)),
 	)
 
+	// Strip YAML front matter
+	sourceString = markdownFrontMatterRegex.ReplaceAllString(sourceString, "")
+
+	// Convert Markdown to HTML
 	html := blackfriday.Run([]byte(sourceString), blackfriday.WithRenderer(renderer))
 	htmlString := string(html)
 	htmlStringSanitized := policy.Sanitize(htmlString)

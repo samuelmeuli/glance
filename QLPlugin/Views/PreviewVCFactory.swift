@@ -8,7 +8,7 @@ class PreviewVCFactory {
 			case "gz":
 				// `gzip` is only supported for tarballs
 				return fileURL.path.hasSuffix(".tar.gz") ? TARPreview.self : nil
-			case "md", "markdown", "mdown", "mkdn", "mkd":
+			case "md", "markdown", "mdown", "mkdn", "mkd", "rmd":
 				return MarkdownPreview.self
 			case "ipynb":
 				return JupyterPreview.self
