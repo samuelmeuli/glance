@@ -4,7 +4,7 @@ import Foundation
 /// May return `nil` if the file is  not supported.
 class PreviewVCFactory {
 	static func getPreviewInitializer(fileURL: URL) -> Preview.Type? {
-		switch fileURL.pathExtension {
+		switch fileURL.pathExtension.lowercased() {
 			case "gz":
 				// `gzip` is only supported for tarballs
 				return fileURL.path.hasSuffix(".tar.gz") ? TARPreview.self : nil
