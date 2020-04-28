@@ -4,8 +4,8 @@ import SwiftExec
 
 /// View controller for previewing tarballs (may be gzipped).
 class TARPreview: Preview {
-	let filesRegex = #"([\w-]{10})  \d+ .+ .+ + (\d+) (\w{3} \d+ +[\d:]+) (.*)"#
-	let sizeRegex = #" +\d+ +(\d+) +([\d.]+)% .+"#
+	let filesRegex = #"([\w-]{10}) +\d+ +.+ +.+ +(\d+) +(\w{3} +\d+ +[\d:]+) +(.+)"#
+	let sizeRegex = #" +\d+ +(\d+) +([\d.]+)% +.+"#
 
 	let byteCountFormatter = ByteCountFormatter()
 	let dateFormatter1 = DateFormatter()
