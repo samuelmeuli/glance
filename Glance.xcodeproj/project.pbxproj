@@ -23,12 +23,12 @@
 		7E21C88E24390BE400818EB2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C88C2438CAA500818EB2 /* Stats.swift */; };
 		7E21C89124390E3100818EB2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C89024390E3100818EB2 /* Date.swift */; };
 		7E413F802418DD6200CFBB1D /* TSVPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* TSVPreview.swift */; };
+		7E42B61E245857D9008D7116 /* htmlconverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42B61D245857D9008D7116 /* htmlconverter.a */; };
 		7E458AED2439176B0091BD0F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C89024390E3100818EB2 /* Date.swift */; };
 		7E458AF0243944810091BD0F /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E458AEF243944810091BD0F /* URL.swift */; };
 		7E458AF22439474E0091BD0F /* NSMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E458AF12439474E0091BD0F /* NSMenuItem.swift */; };
 		7E458AF52439481F0091BD0F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E458AF42439481F0091BD0F /* Menu.swift */; };
 		7E45F899244DA45500BFB869 /* FileTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45F898244DA45500BFB869 /* FileTree.swift */; };
-		7E5E49482455E3AA00C8C148 /* html-converter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5E49462455E3AA00C8C148 /* html-converter.a */; };
 		7E5E494B2455E3EB00C8C148 /* SwiftExec in Frameworks */ = {isa = PBXBuildFile; productRef = 7E5E494A2455E3EB00C8C148 /* SwiftExec */; };
 		7E616BB0244997420043F7AB /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 7E616BAF244997420043F7AB /* SwiftCSV */; };
 		7E616BB2244998650043F7AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E616BB1244998650043F7AB /* MainVC.xib */; };
@@ -172,12 +172,12 @@
 		7E21C89024390E3100818EB2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7E413F7F2418DD6200CFBB1D /* TSVPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSVPreview.swift; sourceTree = "<group>"; };
+		7E42B61C245857D9008D7116 /* htmlconverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htmlconverter.h; path = HTMLConverter/htmlconverter.h; sourceTree = "<group>"; };
+		7E42B61D245857D9008D7116 /* htmlconverter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = htmlconverter.a; path = HTMLConverter/htmlconverter.a; sourceTree = "<group>"; };
 		7E458AEF243944810091BD0F /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		7E458AF12439474E0091BD0F /* NSMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenuItem.swift; sourceTree = "<group>"; };
 		7E458AF42439481F0091BD0F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		7E45F898244DA45500BFB869 /* FileTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTree.swift; sourceTree = "<group>"; };
-		7E5E49462455E3AA00C8C148 /* html-converter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "html-converter.a"; path = "HTMLConverter/html-converter.a"; sourceTree = "<group>"; };
-		7E5E49472455E3AA00C8C148 /* html-converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "html-converter.h"; path = "HTMLConverter/html-converter.h"; sourceTree = "<group>"; };
 		7E616BB1244998650043F7AB /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		7E6EF1FA240CC802009E4199 /* QLPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QLPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6EF1FC240CC802009E4199 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -279,8 +279,8 @@
 			files = (
 				7E616BB0244997420043F7AB /* SwiftCSV in Frameworks */,
 				7E6EF1FD240CC802009E4199 /* Quartz.framework in Frameworks */,
-				7E5E49482455E3AA00C8C148 /* html-converter.a in Frameworks */,
 				7E5E494B2455E3EB00C8C148 /* SwiftExec in Frameworks */,
+				7E42B61E245857D9008D7116 /* htmlconverter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,8 +407,8 @@
 		7E6EF1FB240CC802009E4199 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7E5E49462455E3AA00C8C148 /* html-converter.a */,
-				7E5E49472455E3AA00C8C148 /* html-converter.h */,
+				7E42B61D245857D9008D7116 /* htmlconverter.a */,
+				7E42B61C245857D9008D7116 /* htmlconverter.h */,
 				7E6EF1FC240CC802009E4199 /* Quartz.framework */,
 			);
 			name = Frameworks;
