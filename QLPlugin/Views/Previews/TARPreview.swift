@@ -121,6 +121,6 @@ class TARPreview: Preview {
 			"""
 		}
 
-		return OutlinePreviewVC(root: fileTree.root, labelText: labelText)
+		return OutlinePreviewVC(rootNodes: fileTree.root.childrenList, labelText: labelText)
 	}
 }

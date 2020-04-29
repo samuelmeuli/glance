@@ -58,7 +58,7 @@ class FileTree {
 	/// position in the tree.
 	func addNode(path: String, isDirectory: Bool, size: Int, dateModified: Date) throws {
 		try addNode(
-			node: root,
+			currentNode: root,
 			pathParts: path.split(separator: "/", omittingEmptySubsequences: true),
 			pathPartIndex: 0,
 			isDirectory: isDirectory,
@@ -71,7 +71,7 @@ class FileTree {
 	/// position in the tree. This is a helper function for the `addNode` function. It performs a
 	/// recursive tree traversal to find the node's location.
 	private func addNode(
-		node: FileTreeNode,
+		currentNode: FileTreeNode,
 		pathParts: [String.SubSequence],
 		pathPartIndex: Int,
 		isDirectory: Bool,
@@ -83,7 +83,7 @@ class FileTree {
 
 		if isLastPathPart {
 			// Reached end of path: Add to tree
-			node.children[name] = FileTreeNode(
+			currentNode.children[name] = FileTreeNode(
 				name: name,
 				size: size,
 				dateModified: dateModified,
@@ -91,7 +91,7 @@ class FileTree {
 			)
 		} else {
 			// Not at end of path: Recurse into subdirectory
-			if let nextNode = node.children[name] {
+			if let nextNode = currentNode.children[name] {
 				if !nextNode.isDirectory {
 					throw FileTreeError.notADirectoryError(
 						pathParts: pathParts,
@@ -99,7 +99,7 @@ class FileTree {
 					)
 				}
 				try addNode(
-					node: nextNode,
+					currentNode: nextNode,
 					pathParts: pathParts,
 					pathPartIndex: pathPartIndex + 1,
 					isDirectory: isDirectory,

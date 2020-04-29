@@ -1,7 +1,7 @@
 import Cocoa
 
 class OutlinePreviewVC: NSViewController, PreviewVC {
-	@objc dynamic var root: FileTreeNode
+	@objc dynamic var rootNodes: [FileTreeNode]
 	private let labelText: String?
 
 	@objc dynamic var customSortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
@@ -10,17 +10,17 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 	@IBOutlet private var outlineView: NSOutlineView!
 	@IBOutlet private var label: NSTextField!
 
-	required convenience init(root: FileTreeNode, labelText: String?) {
-		self.init(nibName: nil, bundle: nil, root: root, labelText: labelText)
+	required convenience init(rootNodes: [FileTreeNode], labelText: String?) {
+		self.init(nibName: nil, bundle: nil, rootNodes: rootNodes, labelText: labelText)
 	}
 
 	init(
 		nibName nibNameOrNil: NSNib.Name?,
 		bundle nibBundleOrNil: Bundle?,
-		root: FileTreeNode,
+		rootNodes: [FileTreeNode],
 		labelText: String?
 	) {
-		self.root = root
+		self.rootNodes = rootNodes
 		self.labelText = labelText
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
@@ -42,7 +42,9 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 
 	private func setUpView() {
 		// Add file tree to `treeController`
-		treeController.addObject(root)
+		for node in rootNodes {
+			treeController.addObject(node)
+		}
 
 		// Add label
 		label.stringValue = labelText ?? ""
