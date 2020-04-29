@@ -4,14 +4,24 @@ on:
   - push
   - pull_request
 
-defaults:
-  run:
-    working-directory: ./HTMLConverter/
-
 jobs:
-  test:
-    name: Test
+  test-swift:
+    name: Test (Swift)
     runs-on: macos-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: xcodebuild clean test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -project ./Glance.xcodeproj -scheme Glance
+
+  test-go:
+    name: Test (Go)
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./HTMLConverter/
 
     steps:
       - name: Check out Git repository

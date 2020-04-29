@@ -6,7 +6,7 @@ on:
 
 jobs:
   lint-swift:
-    name: Lint
+    name: Lint (Swift)
     runs-on: macos-latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
           mint run swiftformat --lint .
 
   lint-go:
-    name: Lint
+    name: Lint (Go)
     runs-on: ubuntu-latest
     defaults:
       run:
