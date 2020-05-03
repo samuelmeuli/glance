@@ -4,7 +4,7 @@ import SwiftExec
 
 class ZIPPreview: Preview {
 	let filesRegex =
-		#"([\w-]{10}) +.+ +\w+ +(\d+) +\w+ +\w+ +(\d{2}-\w{3}-\d{2} +\d{2}:\d{2}) +(.+)"#
+		#"(.{10}) +.+ +.+ +(\d+) +.+ +.+ +(\d{2}-\w{3}-\d{2} +\d{2}:\d{2}) +(.+)"#
 	let sizeRegex = #"\d+ files, (\d+) bytes uncompressed, \d+ bytes compressed: +([\d.]+)%"#
 
 	let byteCountFormatter = ByteCountFormatter()
