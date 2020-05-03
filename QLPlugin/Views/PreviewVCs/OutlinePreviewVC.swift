@@ -37,7 +37,7 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setUpView()
-		expandFirstLevel()
+		expandSingleRootItem()
 	}
 
 	private func setUpView() {
@@ -50,11 +50,11 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 		label.stringValue = labelText ?? ""
 	}
 
-	/// Expands all first-level tree nodes.
-	private func expandFirstLevel() {
+	/// If the root contains a single item, this function expands its children.
+	private func expandSingleRootItem() {
 		let root = treeController.arrangedObjects
-		for node in root.children ?? [] {
-			outlineView.expandItem(node)
+		if root.children?.count == 1 {
+			outlineView.expandItem(root.children?.first!)
 		}
 	}
 }
