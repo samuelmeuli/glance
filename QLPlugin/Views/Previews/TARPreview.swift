@@ -57,16 +57,8 @@ class TARPreview: Preview {
 		}
 	}
 
-	private func parseTARFiles(file: File, lines: String) -> FileTree {
+	private func parseTARFiles(lines: String) -> FileTree {
 		let fileTree = FileTree()
-
-		// Create node for root directory (not contained in `tar` output)
-		try! fileTree.addNode(
-			path: file.url.lastPathComponent.components(separatedBy: ".")[0],
-			isDirectory: true,
-			size: 0,
-			dateModified: file.attributes[FileAttributeKey.modificationDate] as? Date ?? Date()
-		)
 
 		// Content lines: "-rw-r--r--  0 user staff     642 Dec 29  2018 my-tar/file.ext"
 		// - "-" as first character indicates a file, "d" a directory
@@ -106,7 +98,7 @@ class TARPreview: Preview {
 
 		// Parse TAR contents
 		let filesOutput = try runTARFilesCommand(filePath: file.path)
-		let fileTree = parseTARFiles(file: file, lines: filesOutput)
+		let fileTree = parseTARFiles(lines: filesOutput)
 		var labelText =
 			"\(isGzipped ? "Compressed" : "Size"): \(byteCountFormatter.string(for: file.size) ?? "--")"
 
