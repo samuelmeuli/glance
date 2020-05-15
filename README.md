@@ -2,7 +2,9 @@
 
 **All-in-one Quick Look plugin**
 
-Glance provides QuickLook previews for various file types that macOS doesn't support out of the box.
+See what's in your files without opening them!
+
+Glance boosts your productivity by providing Quick Look previews for files that macOS doesn't support out of the box.
 
 ## Install
 
@@ -10,7 +12,7 @@ Glance provides QuickLook previews for various file types that macOS doesn't sup
 
 ![App Store download link](./.github/download-badge.svg)
 
-After opening the app for the first time, macOS will use Glance to generate previews for the supported file types.
+After opening Glance for the first time, macOS will use the app to generate previews for the supported files.
 
 TODO: Main app screenshot
 
@@ -24,7 +26,7 @@ TODO: Main app screenshot
 
   TODO: Add screenshot
 
-- **Archives**: `.tar`, `.tar.gz`, `.zip`
+- **Archive**: `.tar`, `.tar.gz`, `.zip`
 
   TODO: Add screenshot
 
@@ -32,13 +34,13 @@ TODO: Main app screenshot
 
   TODO: Add screenshot
 
-- **TSV** (parsed using [SwiftCSV](https://github.com/swiftcsv/SwiftCSV)): `.tab`, `.tsv`
+- **Tab-separated values** (parsed using [SwiftCSV](https://github.com/swiftcsv/SwiftCSV)): `.tab`, `.tsv`
 
   TODO: Add screenshot
 
 ## FAQ
 
-**There are existing QuickLook apps for some of the supported file types. Why create another one?**
+**There are existing Quick Look apps for some of the supported file types. Why create another one?**
 
 - Glance combines the features of many plugins into one and provides consistent and beautiful previews
 - Glance is fully compatible with Dark Mode
@@ -59,7 +61,7 @@ Please feel free to [open an issue](https://github.com/samuelmeuli/glance/issues
 
 **You claim to support [file type], but previews aren't showing up.**
 
-Please note that Glance skips previews for large files.
+Please note that Glance skips previews for large files to avoid slowing down your Mac.
 
 It's possible that your file's extension or [UTI](https://en.wikipedia.org/wiki/Uniform_Type_Identifier) isn't associated with Glance. You can easily verify this:
 
@@ -78,4 +80,4 @@ To add previews for a new file extension, please follow these steps:
 1. Create a new class for your file type in [this directory](./QLPlugin/Views/Previews/). It should implement the `Preview` protocol. See the other files in the directory for examples.
 2. Match the file extension to your class in [`PreviewVCFactory.swift`](./QLPlugin/Views/PreviewVCFactory.swift).
 3. Find your file's UTI by running `mdls -name kMDItemContentType -name kMDItemContentTypeTree /path/to/your/file`. Add it to `QLSupportedContentTypes` in [`Info.plist`](./QLPlugin/Info.plist).
-4. Update [`README.md`](./README.md) and [`Credits.rtf`](./Glance/Credits.rtf).
+4. Update [`README.md`](./README.md), [`Credits.rtf`](./Glance/Credits.rtf) and [`app-store-description.txt`](./app-store-description.txt).

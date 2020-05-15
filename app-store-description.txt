@@ -1,0 +1,15 @@
+See what's in your files without opening them!
+
+Glance boosts your productivity by providing Quick Look previews for files that macOS doesn't support out of the box.
+
+Features:
+• Beautiful file previews for various file types
+• Previews visible in Quick Look, Finder and Spotlight
+• Full compatibility with Dark Mode
+
+Supported file types:
+• Source code (.cpp, .js, .json, .py, .swift, .yml and many more)
+• Markdown (.md, .markdown, .mdown, .mkdn, .mkd, .Rmd)
+• Archive (.tar, .tar.gz, .zip)
+• Jupyter Notebook (.ipynb)
+• Tab-separated values (.tab, .tsv)

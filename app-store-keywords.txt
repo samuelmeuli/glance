@@ -1,0 +1,1 @@
+glance,quick,look,quicklook,plugin,preview,finder,spotlight,file,thumbnail
