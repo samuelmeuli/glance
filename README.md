@@ -1,55 +1,46 @@
-# Glance
-
-**All-in-one Quick Look plugin**
-
-See what's in your files without opening them!
-
-Glance boosts your productivity by providing Quick Look previews for files that macOS doesn't support out of the box.
-
-## Install
-
-**Glance is available on the Mac App Store:** (TODO: Add link)
-
-![App Store download link](./.github/download-badge.svg)
-
-After opening Glance for the first time, macOS will use the app to generate previews for the supported files.
-
-TODO: Main app screenshot
+<div align="center">
+  <p><img src="./Glance/Assets.xcassets/AppIcon.appiconset/app-icon-256pt@1x.png" alt="" height="140"></p>
+  <h1>Glance</h1>
+  <p><strong>All-in-one Quick Look plugin</strong></p>
+	<p>Glance provides Quick Look previews for files that macOS doesn't support out of the box.</p>
+	<p><a href="https://apps.apple.com/app/id1513574319"><img src="./AppStore/Assets/DownloadBadge.svg" alt="Download on the Mac App Store"></a></p>
+	<p><img src="./AppStore/Listing/Screenshots/Screenshot1.jpg" alt=""></p>
+</div>
 
 ## Supported file types
 
 - **Source code** (with [Chroma](https://github.com/alecthomas/chroma) syntax highlighting): `.cpp`, `.js`, `.json`, `.py`, `.swift`, `.yml` and many more
 
-  TODO: Add screenshot
+  <p><img src="./AppStore/Assets/Screenshots/ScreenshotSourceCode.png" alt="" width="600"></p>
 
 - **Markdown** (rendered using [goldmark](https://github.com/yuin/goldmark)): `.md`, `.markdown`, `.mdown`, `.mkdn`, `.mkd`, `.Rmd`
 
-  TODO: Add screenshot
+  <p><img src="./AppStore/Assets/Screenshots/ScreenshotMarkdown.png" alt="" width="600"></p>
 
 - **Archive**: `.tar`, `.tar.gz`, `.zip`
 
-  TODO: Add screenshot
+  <p><img src="./AppStore/Assets/Screenshots/ScreenshotArchive.png" alt="" width="600"></p>
 
-- **Jupyter Notebook** (rendered using [`nbtohtml`](https://github.com/samuelmeuli/nbtohtml)): `.ipynb`
+- **Jupyter Notebook** (rendered using [nbtohtml](https://github.com/samuelmeuli/nbtohtml)): `.ipynb`
 
-  TODO: Add screenshot
+  <p><img src="./AppStore/Assets/Screenshots/ScreenshotJupyterNotebook.png" alt="" width="600"></p>
 
 - **Tab-separated values** (parsed using [SwiftCSV](https://github.com/swiftcsv/SwiftCSV)): `.tab`, `.tsv`
 
-  TODO: Add screenshot
+  <p><img src="./AppStore/Assets/Screenshots/ScreenshotTSV.png" alt="" width="600"></p>
 
 ## FAQ
 
 **There are existing Quick Look apps for some of the supported file types. Why create another one?**
 
-- Glance combines the features of many plugins into one and provides consistent and beautiful previews
-- Glance is fully compatible with Dark Mode
-- Some plugins still use the deprecated Quick Look generator API and might stop working in the future
-- Glance can easily be extended to support other file types
+- Glance combines the features of many plugins into one and provides consistent and beautiful previews.
+- Glance is fully compatible with Dark Mode.
+- Some plugins still use the deprecated Quick Look Generator API and might stop working in the future.
+- Glance can easily be extended to support other file types.
 
 **Why does Glance require network permissions?**
 
-Glance renders some file previews in a `WKWebView`. All assets are stored locally and [network access is disabled](./QLPlugin/Views/General/OfflineWebView.swift), but web views still need the `com.apple.security.network.client` entitlement to function.
+Glance renders some previews in a `WKWebView`. All assets are stored locally and [network access is disabled](./QLPlugin/Views/General/OfflineWebView.swift), but web views still need the `com.apple.security.network.client` entitlement to function.
 
 **Why are images in my Markdown files not loading?**
 
