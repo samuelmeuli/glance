@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -399,21 +398,21 @@
                                 <rect key="frame" x="0.0" y="40" width="1100" height="540"/>
                                 <subviews>
                                     <stackView distribution="equalCentering" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ptx-j9-3J7" userLabel="TitleOuterStackView">
-                                        <rect key="frame" x="472" y="490" width="157" height="50"/>
+                                        <rect key="frame" x="470" y="490" width="160" height="50"/>
                                         <subviews>
-                                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdk-Iw-lqp" userLabel="TitleInnerStackView">
-                                                <rect key="frame" x="0.0" y="0.0" width="157" height="50"/>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdk-Iw-lqp" userLabel="TitleInnerStackView">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
                                                 <subviews>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-NQ-xW6" userLabel="AppIconImageView">
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-NQ-xW6" userLabel="AppIconImageView" customClass="AppIcon" customModule="Glance" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="haN-8k-gjw"/>
                                                             <constraint firstAttribute="width" constant="50" id="rfM-bf-ldb"/>
                                                         </constraints>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSMobileMe" id="Xj9-Zy-3Ec" userLabel="AppIconImage"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSMultipleDocuments" id="Xj9-Zy-3Ec" userLabel="AppIconImage"/>
                                                     </imageView>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-oA-EKJ" userLabel="AppNameLabel">
-                                                        <rect key="frame" x="53" y="8" width="106" height="35"/>
+                                                        <rect key="frame" x="56" y="8" width="106" height="35"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="Glance" id="NSJ-Vq-LPH">
                                                             <font key="font" metaFont="systemBold" size="30"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -813,7 +812,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSMobileMe" width="32" height="32"/>
+        <image name="NSMultipleDocuments" width="32" height="32"/>
         <image name="screenshot-finder" width="1300" height="700"/>
         <image name="screenshot-quick-look" width="1300" height="700"/>
         <image name="screenshot-spotlight" width="1300" height="700"/>
