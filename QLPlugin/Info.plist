@@ -31,15 +31,11 @@
 				<!--
 					UTIs that macOS does not allow us to handle:
 
-					- .csv (public.comma-separated-values-text)
-					- .pem (public.x509-certificate)
-					- .plist (com.apple.property-list)
-					- .ts (could be TypeScript, is identified as public.mpeg-2-transport-stream)
-					- .xml (public.xml)
+					- Any UTI which is already supported by Quick Look (e.g. CSV)
+					- com.apple.property-list (.plist)
+					- public.mpeg-2-transport-stream (.ts)
+					- public.xml (.xml)
 				-->
-
-				<!-- Base UTI -->
-				<string>public.data</string>
 
 				<!-- Archive -->
 				<string>org.gnu.gnu-zip-archive</string> <!-- .gz -->
@@ -96,22 +92,20 @@
 				<string>com.sun.java-web-start</string>
 				<string>com.sun.javafx</string>
 				<string>com.sun.manifest</string>
-				<string>com.unknown.lhs</string>
 				<string>com.vallettaventures.texpadm.tex</string> <!-- Texpad LaTeX (.cls, .sty, .tex) -->
-				<string>dyn.ah62d4rv4ge8007a</string>
-				<string>dyn.ah62d4rv4ge80255drq</string> <!-- Lockfile (.lock, e.g. for Yarn and Poetry) -->
-				<string>dyn.ah62d4rv4ge80c75p</string>
-				<string>dyn.ah62d4rv4ge80g55sq2</string>
-				<string>dyn.ah62d4rv4ge80g62</string>
-				<string>dyn.ah62d4rv4ge80s52</string>
-				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string>
-				<string>dyn.ah62d4rv4ge80w5pq</string>
-				<string>dyn.ah62d4rv4ge80y652</string>
-				<string>dyn.ah62d4rv4ge81e3pxr70hq3pe</string> <!-- Lockfile (.resolved, for Swift Package Manager) -->
-				<string>dyn.ah62d4rv4ge81g22</string>
-				<string>dyn.ah62d4rv4ge81g25brvuu</string>
-				<string>dyn.ah62d4rv4ge81g25xsq</string>
-				<string>dyn.ah62d4rv4ge81g6pq</string>
+				<string>dyn.ah62d4rv4ge8007a</string> <!-- .kt -->
+				<string>dyn.ah62d4rv4ge80255drq</string> <!-- .lock (lockfile for Poetry, Yarn, ...) -->
+				<string>dyn.ah62d4rv4ge80c75p</string> <!-- .awk -->
+				<string>dyn.ah62d4rv4ge80g55sq2</string> <!-- .conf -->
+				<string>dyn.ah62d4rv4ge80g62</string> <!-- .cs -->
+				<string>dyn.ah62d4rv4ge80s52</string> <!-- .go -->
+				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string> <!-- .gradle -->
+				<string>dyn.ah62d4rv4ge80w5pq</string> <!-- .iml -->
+				<string>dyn.ah62d4rv4ge80y652</string> <!-- .jsx -->
+				<string>dyn.ah62d4rv4ge81e3pxr70hq3pe</string> <!-- .resolved (lockfile for Swift Package Manager) -->
+				<string>dyn.ah62d4rv4ge81g25brvuu</string> <!-- .scala -->
+				<string>dyn.ah62d4rv4ge81g25xsq</string> <!-- .scss -->
+				<string>dyn.ah62d4rv4ge81g6pq</string> <!-- .sql -->
 				<string>dyn.ah62d4rv4ge81k55rru</string> <!-- .toml -->
 				<string>org.applescript.source</string>
 				<string>org.arduino.ino-source</string>
@@ -176,6 +170,7 @@
 				<string>public.c-plus-plus-source</string>
 				<string>public.c-source</string>
 				<string>public.css</string>
+				<string>public.data</string> <!-- e.g. .gitignore, .editorconfig, README, ... -->
 				<string>public.json</string>
 				<string>public.objective-c-source</string>
 				<string>public.pascal-source</string>
