@@ -14,7 +14,7 @@ class WebPreviewVC: NSViewController, PreviewVC {
 		withExtension: "css"
 	)
 
-	@IBOutlet private var webView: WKWebView!
+	@IBOutlet private var webView: OfflineWebView!
 
 	required convenience init(
 		html: String,

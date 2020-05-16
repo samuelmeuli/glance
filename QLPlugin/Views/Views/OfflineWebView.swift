@@ -34,7 +34,9 @@ let blockRules = """
 
 /// `WKWebView` which only allows the loading of local resources
 class OfflineWebView: WKWebView {
-	override init(frame: CGRect, configuration: WKWebViewConfiguration) {
+	required init?(coder decoder: NSCoder) {
+		super.init(coder: decoder)
+
 		WKContentRuleListStore.default().compileContentRuleList(
 			forIdentifier: "ContentBlockingRules",
 			encodedContentRuleList: blockRules
@@ -47,7 +49,7 @@ class OfflineWebView: WKWebView {
 					error.localizedDescription
 				)
 			} else if let contentRuleList = contentRuleList {
-				configuration.userContentController.add(contentRuleList)
+				self.configuration.userContentController.add(contentRuleList)
 			} else {
 				os_log(
 					"Error adding WKWebView content rule list: Content rule list is not defined",
@@ -56,10 +58,5 @@ class OfflineWebView: WKWebView {
 				)
 			}
 		}
-		super.init(frame: frame, configuration: configuration)
-	}
-
-	required init?(coder decoder: NSCoder) {
-		super.init(coder: decoder)
 	}
 }
