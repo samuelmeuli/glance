@@ -48,7 +48,7 @@ Glance only has access to the file that’s being previewed (`com.apple.security
 
 **Why isn't [file type] supported?**
 
-Please feel free to [open an issue](https://github.com/samuelmeuli/glance/issues/new) or [contribute](#contributing)!
+Feel free to [open an issue](https://github.com/samuelmeuli/glance/issues/new) or [contribute](#contributing)! Please note that [some file types cannot be supported](./QLPlugin/Info.plist).
 
 **You claim to support [file type], but previews aren't showing up.**
 
