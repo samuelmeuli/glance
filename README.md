@@ -42,6 +42,10 @@
 
 Glance renders some previews in a `WKWebView`. All assets are stored locally and [network access is disabled](./QLPlugin/Views/General/OfflineWebView.swift), but web views still need the `com.apple.security.network.client` entitlement to function.
 
+**Why isn't the app available on macOS 10.14 or older?**
+
+The app uses the [new Quick Look API](https://developer.apple.com/documentation/quartz/qlpreviewingcontroller/2867936-preparepreviewoffile) that was introduced in 10.15, so it unfortunately won't work with older versions of macOS.
+
 **Why are images in my Markdown files not loading?**
 
 Glance only has access to the file that’s being previewed (`com.apple.security.files.user-selected.read-only` entitlement). Any image files referenced from Markdown are therefore not loaded.
