@@ -50,8 +50,13 @@
 				<string>dyn.ah62d4rv4ge80w6d3r3va</string> <!-- .ipynb -->
 
 				<!-- Markdown -->
+				<string>dyn.ah62d4rv4ge8042pwrrwg875s</string> <!-- .markdown -->
+				<string>dyn.ah62d4rv4ge8043a</string> <!-- .md -->
+				<string>dyn.ah62d4rv4ge8043dts71a</string> <!-- .mdown -->
+				<string>dyn.ah62d4rv4ge80445e</string> <!-- .mkd -->
+				<string>dyn.ah62d4rv4ge80445er2</string> <!-- .mkdn -->
+				<string>dyn.ah62d4rv4ge80445er7506</string> <!-- .mkdown -->
 				<string>dyn.ah62d4rv4ge81e5pe</string> <!-- .Rmd -->
-				<string>io.caret.markdown</string> <!-- .markdown, .md, .mdown, .mkd, .mkdn -->
 				<string>net.daringfireball.markdown</string> <!-- .markdown, .md, .mdown, .mkd, .mkdn -->
 
 				<!-- TSV -->
