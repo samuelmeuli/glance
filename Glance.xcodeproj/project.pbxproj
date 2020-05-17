@@ -13,6 +13,7 @@
 		7E022BEE245253B3000EFCD3 /* OutlinePreviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E022BEC245253B3000EFCD3 /* OutlinePreviewVC.xib */; };
 		7E08A50F2454372200B7FF53 /* TablePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E08A50D2454372200B7FF53 /* TablePreviewVC.swift */; };
 		7E08A5102454372200B7FF53 /* TablePreviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E08A50E2454372200B7FF53 /* TablePreviewVC.xib */; };
+		7E0DC237247163C7003AA589 /* AppleScriptPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DC236247163C7003AA589 /* AppleScriptPreview.swift */; };
 		7E1B16922455D93E00E2B84D /* HTMLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B16912455D93E00E2B84D /* HTMLRenderer.swift */; };
 		7E1DC51F240E6CE300D0A061 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */; };
 		7E1DC521240E6D8000D0A061 /* MarkdownPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DC520240E6D8000D0A061 /* MarkdownPreview.swift */; };
@@ -172,6 +173,7 @@
 		7E022BEC245253B3000EFCD3 /* OutlinePreviewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutlinePreviewVC.xib; sourceTree = "<group>"; };
 		7E08A50D2454372200B7FF53 /* TablePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePreviewVC.swift; sourceTree = "<group>"; };
 		7E08A50E2454372200B7FF53 /* TablePreviewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TablePreviewVC.xib; sourceTree = "<group>"; };
+		7E0DC236247163C7003AA589 /* AppleScriptPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptPreview.swift; sourceTree = "<group>"; };
 		7E1B16902455D8DB00E2B84D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		7E1B16912455D93E00E2B84D /* HTMLRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLRenderer.swift; sourceTree = "<group>"; };
 		7E1DC51E240E6CE300D0A061 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 		7E1DC52C240E9A3700D0A061 /* Previews */ = {
 			isa = PBXGroup;
 			children = (
+				7E0DC236247163C7003AA589 /* AppleScriptPreview.swift */,
 				7E1DC529240E6FDE00D0A061 /* CodePreview.swift */,
 				7EB7491824228549007265A4 /* JupyterPreview.swift */,
 				7E1DC520240E6D8000D0A061 /* MarkdownPreview.swift */,
@@ -868,6 +871,7 @@
 				7E413F802418DD6200CFBB1D /* TSVPreview.swift in Sources */,
 				7E1DC52A240E6FDE00D0A061 /* CodePreview.swift in Sources */,
 				7E022BED245253B3000EFCD3 /* OutlinePreviewVC.swift in Sources */,
+				7E0DC237247163C7003AA589 /* AppleScriptPreview.swift in Sources */,
 				7E9F0D7E24168870007F1008 /* Script.swift in Sources */,
 				7EB3648A244B665700D7F96F /* ZIPPreview.swift in Sources */,
 				7E9F0D7D24168870007F1008 /* Stylesheet.swift in Sources */,

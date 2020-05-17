@@ -16,6 +16,8 @@ let fileExtensionLexers = [
 	"iml": "xml",
 	"plist": "xml",
 	"resolved": "json", // Swift Package Manager lockfile (Package.resolved)
+	"scpt": "applescript", // AppleScript binary
+	"scptd": "applescript", // AppleScript bundle
 	"sty": "tex", // LaTeX styles file
 ]
 
@@ -39,10 +41,14 @@ class CodePreview: Preview {
 		}
 	}
 
+	func getSource(file: File) throws -> String {
+		try! file.read()
+	}
+
 	private func getHTML(file: File) throws -> String {
 		var source: String
 		do {
-			source = try file.read()
+			source = try getSource(file: file)
 		} catch {
 			os_log(
 				"Could not read code file: %{public}s",
