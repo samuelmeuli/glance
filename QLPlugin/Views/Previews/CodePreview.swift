@@ -13,7 +13,10 @@ let fileExtensionLexers = [
 	"alfredappearance": "json", // Alfred theme
 	"cls": "tex", // LaTeX classes file
 	"entitlements": "xml",
+	"hbs": "handlebars", // Handlebars template
 	"iml": "xml",
+	"liquid": "twig", // Liquid template
+	"njk": "twig", // Nunjucks template
 	"plist": "xml",
 	"resolved": "json", // Swift Package Manager lockfile (Package.resolved)
 	"scpt": "applescript", // AppleScript binary

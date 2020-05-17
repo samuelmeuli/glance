@@ -95,12 +95,16 @@
 				<string>com.sun.manifest</string>
 				<string>com.vallettaventures.texpadm.tex</string> <!-- Texpad LaTeX (.cls, .sty, .tex) -->
 				<string>dyn.ah62d4rv4ge8007a</string> <!-- .kt -->
+				<string>dyn.ah62d4rv4ge8024pvszy0k</string> <!-- .liquid -->
 				<string>dyn.ah62d4rv4ge80255drq</string> <!-- .lock (lockfile for Cargo, Poetry, Yarn, ...) -->
+				<string>dyn.ah62d4rv4ge8064xp</string> <!-- .njk (Nunjucks) -->
 				<string>dyn.ah62d4rv4ge80c75p</string> <!-- .awk -->
 				<string>dyn.ah62d4rv4ge80g55sq2</string> <!-- .conf -->
 				<string>dyn.ah62d4rv4ge80g62</string> <!-- .cs -->
 				<string>dyn.ah62d4rv4ge80s52</string> <!-- .go -->
 				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string> <!-- .gradle -->
+				<string>dyn.ah62d4rv4ge80u2psqv0gn2xbsm3u</string> <!-- .handlebars -->
+				<string>dyn.ah62d4rv4ge80u2xx</string> <!-- .hbs (Handlebars) -->
 				<string>dyn.ah62d4rv4ge80w5pq</string> <!-- .iml -->
 				<string>dyn.ah62d4rv4ge80y652</string> <!-- .jsx -->
 				<string>dyn.ah62d4rv4ge81e3pxr70hq3pe</string> <!-- .resolved (lockfile for Swift Package Manager) -->
@@ -110,6 +114,7 @@
 				<string>dyn.ah62d4rv4ge81g6pq</string> <!-- .sql -->
 				<string>dyn.ah62d4rv4ge81k55rru</string> <!-- .toml -->
 				<string>dyn.ah62d4rv4ge81k652</string> <!-- .tsx -->
+				<string>dyn.ah62d4rv4ge81k75mq6</string> <!-- .twig -->
 				<string>org.arduino.ino-source</string>
 				<string>org.arduino.source</string>
 				<string>org.asm.source</string>
