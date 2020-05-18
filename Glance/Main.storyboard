@@ -335,12 +335,6 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Glance Help" keyEquivalent="?" id="FKE-Sm-Kum">
-                                            <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="aQC-g2-T8m"/>
                                         <menuItem title="Website" id="f7A-U6-axm" customClass="WebsiteMenuItem" customModule="Glance" customModuleProvider="target">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
