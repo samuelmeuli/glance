@@ -14,12 +14,12 @@ import SwiftExec
 class AppleScriptPreview: CodePreview {
 	override func getSource(file: File) throws -> String {
 		if file.url.pathExtension == "scpt" || file.url.pathExtension == "scptd" {
-			let result = try! exec(
+			let result = try exec(
 				program: "/usr/bin/osadecompile",
 				arguments: [file.path]
 			)
 			return result.stdout ?? ""
 		}
-		return try! file.read()
+		return try file.read()
 	}
 }

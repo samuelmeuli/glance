@@ -45,7 +45,7 @@ class CodePreview: Preview {
 	}
 
 	func getSource(file: File) throws -> String {
-		try! file.read()
+		try file.read()
 	}
 
 	private func getHTML(file: File) throws -> String {
