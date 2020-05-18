@@ -5,7 +5,7 @@ import SwiftExec
 class ZIPPreview: Preview {
 	let filesRegex =
 		#"(.{10}) +.+ +.+ +(\d+) +.+ +.+ +(\d{2}-\w{3}-\d{2} +\d{2}:\d{2}) +(.+)"#
-	let sizeRegex = #"\d+ files, (\d+) bytes uncompressed, \d+ bytes compressed: +([\d.]+)%"#
+	let sizeRegex = #"\d+ files?, (\d+) bytes? uncompressed, \d+ bytes? compressed: +([\d.]+)%"#
 
 	let byteCountFormatter = ByteCountFormatter()
 	let dateFormatter = DateFormatter()
@@ -15,11 +15,21 @@ class ZIPPreview: Preview {
 	}
 
 	private func runZIPInfoCommand(filePath: String) throws -> String {
-		let result = try exec(
-			program: "/usr/bin/zipinfo",
-			arguments: [filePath]
-		)
-		return result.stdout ?? ""
+		do {
+			let result = try exec(
+				program: "/usr/bin/zipinfo",
+				arguments: [filePath]
+			)
+			return result.stdout ?? ""
+		} catch {
+			// Empty ZIP files are allowed, but return exit code 1
+			let error = error as! ExecError
+			let stdout = error.execResult.stdout ?? ""
+			if error.execResult.exitCode == 1, stdout.hasSuffix("Empty zipfile.") {
+				return stdout
+			}
+			throw error
+		}
 	}
 
 	/// Parses the output of the `zipinfo` command.
@@ -34,7 +44,7 @@ class ZIPPreview: Preview {
 		// Content lines: "drwxr-xr-x  2.0 unx        0 bx stor 20-Jan-13 19:38 my-zip/dir/"
 		// - "-" as first character indicates a file, "d" a directory
 		// - "0 bx" indicates the number of bytes
-		let filesString = linesSplit[2 ... linesSplit.count - 2].joined(separator: "\n")
+		let filesString = linesSplit[2 ..< linesSplit.count - 1].joined(separator: "\n")
 		let fileMatches = filesString.matchRegex(regex: filesRegex)
 		for fileMatch in fileMatches {
 			let permissions = fileMatch[1]
@@ -57,12 +67,17 @@ class ZIPPreview: Preview {
 			}
 		}
 
-		// Last line: "152 files, 192919 bytes uncompressed, 65061 bytes compressed:  66.3%"
-		let sizeMatches = String(linesSplit.last ?? "").matchRegex(regex: sizeRegex)
-		let sizeUncompressed = Int(sizeMatches[0][1])
-		let compressionRatio = Double(sizeMatches[0][2])
-
-		return (fileTree, sizeUncompressed, compressionRatio)
+		// Last line:
+		// - If not empty: "152 files, 192919 bytes uncompressed, 65061 bytes compressed:  66.3%"
+		// - If empty: "Empty zipfile."
+		if let lastLine = linesSplit.last, lastLine != "Empty zipfile." {
+			let sizeMatches = String(lastLine).matchRegex(regex: sizeRegex)
+			let sizeUncompressed = Int(sizeMatches[0][1])
+			let compressionRatio = Double(sizeMatches[0][2])
+			return (fileTree, sizeUncompressed, compressionRatio)
+		} else {
+			return (fileTree, 0, 0)
+		}
 	}
 
 	func createPreviewVC(file: File) throws -> PreviewVC {
