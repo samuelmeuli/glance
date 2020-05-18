@@ -81,7 +81,7 @@ class FileTreeTests: XCTestCase {
 	// Tree:
 	//
 	// └── non-empty-directory/
-	//     ├── file-1
+	//     ├── file-1
 	//     └── file-2
 
 	func testAddNonEmptyDirectory1() throws {
@@ -257,8 +257,8 @@ class FileTreeTests: XCTestCase {
 	// Tree:
 	//
 	// ├── non-empty-directory/
-	// │   ├── file-1
-	// │   └── file-2
+	// │   ├── file-1
+	// │   └── file-2
 	// ├── empty-directory/
 	// └── file-1
 

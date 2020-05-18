@@ -1,7 +1,7 @@
 import Foundation
 
 /// Returns a `PreviewVC` subclass that can be used to generate a preview of the provided file.
-/// May return `nil` if the file is  not supported.
+/// May return `nil` if the file is not supported.
 class PreviewVCFactory {
 	static func getPreviewInitializer(fileURL: URL) -> Preview.Type? {
 		switch fileURL.pathExtension.lowercased() {
