@@ -40,7 +40,7 @@
 
 **Why does Glance require network permissions?**
 
-Glance renders some previews in a `WKWebView`. All assets are stored locally and [network access is disabled](./QLPlugin/Views/General/OfflineWebView.swift), but web views still need the `com.apple.security.network.client` entitlement to function.
+Glance renders some previews in a `WKWebView`. All assets are stored locally and network access is disabled, but web views unfortunately still need the `com.apple.security.network.client` entitlement to function.
 
 **Why isn't the app available on macOS 10.14 or older?**
 
@@ -48,11 +48,11 @@ The app uses the [new Quick Look API](https://developer.apple.com/documentation/
 
 **Why are images in my Markdown files not loading?**
 
-Glance only has access to the file that’s being previewed (`com.apple.security.files.user-selected.read-only` entitlement). Any image files referenced from Markdown are therefore not loaded.
+Glance blocks remote assets. Furthermore, the app only has access to the file that's being previewed. Local image files referenced from Markdown are therefore not loaded.
 
 **Why isn't [file type] supported?**
 
-Feel free to [open an issue](https://github.com/samuelmeuli/glance/issues/new) or [contribute](#contributing)! Please note that [some file types cannot be supported](./QLPlugin/Info.plist).
+Feel free to [open an issue](https://github.com/samuelmeuli/glance/issues/new) or [contribute](#contributing)! Please note that macOS doesn't allow the handling of some file types like `.plist`, `.ts` and `.xml`.
 
 **You claim to support [file type], but previews aren't showing up.**
 
@@ -75,4 +75,4 @@ To add previews for a new file extension, please follow these steps:
 1. Create a new class for your file type in [this directory](./QLPlugin/Views/Previews/). It should implement the `Preview` protocol. See the other files in the directory for examples.
 2. Match the file extension to your class in [`PreviewVCFactory.swift`](./QLPlugin/Views/PreviewVCFactory.swift).
 3. Find your file's UTI by running `mdls -name kMDItemContentType -name kMDItemContentTypeTree /path/to/your/file`. Add it to `QLSupportedContentTypes` in [`Info.plist`](./QLPlugin/Info.plist).
-4. Update [`README.md`](./README.md), [`Credits.rtf`](./Glance/Credits.rtf) and [`app-store-description.txt`](./app-store-description.txt).
+4. Update [`README.md`](./README.md), [`Credits.rtf`](./Glance/Credits.rtf) and [the App Store description](./AppStore/Listing/Description.txt).
