@@ -41,9 +41,11 @@ class ZIPPreview: Preview {
 		let fileTree = FileTree()
 		let linesSplit = lines.split(separator: "\n")
 
-		// Content lines: "drwxr-xr-x  2.0 unx        0 bx stor 20-Jan-13 19:38 my-zip/dir/"
-		// - "-" as first character indicates a file, "d" a directory
-		// - "0 bx" indicates the number of bytes
+		// List entry format: "drwxr-xr-x  2.0 unx        0 bx stor 20-Jan-13 19:38 my-zip/dir/"
+		// - Column 1: Permissions ("-" as first character indicates a file, "d" a directory)
+		// - Column 4: File size in bytes
+		// - Columns 7-8: Date modified
+		// - Column 9: File path
 		let filesString = linesSplit[2 ..< linesSplit.count - 1].joined(separator: "\n")
 		let fileMatches = filesString.matchRegex(regex: filesRegex)
 		for fileMatch in fileMatches {

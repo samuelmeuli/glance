@@ -60,9 +60,11 @@ class TARPreview: Preview {
 	private func parseTARFiles(lines: String) -> FileTree {
 		let fileTree = FileTree()
 
-		// Content lines: "-rw-r--r--  0 user staff     642 Dec 29  2018 my-tar/file.ext"
-		// - "-" as first character indicates a file, "d" a directory
-		// - Digits before date indicate number of bytes
+		// List entry format: "-rw-r--r--  0 user staff     642 Dec 29  2018 my-tar/file.ext"
+		// - Column 1: Permissions ("-" as first character indicates a file, "d" a directory)
+		// - Column 5: File size in bytes
+		// - Columns 6-8: Date modified
+		// - Column 9: File path
 		let fileMatches = lines.matchRegex(regex: filesRegex)
 		for fileMatch in fileMatches {
 			let permissions = fileMatch[1]
