@@ -25,6 +25,7 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
 		// Register required value transformers
+		ValueTransformer.setValueTransformer(DateTransformer(), forName: .dateTransformerName)
 		ValueTransformer.setValueTransformer(IconTransformer(), forName: .iconTransformerName)
 		ValueTransformer.setValueTransformer(SizeTransformer(), forName: .sizeTransformerName)
 	}
@@ -56,6 +57,33 @@ class OutlinePreviewVC: NSViewController, PreviewVC {
 		if root.children?.count == 1 {
 			outlineView.expandItem(root.children?.first!)
 		}
+	}
+}
+
+/// `ValueTransformer` which formats the provided date.
+class DateTransformer: ValueTransformer {
+	let dateFormatter = DateFormatter()
+	let fallbackValue = "--"
+
+	override init() {
+		// Use same date format as Finder
+		dateFormatter.dateStyle = .medium
+		dateFormatter.timeStyle = .short
+		dateFormatter.doesRelativeDateFormatting = true
+	}
+
+	override class func transformedValueClass() -> AnyClass { NSString.self }
+
+	override class func allowsReverseTransformation() -> Bool { false }
+
+	override func transformedValue(_ value: Any?) -> Any? {
+		guard let date = value as? Date else {
+			return nil
+		}
+
+		// Dates which are `nil` are passed to this function as epoch dates (default value). If
+		// this is the case, return "--" instead (same behavior as Finder)
+		return date.timeIntervalSince1970 == 0 ? fallbackValue : dateFormatter.string(from: date)
 	}
 }
 
@@ -104,6 +132,7 @@ class SizeTransformer: ValueTransformer {
 }
 
 extension NSValueTransformerName {
+	static let dateTransformerName = NSValueTransformerName(rawValue: "DateTransformer")
 	static let iconTransformerName = NSValueTransformerName(rawValue: "IconTransformer")
 	static let sizeTransformerName = NSValueTransformerName(rawValue: "SizeTransformer")
 }

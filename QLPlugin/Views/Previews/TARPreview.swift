@@ -67,7 +67,7 @@ class TARPreview: Preview {
 		for fileMatch in fileMatches {
 			let permissions = fileMatch[1]
 			let size = Int(fileMatch[2]) ?? 0
-			let dateModified = parseDate(dateString: fileMatch[3]) ?? Date()
+			let dateModified = parseDate(dateString: fileMatch[3])
 			let path = fileMatch[4]
 			do {
 				// Add file/directory node to tree

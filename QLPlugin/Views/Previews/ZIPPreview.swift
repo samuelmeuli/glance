@@ -49,7 +49,7 @@ class ZIPPreview: Preview {
 		for fileMatch in fileMatches {
 			let permissions = fileMatch[1]
 			let size = Int(fileMatch[2]) ?? 0
-			let dateModified = dateFormatter.date(from: fileMatch[3]) ?? Date()
+			let dateModified = dateFormatter.date(from: fileMatch[3])
 			let path = fileMatch[4]
 			// Ignore "__MACOSX" subdirectory (ZIP resource fork created by macOS)
 			if !path.hasPrefix("__MACOSX") {

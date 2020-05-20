@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,13 +106,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="EnR-V3-kK2">
-                                                            <dateFormatter key="formatter" dateStyle="medium" timeStyle="short" doesRelativeDateFormatting="YES" id="dg9-ex-Uou"/>
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="bGz-mP-JvV" name="value" keyPath="objectValue.dateModified" id="HTZ-fQ-kiV"/>
+                                                            <binding destination="bGz-mP-JvV" name="value" keyPath="objectValue.dateModified" id="yWK-4r-mhv">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">DateTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
                                                         </connections>
                                                     </textField>
                                                 </subviews>

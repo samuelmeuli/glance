@@ -55,7 +55,7 @@ class FileTree {
 	/// Parses the provided file/directory's path and creates a new `FileTreeNode` at the correct
 	/// position in the tree. If a file/directory's parent directory doesn't exist yet, it will
 	/// be created (with `dateModified` set to `nil`).
-	func addNode(path: String, isDirectory: Bool, size: Int, dateModified: Date) throws {
+	func addNode(path: String, isDirectory: Bool, size: Int, dateModified: Date?) throws {
 		try addNode(
 			parentNode: root,
 			pathParts: path.split(separator: "/", omittingEmptySubsequences: true),
@@ -75,7 +75,7 @@ class FileTree {
 		pathPartIndex: Int,
 		isDirectory: Bool,
 		size: Int,
-		dateModified: Date
+		dateModified: Date?
 	) throws {
 		let isLastPathPart = pathPartIndex == pathParts.count - 1
 		let name = String(pathParts[pathPartIndex])
