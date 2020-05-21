@@ -52,7 +52,9 @@ Glance blocks remote assets. Furthermore, the app only has access to the file th
 
 **Why isn't [file type] supported?**
 
-Feel free to [open an issue](https://github.com/samuelmeuli/glance/issues/new) or [contribute](#contributing)! Please note that macOS doesn't allow the handling of some file types like `.plist`, `.ts` and `.xml`.
+Feel free to [open an issue](https://github.com/samuelmeuli/glance/issues/new) or [contribute](#contributing)! When opening an issue, please describe what kind of preview you'd expect for your file.
+
+Please note that macOS doesn't allow the handling of some file types (e.g. `.plist`, `.ts` and `.xml`).
 
 **You claim to support [file type], but previews aren't showing up.**
 
