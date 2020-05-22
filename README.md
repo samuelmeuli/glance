@@ -17,7 +17,7 @@
 
   <p><img src="./AppStore/Assets/Screenshots/ScreenshotMarkdown.png" alt="" width="600"></p>
 
-- **Archive**: `.tar`, `.tar.gz`, `.zip`
+- **Archive**: `.pkg`, `.tar`, `.tar.gz`, `.zip`
 
   <p><img src="./AppStore/Assets/Screenshots/ScreenshotArchive.png" alt="" width="600"></p>
 

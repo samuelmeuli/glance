@@ -14,6 +14,8 @@ class PreviewVCFactory {
 				return MarkdownPreview.self
 			case "ipynb":
 				return JupyterPreview.self
+			case "pkg":
+				return PackagePreview.self
 			case "tar":
 				return TARPreview.self
 			case "tab", "tsv":

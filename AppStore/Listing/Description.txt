@@ -10,6 +10,6 @@ Features:
 Supported file types:
 • Source code (.cpp, .js, .json, .py, .swift, .yml and many more)
 • Markdown (.md, .markdown, .mdown, .mkdn, .mkd, .Rmd)
-• Archive (.tar, .tar.gz, .zip)
+• Archive (.pkg, .tar, .tar.gz, .zip)
 • Jupyter Notebook (.ipynb)
 • Tab-separated values (.tab, .tsv)

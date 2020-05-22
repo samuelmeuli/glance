@@ -38,6 +38,7 @@
 				-->
 
 				<!-- Archive -->
+				<string>com.apple.installer-package-archive</string> <!-- .pkg -->
 				<string>org.gnu.gnu-zip-archive</string> <!-- .gz -->
 				<string>public.tar-archive</string> <!-- .tar -->
 				<string>public.zip-archive</string> <!-- .zip -->

@@ -23,6 +23,7 @@
 		7E21C88D2438CAA500818EB2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C88C2438CAA500818EB2 /* Stats.swift */; };
 		7E21C88E24390BE400818EB2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C88C2438CAA500818EB2 /* Stats.swift */; };
 		7E21C89124390E3100818EB2 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C89024390E3100818EB2 /* Date.swift */; };
+		7E405B10247576FD00AC9119 /* PackagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405B0F247576FD00AC9119 /* PackagePreview.swift */; };
 		7E413F802418DD6200CFBB1D /* TSVPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E413F7F2418DD6200CFBB1D /* TSVPreview.swift */; };
 		7E42B61E245857D9008D7116 /* htmlconverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E42B61D245857D9008D7116 /* htmlconverter.a */; };
 		7E458AED2439176B0091BD0F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21C89024390E3100818EB2 /* Date.swift */; };
@@ -183,6 +184,7 @@
 		7E21C88C2438CAA500818EB2 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		7E21C89024390E3100818EB2 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		7E3DF744242CBE7F00DE7CD6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7E405B0F247576FD00AC9119 /* PackagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagePreview.swift; sourceTree = "<group>"; };
 		7E413F7F2418DD6200CFBB1D /* TSVPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSVPreview.swift; sourceTree = "<group>"; };
 		7E42B61C245857D9008D7116 /* htmlconverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htmlconverter.h; path = HTMLConverter/htmlconverter.h; sourceTree = "<group>"; };
 		7E42B61D245857D9008D7116 /* htmlconverter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = htmlconverter.a; path = HTMLConverter/htmlconverter.a; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				7E1DC529240E6FDE00D0A061 /* CodePreview.swift */,
 				7EB7491824228549007265A4 /* JupyterPreview.swift */,
 				7E1DC520240E6D8000D0A061 /* MarkdownPreview.swift */,
+				7E405B0F247576FD00AC9119 /* PackagePreview.swift */,
 				7E7A9DAC244F24B900276E51 /* TARPreview.swift */,
 				7E413F7F2418DD6200CFBB1D /* TSVPreview.swift */,
 				7EB36489244B665700D7F96F /* ZIPPreview.swift */,
@@ -863,6 +866,7 @@
 				7E45F899244DA45500BFB869 /* FileTree.swift in Sources */,
 				7E9F0D7F24168870007F1008 /* WebAsset.swift in Sources */,
 				7E022BE52452181F000EFCD3 /* WebPreviewVC.swift in Sources */,
+				7E405B10247576FD00AC9119 /* PackagePreview.swift in Sources */,
 				7E08A50F2454372200B7FF53 /* TablePreviewVC.swift in Sources */,
 				7E6EF200240CC802009E4199 /* MainVC.swift in Sources */,
 				7E7A9DAD244F24B900276E51 /* TARPreview.swift in Sources */,
