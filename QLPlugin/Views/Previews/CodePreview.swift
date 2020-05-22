@@ -2,11 +2,23 @@ import Foundation
 import os.log
 
 let dotfileLexers = [
+	".bashrc": "bashrc",
 	".dockerignore": "bash",
 	".editorconfig": "ini",
 	".gitattributes": "bash",
+	".gitconfig": "ini",
 	".gitignore": "bash",
 	".npmignore": "bash",
+	".vimrc": "vim",
+	".zprofile": "zsh",
+	".zsh_history": "txt",
+	".zshrc": "zshrc",
+	"dockerfile": "Dockerfile",
+	"gemfile": "Gemfile",
+	"gnumakefile": "Makefile",
+	"makefile": "Makefile",
+	"pkgbuild": "pkgbuild",
+	"rakefile": "Rakefile",
 ]
 
 let fileExtensionLexers = [
@@ -24,6 +36,7 @@ let fileExtensionLexers = [
 	"spf": "xml", // Sequel Pro query favorites file
 	"spTheme": "xml", // Sequel Pro theme file
 	"sty": "tex", // LaTeX styles file
+	"webmanifest": "json", // Web app manifest
 ]
 
 class CodePreview: Preview {
@@ -39,10 +52,13 @@ class CodePreview: Preview {
 	private func getLexer(fileURL: URL) -> String {
 		if fileURL.pathExtension.isEmpty {
 			// Dotfile
-			return dotfileLexers[fileURL.lastPathComponent, default: "autodetect"]
+			return dotfileLexers[fileURL.lastPathComponent.lowercased(), default: "autodetect"]
 		} else {
 			// File with extension
-			return fileExtensionLexers[fileURL.pathExtension, default: fileURL.pathExtension]
+			return fileExtensionLexers[
+				fileURL.pathExtension.lowercased(),
+				default: fileURL.pathExtension
+			]
 		}
 	}
 

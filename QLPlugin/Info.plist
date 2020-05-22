@@ -29,9 +29,9 @@
 			<key>QLSupportedContentTypes</key>
 			<array>
 				<!--
-					UTIs that macOS does not allow us to handle:
+					File types that Glance cannot provide previews for:
 
-					- Any UTI which is already supported by Quick Look (e.g. CSV)
+					- Files that are already supported by macOS (e.g. .csv)
 					- com.apple.property-list (.plist)
 					- public.mpeg-2-transport-stream (.ts)
 					- public.xml (.xml)
@@ -61,148 +61,165 @@
 				<string>public.tab-separated-values-text</string> <!-- .tsv -->
 
 				<!-- Code / plain text -->
-				<string>com.adobe.actionscript</string>
-				<string>com.adobe.coldfusion</string>
-				<string>com.adobe.jsx</string>
+				<string>com.adobe.jsx</string> <!-- .jsx (used for React instead of ExtendScript -->
 				<string>com.apple.applescript.script-bundle</string> <!-- .scptd (AppleScript bundle) -->
 				<string>com.apple.applescript.script</string> <!-- .scpt (AppleScript binary) -->
 				<string>com.apple.applescript.text</string> <!-- .applescript (AppleScript text file) -->
-				<string>com.apple.property-list</string> <!-- .plist -->
-				<string>com.apple.rez-source</string>
+				<string>com.apple.disk-image-dart</string> <!-- .dart (used for Google's programming language instead of Apple's Disk Archive/Retrieval Tool) -->
+				<string>com.apple.rez-source</string> <!-- .r -->
+				<string>com.apple.rez-source</string> <!-- .r (used for R instead of Apple's Rez) -->
 				<string>com.apple.xcode.entitlements-property-list</string> <!-- .entitlements -->
-				<string>com.barebones.bbedit.scss-source</string>
-				<string>com.barebones.bbedit.verilog-hdl-source</string>
-				<string>com.barebones.bbedit.vhdl-source</string>
-				<string>com.dhowett.logos</string>
-				<string>com.eiffel.eiffelstudio-project-config</string>
-				<string>com.eiffel.source-code</string>
-				<string>com.jetbrain.source</string>
-				<string>com.macromates.textmate.scheme</string>
-				<string>com.macromates.textmate.standard-ml</string>
-				<string>com.microsoft.c-sharp</string>
-				<string>com.microsoft.csharp-source</string>
-				<string>com.microsoft.f-sharp</string>
-				<string>com.microsoft.ini</string>
-				<string>com.microsoft.typescript</string>
-				<string>com.microsoft.vb-source</string>
-				<string>com.microsoft.visual-basic</string>
-				<string>com.netscape.javascript-source</string>
+				<string>com.barebones.bbedit.ini-configuration</string> <!-- .cfg -->
+				<string>com.barebones.bbedit.scss-source</string> <!-- .scss -->
+				<string>com.barebones.bbedit.tex-source</string> <!-- .tex -->
+				<string>com.eiffel.source-code</string> <!-- .e (Eiffel) -->
+				<string>com.microsoft.csharp-source</string> <!-- .cs -->
+				<string>com.microsoft.f-sharp</string> <!-- .fsx (F Sharp) -->
+				<string>com.netscape.javascript-source</string> <!-- .js -->
 				<string>com.runningwithcrayons.alfred.appearance</string> <!-- Alfred theme (.alfredappearance) -->
 				<string>com.sequelpro.sequelpro.spf</string> <!-- .spf (Sequel Pro query favorites file) -->
 				<string>com.sequelpro.sequelpro.sptheme</string> <!-- .spTheme (Sequel Pro theme file) -->
 				<string>com.sequelpro.sequelpro.sql</string> <!-- .sql (used by Sequel Pro) -->
-				<string>com.sun.java-class</string>
-				<string>com.sun.java-server-pages</string>
-				<string>com.sun.java-source</string>
-				<string>com.sun.java-web-start</string>
-				<string>com.sun.javafx</string>
-				<string>com.sun.manifest</string>
-				<string>com.vallettaventures.texpadm.tex</string> <!-- Texpad LaTeX (.cls, .sty, .tex) -->
-				<string>dyn.ah62d4rv4ge8007a</string> <!-- .kt -->
+				<string>com.sun.java-source</string> <!-- .java -->
+				<string>com.vallettaventures.texpadm.bibtex</string> <!-- .bib (Texpad BibTeX) -->
+				<string>com.vallettaventures.texpadm.tex</string> <!-- .cls, .sty, .tex (Texpad LaTeX) -->
+				<string>dyn.ah62d4rv4ge8007a</string> <!-- .kt (Kotlin) -->
 				<string>dyn.ah62d4rv4ge8024pvszy0k</string> <!-- .liquid -->
 				<string>dyn.ah62d4rv4ge80255drq</string> <!-- .lock (lockfile for Cargo, Poetry, Yarn, ...) -->
+				<string>dyn.ah62d4rv4ge8045a</string> <!-- .ml (OCaml) -->
+				<string>dyn.ah62d4rv4ge8064p2</string> <!-- .nix -->
+				<string>dyn.ah62d4rv4ge8064pr</string> <!-- .nim (Nim) -->
+				<string>dyn.ah62d4rv4ge8064prsm10k</string> <!-- .nimrod (Nim) -->
 				<string>dyn.ah62d4rv4ge8064xp</string> <!-- .njk (Nunjucks) -->
-				<string>dyn.ah62d4rv4ge80c75p</string> <!-- .awk -->
+				<string>dyn.ah62d4rv4ge80c7p2</string> <!-- .aux (LaTeX) -->
 				<string>dyn.ah62d4rv4ge80g55sq2</string> <!-- .conf -->
+				<string>dyn.ah62d4rv4ge80g5pbrrwu</string> <!-- .cmake -->
 				<string>dyn.ah62d4rv4ge80g62</string> <!-- .cs -->
+				<string>dyn.ah62d4rv4ge80g6pq</string> <!-- .cql (Cassandra) -->
+				<string>dyn.ah62d4rv4ge80n5dr</string> <!-- .elm -->
+				<string>dyn.ah62d4rv4ge80n65dsmy1a7a</string> <!-- .escript (Erlang) -->
+				<string>dyn.ah62d4rv4ge80n8a</string> <!-- .ex (Elixir) -->
+				<string>dyn.ah62d4rv4ge80n8dx</string> <!-- .exs (Elixir) -->
+				<string>dyn.ah62d4rv4ge80s3prsr2gn22</string> <!-- .gemspec (Ruby) -->
 				<string>dyn.ah62d4rv4ge80s52</string> <!-- .go -->
 				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string> <!-- .gradle -->
+				<string>dyn.ah62d4rv4ge80s6xbsbyhc5a</string> <!-- .graphql (GraphQL) -->
+				<string>dyn.ah62d4rv4ge80s6xbsbyhc5dx</string> <!-- .graphqls (GraphQL schema) -->
+				<string>dyn.ah62d4rv4ge80u25q</string> <!-- .hcl -->
 				<string>dyn.ah62d4rv4ge80u2psqv0gn2xbsm3u</string> <!-- .handlebars -->
 				<string>dyn.ah62d4rv4ge80u2xx</string> <!-- .hbs (Handlebars) -->
 				<string>dyn.ah62d4rv4ge80w5pq</string> <!-- .iml -->
 				<string>dyn.ah62d4rv4ge80y5a</string> <!-- .jl -->
 				<string>dyn.ah62d4rv4ge80y652</string> <!-- .jsx -->
+				<string>dyn.ah62d4rv4ge81a63v</string> <!-- .ps1 (PowerShell) -->
+				<string>dyn.ah62d4rv4ge81a65rge</string> <!-- .psm1 (PowerShell) -->
+				<string>dyn.ah62d4rv4ge81e2ppqy</string> <!-- .rake (Ruby) -->
 				<string>dyn.ah62d4rv4ge81e3pxr70hq3pe</string> <!-- .resolved (lockfile for Swift Package Manager) -->
+				<string>dyn.ah62d4rv4ge81e3pxsu</string> <!-- .rest (reStructuredText) -->
+				<string>dyn.ah62d4rv4ge81e45y</string> <!-- .rkt (Racket) -->
 				<string>dyn.ah62d4rv4ge81e62</string> <!-- .rs -->
+				<string>dyn.ah62d4rv4ge81e65y</string> <!-- .rst (reStructuredText) -->
+				<string>dyn.ah62d4rv4ge81e6k</string> <!-- .rq (SPARQL) -->
 				<string>dyn.ah62d4rv4ge81g25brvuu</string> <!-- .scala -->
 				<string>dyn.ah62d4rv4ge81g25xsq</string> <!-- .scss -->
+				<string>dyn.ah62d4rv4ge81g2pxsq</string> <!-- .sass -->
+				<string>dyn.ah62d4rv4ge81g3pws3y0g3k</string> <!-- .service (systemd) -->
+				<string>dyn.ah62d4rv4ge81g6dbsm202</string> <!-- .sparql (SPARQL) -->
 				<string>dyn.ah62d4rv4ge81g6pq</string> <!-- .sql -->
+				<string>dyn.ah62d4rv4ge81k55d</string> <!-- .toc (LaTeX) -->
 				<string>dyn.ah62d4rv4ge81k55rru</string> <!-- .toml -->
 				<string>dyn.ah62d4rv4ge81k652</string> <!-- .tsx -->
 				<string>dyn.ah62d4rv4ge81k75mq6</string> <!-- .twig -->
-				<string>org.arduino.ino-source</string>
-				<string>org.arduino.source</string>
-				<string>org.asm.source</string>
-				<string>org.bash.source</string>
-				<string>org.clojure</string>
-				<string>org.codehaus.groovy-source</string>
-				<string>org.coffee.source</string>
+				<string>dyn.ah62d4rv4ge81k7dq</string> <!-- .ttl (Turtle) -->
+				<string>dyn.ah62d4rv4ge81q7pf</string> <!-- .vue -->
+				<string>dyn.ah62d4rv4ge81s3pcrzu064pgqz31k</string> <!-- .webmanifest (web app manifest) -->
+				<string>dyn.ah62d4rv4ge81s65eru</string> <!-- .wsdl -->
+				<string>dyn.ah62d4rv4ge81s65g</string> <!-- .wsf -->
+				<string>dyn.ah62d4rv4ge81u65e</string> <!-- .xsd -->
+				<string>dyn.ah62d4rv4ge81u65q</string> <!-- .xsl -->
+				<string>dyn.ah62d4rv4ge81u65qsu</string> <!-- .xslt -->
+				<string>org.arduino.ino-source</string> <!-- .ino (Arduino) -->
+				<string>org.arduino.source</string>  <!-- .pde (Arduino) -->
+				<string>org.asm.source</string> <!-- .asm (TASM) -->
+				<string>org.codehaus.groovy-source</string> <!-- .groovy -->
+				<string>org.coffee.source</string> <!-- .coffee (CoffeeScript) -->
 				<string>org.coffeescript.coffeescript</string>
-				<string>org.cson.source</string>
-				<string>org.erlang.erlang-source</string>
-				<string>org.erlang.erlang</string>
-				<string>org.fish.source</string>
-				<string>org.gcc.files</string>
-				<string>org.go.source</string>
-				<string>org.gradle.source</string>
-				<string>org.haskell.haskell-source</string>
-				<string>org.haskell.haskell</string>
-				<string>org.haskell.literate-haskell-source</string>
-				<string>org.inno.source</string>
-				<string>org.iso.sql</string>
-				<string>org.km3</string>
-				<string>org.kmt.source</string>
-				<string>org.kotlinlang.source</string>
-				<string>org.lua.lua-source</string>
-				<string>org.lua.lua</string>
-				<string>org.microsoft.inf</string>
-				<string>org.n8gray.awk</string>
-				<string>org.n8gray.bat</string>
-				<string>org.n8gray.diff-script</string>
-				<string>org.n8gray.idl</string>
-				<string>org.n8gray.ini-source</string>
-				<string>org.n8gray.javaInstaller</string>
-				<string>org.n8gray.jsp-source</string>
-				<string>org.n8gray.lisp</string>
-				<string>org.n8gray.makefile</string>
-				<string>org.n8gray.railstemplate</string>
-				<string>org.n8gray.scheme-source</string>
-				<string>org.n8gray.standard-ml-source</string>
-				<string>org.n8gray.structured-query-language-source</string>
-				<string>org.n8gray.verilog</string>
-				<string>org.n8gray.vhdl</string>
-				<string>org.n8gray.xhtml</string>
-				<string>org.nfo</string>
-				<string>org.ocaml.ocaml-interface</string>
-				<string>org.ocaml.ocaml-source</string>
-				<string>org.ocaml.ocaml</string>
-				<string>org.omg.ecore</string>
-				<string>org.rdf.source</string>
-				<string>org.rust-lang.source</string>
-				<string>org.sbarex.conf</string>
-				<string>org.sbarex.dart</string>
-				<string>org.scala.source</string>
-				<string>org.tug.lua</string>
-				<string>org.tug.tex</string>
-				<string>org.vim.vim-script</string>
-				<string>org.xul.source</string>
-				<string>public.bash-script</string>
-				<string>public.c-header</string>
-				<string>public.c-plus-plus-header</string>
-				<string>public.c-plus-plus-source</string>
-				<string>public.c-source</string>
-				<string>public.css</string>
+				<string>org.cson.source</string> <!-- .cson (CoffeeScript-Object-Notation) -->
+				<string>org.erlang.erlang-source</string> <!-- .erl, .hrl (Erlang) -->
+				<string>org.fish.source</string> <!-- .fish -->
+				<string>org.gcc.files</string> <!-- .d -->
+				<string>org.go.source</string> <!-- .go -->
+				<string>org.gradle.source</string> <!-- .gradle -->
+				<string>org.haskell.haskell-source</string> <!-- .hs (Haskell) -->
+				<string>org.haskell.literate-haskell-source</string> <!-- .lhs (Haskell) -->
+				<string>org.inno.source</string> <!-- .iss -->
+				<string>org.iso.sql</string> <!-- .sql -->
+				<string>org.khronos.glsl.fragment-shader</string> <!-- .frag (OpenGL Shading Language) -->
+				<string>org.khronos.glsl.vertex-shader</string> <!-- .vert (OpenGL Shading Language) -->
+				<string>org.kmt.source</string> <!-- .kmt -->
+				<string>org.kotlinlang.source</string> <!-- .kt (Kotlin) -->
+				<string>org.lua.lua-source</string> <!-- .lua -->
+				<string>org.microsoft.inf</string> <!-- .inf -->
+				<string>org.n8gray.awk</string> <!-- .awk -->
+				<string>org.n8gray.bat</string> <!-- .bat, .cmd -->
+				<string>org.n8gray.ini-source</string> <!-- .ini -->
+				<string>org.n8gray.jsp-source</string> <!-- .jsp -->
+				<string>org.n8gray.lisp</string> <!-- .clj, .el, .lisp -->
+				<string>org.n8gray.makefile</string> <!-- .mk (Makefile) -->
+				<string>org.n8gray.railstemplate</string> <!-- .erb, .rhtml, .rjs -->
+				<string>org.n8gray.scheme-source</string> <!-- .scm (Scheme) -->
+				<string>org.n8gray.standard-ml-source</string> <!-- .sml (Standard ML) -->
+				<string>org.n8gray.structured-query-language-source</string> <!-- .sql -->
+				<string>org.n8gray.verilog</string> <!-- .v (Coq) -->
+				<string>org.n8gray.vhdl</string> <!-- .vhdl -->
+				<string>org.nfo</string> <!-- .nfo -->
+				<string>org.ocaml.ocaml-interface</string> <!-- .mli (OCaml) -->
+				<string>org.ocaml.ocaml-source</string> <!-- .ml, .mll, .mly (OCaml) -->
+				<string>org.omg.ecore</string> <!-- .ecore -->
+				<string>org.rdf.source</string> <!-- .rdf -->
+				<string>org.rust-lang.source</string> <!-- .rs (Rust) -->
+				<string>org.scala.source</string> <!-- .scala -->
+				<string>org.tug.lua</string> <!-- .lua (used by TeXShop) -->
+				<string>org.tug.tex</string> <!-- .tex (used by TeXShop) -->
+				<string>org.tug.latex</string> <!-- .latex (used by TeXShop) -->
+				<string>org.vim.vim-script</string> <!-- .vim -->
+				<string>org.xul.source</string> <!-- .xul -->
+				<string>public.ada-source</string> <!-- .ada, .adb, .ads (Ada) -->
+				<string>public.assembly-source</string> <!-- .s (Assembly) -->
+				<string>public.bash-script</string> <!-- .bash -->
+				<string>public.c-header</string> <!-- .h -->
+				<string>public.c-plus-plus-header</string> <!-- .hpp, .h++, .hh, .hxx -->
+				<string>public.c-plus-plus-source</string> <!-- .cpp, .c++, .cc, .cxx, .cp -->
+				<string>public.c-source</string> <!-- .c -->
+				<string>public.csh-script</string> <!-- .csh -->
+				<string>public.css</string> <!-- .css -->
 				<string>public.data</string> <!-- e.g. .gitignore, .editorconfig, README, ... -->
-				<string>public.json</string>
-				<string>public.objective-c-source</string>
-				<string>public.pascal-source</string>
-				<string>public.patch-file</string>
-				<string>public.perl-script</string>
-				<string>public.php-script</string>
-				<string>public.plain-text</string>
-				<string>public.python-script</string>
-				<string>public.ruby-script</string>
+				<string>public.fortran-90-source</string> <!-- .f90 (Fortran) -->
+				<string>public.fortran-source</string> <!-- .f, .for (Fortran) -->
+				<string>public.json</string> <!-- .json -->
+				<string>public.ksh-script</string> <!-- .ksh (KornShell) -->
+				<string>public.make-source</string> <!-- .mak (Makefile) -->
+				<string>public.objective-c-source</string> <!-- .m (Objective-C) -->
+				<string>public.opencl-source</string> <!-- .cl (OpenCL) -->
+				<string>public.pascal-source</string> <!-- .pas (Pascal) -->
+				<string>public.patch-file</string> <!-- .diff, .patch -->
+				<string>public.perl-script</string> <!-- .pl, .pm (Perl) -->
+				<string>public.php-script</string> <!-- .php -->
+				<string>public.plain-text</string> <!-- .txt -->
+				<string>public.protobuf-source</string> <!-- .proto (Protocol Buffer) -->
+				<string>public.python-script</string> <!-- .py -->
+				<string>public.rss</string> <!-- .rss -->
+				<string>public.ruby-script</string> <!-- .rb, .rbw (Ruby) -->
 				<string>public.script</string>
-				<string>public.shell-script</string>
+				<string>public.shell-script</string> <!-- .sh -->
 				<string>public.source-code</string>
-				<string>public.swift-source</string>
-				<string>public.tex</string>
+				<string>public.swift-source</string> <!-- .swift -->
+				<string>public.tcsh-script</string> <!-- .tcsh -->
+				<string>public.tex</string> <!-- .tex -->
 				<string>public.text</string>
-				<string>public.xml</string>
-				<string>public.yaml</string>
-				<string>public.zsh-script</string>
-				<string>tk.tcl.tcl-source</string>
-				<string>tk.tcl.tcl</string>
+				<string>public.yaml</string> <!-- .yaml, .yml -->
+				<string>public.zsh-script</string> <!-- .zsh -->
+				<string>tk.tcl.tcl-source</string> <!-- .tcl -->
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<true/>
