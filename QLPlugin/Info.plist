@@ -88,6 +88,9 @@
 				<string>com.microsoft.visual-basic</string>
 				<string>com.netscape.javascript-source</string>
 				<string>com.runningwithcrayons.alfred.appearance</string> <!-- Alfred theme (.alfredappearance) -->
+				<string>com.sequelpro.sequelpro.spf</string> <!-- .spf (Sequel Pro query favorites file) -->
+				<string>com.sequelpro.sequelpro.sptheme</string> <!-- .spTheme (Sequel Pro theme file) -->
+				<string>com.sequelpro.sequelpro.sql</string> <!-- .sql (used by Sequel Pro) -->
 				<string>com.sun.java-class</string>
 				<string>com.sun.java-server-pages</string>
 				<string>com.sun.java-source</string>

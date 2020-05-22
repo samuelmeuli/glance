@@ -21,6 +21,8 @@ let fileExtensionLexers = [
 	"resolved": "json", // Swift Package Manager lockfile (Package.resolved)
 	"scpt": "applescript", // AppleScript binary
 	"scptd": "applescript", // AppleScript bundle
+	"spf": "xml", // Sequel Pro query favorites file
+	"spTheme": "xml", // Sequel Pro theme file
 	"sty": "tex", // LaTeX styles file
 ]
 
