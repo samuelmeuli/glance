@@ -49,6 +49,10 @@ body {
 	line-height: 1.5;
 	tab-size: 4;
 	background: var(--color-background-body);
+
+	/* Disable text selection (the copy shortcut doesn't work and no context menu can be opened) */
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 /* General element spacing */
