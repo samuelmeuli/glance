@@ -35,6 +35,7 @@ let fileExtensionLexers = [
 	"scptd": "applescript", // AppleScript bundle
 	"spf": "xml", // Sequel Pro query favorites file
 	"spTheme": "xml", // Sequel Pro theme file
+	"strings": "c", // Apple Strings Resource File
 	"sty": "tex", // LaTeX styles file
 	"webmanifest": "json", // Web app manifest
 ]

@@ -69,6 +69,7 @@
 				<string>com.apple.rez-source</string> <!-- .r -->
 				<string>com.apple.rez-source</string> <!-- .r (used for R instead of Apple's Rez) -->
 				<string>com.apple.xcode.entitlements-property-list</string> <!-- .entitlements -->
+				<string>com.apple.xcode.strings-text</string> <!-- .strings (Apple Strings Resource File) -->
 				<string>com.barebones.bbedit.ini-configuration</string> <!-- .cfg -->
 				<string>com.barebones.bbedit.scss-source</string> <!-- .scss -->
 				<string>com.barebones.bbedit.tex-source</string> <!-- .tex -->
@@ -179,9 +180,9 @@
 				<string>org.rdf.source</string> <!-- .rdf -->
 				<string>org.rust-lang.source</string> <!-- .rs (Rust) -->
 				<string>org.scala.source</string> <!-- .scala -->
+				<string>org.tug.latex</string> <!-- .latex (used by TeXShop) -->
 				<string>org.tug.lua</string> <!-- .lua (used by TeXShop) -->
 				<string>org.tug.tex</string> <!-- .tex (used by TeXShop) -->
-				<string>org.tug.latex</string> <!-- .latex (used by TeXShop) -->
 				<string>org.vim.vim-script</string> <!-- .vim -->
 				<string>org.xul.source</string> <!-- .xul -->
 				<string>public.ada-source</string> <!-- .ada, .adb, .ads (Ada) -->
