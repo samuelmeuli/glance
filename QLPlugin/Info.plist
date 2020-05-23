@@ -61,15 +61,20 @@
 				<string>public.tab-separated-values-text</string> <!-- .tsv -->
 
 				<!-- Code / plain text -->
-				<string>com.adobe.jsx</string> <!-- .jsx (used for React instead of ExtendScript -->
+				<string>com.adobe.jsx</string> <!-- .jsx (used for React instead of ExtendScript) -->
 				<string>com.apple.applescript.script-bundle</string> <!-- .scptd (AppleScript bundle) -->
 				<string>com.apple.applescript.script</string> <!-- .scpt (AppleScript binary) -->
 				<string>com.apple.applescript.text</string> <!-- .applescript (AppleScript text file) -->
 				<string>com.apple.disk-image-dart</string> <!-- .dart (used for Google's programming language instead of Apple's Disk Archive/Retrieval Tool) -->
+				<string>com.apple.dt.document.scheme</string> <!-- .xcscheme (Xcode schemes) -->
+				<string>com.apple.dt.interfacebuilder.document.storyboard</string> <!-- .storyboard (Xcode Storyboard) -->
+				<string>com.apple.interfacebuilder.document.cocoa</string> <!-- .xib (Xcode XIB) -->
 				<string>com.apple.rez-source</string> <!-- .r -->
 				<string>com.apple.rez-source</string> <!-- .r (used for R instead of Apple's Rez) -->
 				<string>com.apple.xcode.entitlements-property-list</string> <!-- .entitlements -->
-				<string>com.apple.xcode.strings-text</string> <!-- .strings (Apple Strings Resource File) -->
+				<string>com.apple.xcode.projectdata</string> <!-- .pbxproj (Xcode project data) -->
+				<string>com.apple.xcode.strings-dictionary</string> <!-- .stringsdict (Xcode Stringsdict) -->
+				<string>com.apple.xcode.strings-text</string> <!-- .strings (Xcode Strings Resource) -->
 				<string>com.barebones.bbedit.ini-configuration</string> <!-- .cfg -->
 				<string>com.barebones.bbedit.scss-source</string> <!-- .scss -->
 				<string>com.barebones.bbedit.tex-source</string> <!-- .tex -->
@@ -200,6 +205,7 @@
 				<string>public.json</string> <!-- .json -->
 				<string>public.ksh-script</string> <!-- .ksh (KornShell) -->
 				<string>public.make-source</string> <!-- .mak (Makefile) -->
+				<string>public.module-map</string> <!-- .modulemap (Clang module map) -->
 				<string>public.objective-c-source</string> <!-- .m (Objective-C) -->
 				<string>public.opencl-source</string> <!-- .cl (OpenCL) -->
 				<string>public.pascal-source</string> <!-- .pas (Pascal) -->

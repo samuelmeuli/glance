@@ -2,42 +2,54 @@ import Foundation
 import os.log
 
 let dotfileLexers = [
-	".bashrc": "bashrc",
+	// Files with syntax supported by Chroma
+	".bashrc": ".bashrc",
+	".vimrc": ".vimrc",
+	".zprofile": "zsh",
+	".zshrc": ".zshrc",
+	"dockerfile": "Dockerfile",
+	"gemfile": "Gemfile",
+	"gnumakefile": "Makefile",
+	"makefile": "Makefile",
+	"pkgbuild": "PKGBUILD",
+	"rakefile": "Rakefile",
+
+	// Files for which a different, similar syntax is used
 	".dockerignore": "bash",
 	".editorconfig": "ini",
 	".gitattributes": "bash",
 	".gitconfig": "ini",
 	".gitignore": "bash",
 	".npmignore": "bash",
-	".vimrc": "vim",
-	".zprofile": "zsh",
 	".zsh_history": "txt",
-	".zshrc": "zshrc",
-	"dockerfile": "Dockerfile",
-	"gemfile": "Gemfile",
-	"gnumakefile": "Makefile",
-	"makefile": "Makefile",
-	"pkgbuild": "pkgbuild",
-	"rakefile": "Rakefile",
 ]
 
 let fileExtensionLexers = [
-	"alfredappearance": "json", // Alfred theme
-	"cls": "tex", // LaTeX classes file
+	// Files with syntax supported by Chroma
+	"alfredappearance": "json",
+	"cls": "tex",
 	"entitlements": "xml",
-	"hbs": "handlebars", // Handlebars template
+	"hbs": "handlebars",
 	"iml": "xml",
-	"liquid": "twig", // Liquid template
-	"njk": "twig", // Nunjucks template
 	"plist": "xml",
-	"resolved": "json", // Swift Package Manager lockfile (Package.resolved)
-	"scpt": "applescript", // AppleScript binary
-	"scptd": "applescript", // AppleScript bundle
-	"spf": "xml", // Sequel Pro query favorites file
-	"spTheme": "xml", // Sequel Pro theme file
-	"strings": "c", // Apple Strings Resource File
-	"sty": "tex", // LaTeX styles file
-	"webmanifest": "json", // Web app manifest
+	"resolved": "json",
+	"scpt": "applescript",
+	"scptd": "applescript",
+	"spf": "xml",
+	"spTheme": "xml",
+	"storyboard": "xml",
+	"stringsdict": "xml",
+	"sty": "tex",
+	"webmanifest": "json",
+	"xcscheme": "xml",
+	"xib": "xml",
+
+	// Files for which a different, similar syntax is used
+	"liquid": "twig",
+	"modulemap": "hcl",
+	"njk": "twig",
+	"pbxproj": "txt",
+	"strings": "c",
 ]
 
 class CodePreview: Preview {
