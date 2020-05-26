@@ -55,6 +55,7 @@
 				<string>dyn.ah62d4rv4ge80445er7506</string> <!-- .mkdown -->
 				<string>dyn.ah62d4rv4ge81e5pe</string> <!-- .Rmd -->
 				<string>net.daringfireball.markdown</string> <!-- .markdown, .md, .mdown, .mkd, .mkdn -->
+				<string>net.ia.markdown</string> <!-- .md (used by iA Writer) -->
 
 				<!-- TSV -->
 				<string>dyn.ah62d4rv4ge81k2pc</string> <!-- .tab -->
