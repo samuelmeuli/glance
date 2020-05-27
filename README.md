@@ -77,4 +77,4 @@ To add previews for a new file extension, please follow these steps:
 1. Create a new class for your file type in [this directory](./QLPlugin/Views/Previews/). It should implement the `Preview` protocol. See the other files in the directory for examples.
 2. Match the file extension to your class in [`PreviewVCFactory.swift`](./QLPlugin/Views/PreviewVCFactory.swift).
 3. Find your file's UTI by running `mdls -name kMDItemContentType -name kMDItemContentTypeTree /path/to/your/file`. Add it to `QLSupportedContentTypes` in [`Info.plist`](./QLPlugin/Info.plist).
-4. Update [`README.md`](./README.md), [`Credits.rtf`](./Glance/Credits.rtf) and [the App Store description](./AppStore/Listing/Description.txt).
+4. Update [`README.md`](README.md), [`SupportedFilesWC.xib`](Glance/SupportedFilesWC.xib), the [App Store description](AppStore/Listing/Description.txt) and [`Credits.rtf`](Glance/Credits.rtf) (if you introduced a new library).
