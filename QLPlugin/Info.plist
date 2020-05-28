@@ -93,6 +93,7 @@
 				<string>dyn.ah62d4rv4ge8007a</string> <!-- .kt (Kotlin) -->
 				<string>dyn.ah62d4rv4ge8024pvszy0k</string> <!-- .liquid -->
 				<string>dyn.ah62d4rv4ge80255drq</string> <!-- .lock (lockfile for Cargo, Poetry, Yarn, ...) -->
+				<string>dyn.ah62d4rv4ge8043d2</string> <!-- .mdx (MDX, Markdown with JSX) -->
 				<string>dyn.ah62d4rv4ge8045a</string> <!-- .ml (OCaml) -->
 				<string>dyn.ah62d4rv4ge8064p2</string> <!-- .nix -->
 				<string>dyn.ah62d4rv4ge8064pr</string> <!-- .nim (Nim) -->
