@@ -135,6 +135,7 @@
 				<string>dyn.ah62d4rv4ge81g3pws3y0g3k</string> <!-- .service (systemd) -->
 				<string>dyn.ah62d4rv4ge81g6dbsm202</string> <!-- .sparql (SPARQL) -->
 				<string>dyn.ah62d4rv4ge81g6pq</string> <!-- .sql -->
+				<string>dyn.ah62d4rv4ge81g7xfrv4gn</string> <!-- .svelte -->
 				<string>dyn.ah62d4rv4ge81k55d</string> <!-- .toc (LaTeX) -->
 				<string>dyn.ah62d4rv4ge81k55rru</string> <!-- .toml -->
 				<string>dyn.ah62d4rv4ge81k652</string> <!-- .tsx -->
