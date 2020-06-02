@@ -66,6 +66,9 @@ class CodePreview: Preview {
 		if fileURL.pathExtension.isEmpty {
 			// Dotfile
 			return dotfileLexers[fileURL.lastPathComponent.lowercased(), default: "autodetect"]
+		} else if fileURL.pathExtension.lowercased() == "dist" {
+			// .dist file
+			return getLexer(fileURL: fileURL.deletingPathExtension())
 		} else {
 			// File with extension
 			return fileExtensionLexers[
