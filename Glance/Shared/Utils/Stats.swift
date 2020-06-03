@@ -46,9 +46,11 @@ class Stats {
 		defaults!.set(dateCounts, forKey: dateCountsKey)
 
 		// Increase file extension count by 1
-		var extensionCounts = getExtensionCounts()
-		extensionCounts[fileExtension] = extensionCounts[fileExtension, default: 0] + 1
-		defaults!.set(extensionCounts, forKey: extensionCountsKey)
+		if !fileExtension.isEmpty { // Skip for files without extension (e.g. LICENSE, Dockerfile)
+			var extensionCounts = getExtensionCounts()
+			extensionCounts[fileExtension] = extensionCounts[fileExtension, default: 0] + 1
+			defaults!.set(extensionCounts, forKey: extensionCountsKey)
+		}
 
 		// Increase total count by 1
 		defaults!.set(getTotalCount() + 1, forKey: totalCountKey)
